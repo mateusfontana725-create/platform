@@ -21,7 +21,8 @@
   </section>
 
   <h2 class="section-title">O que você quer fazer?</h2>
-  <div class="grid" id="modos" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))"></div>
+  <div class="modos" id="modos"></div>
+  <p class="muted small" id="dica-offline" hidden style="margin-top:14px">Para estudar sem internet, baixe o resumo em PDF e o quiz em um único arquivo .html. O quiz baixado abre direto no navegador do celular ou do computador.</p>
 </div>
 
 <script src="assets/materias.js"></script>
@@ -43,15 +44,21 @@
   document.getElementById('crumb-nome').textContent = m.nome;
   hero.style.background = 'linear-gradient(135deg,' + m.cor + ',' + m.cor + 'cc)';
 
-  function modo(href, ico, titulo, texto, ok, emBreve) {
-    if (ok) {
-      return '<a class="mode" href="' + href + '"><div class="ico">' + ico + '</div><h2>' + titulo + '</h2><p>' + texto + '</p></a>';
-    }
-    return '<div class="mode off" aria-disabled="true"><div class="ico">' + ico + '</div><h2>' + titulo + '</h2><p>' + emBreve + '</p></div>';
+  function modo(href, ico, titulo, texto, ok, emBreve, arquivo, rotuloBaixar) {
+    var card = ok
+      ? '<a class="mode" href="' + href + '"><div class="ico">' + ico + '</div><h2>' + titulo + '</h2><p>' + texto + '</p></a>'
+      : '<div class="mode off" aria-disabled="true"><div class="ico">' + ico + '</div><h2>' + titulo + '</h2><p>' + emBreve + '</p></div>';
+    var baixar = ok && arquivo
+      ? '<a class="btn dl" href="' + arquivo + '" download>⬇ ' + rotuloBaixar + '</a>'
+      : '';
+    return '<div class="mbloco">' + card + baixar + '</div>';
   }
   document.getElementById('modos').innerHTML =
-    modo(m.resumo || '#', '📘', 'Resumo', 'Conteúdo organizado para estudar e revisar os principais pontos.', !!m.resumo, 'Resumo em breve.') +
-    modo('quiz.html?m=' + encodeURIComponent(m.id), '✅', 'Quiz', 'Questões com dica, correção imediata e duas explicações.', !!m.quiz, 'Quiz em breve.');
+    modo(m.resumo || '#', '📘', 'Resumo', 'Conteúdo organizado para estudar e revisar os principais pontos.', !!m.resumo, 'Resumo em breve.', m.resumoPdf, 'Baixar resumo (PDF)') +
+    modo('quiz.html?m=' + encodeURIComponent(m.id), '✅', 'Quiz', 'Questões com dica, correção imediata e duas explicações.', !!m.quiz, 'Quiz em breve.', m.quizOffline, 'Baixar quiz (.html)');
+  if (m.resumo || m.quiz) {
+    document.getElementById('dica-offline').hidden = false;
+  }
 })();
 </script>
 </body>

@@ -96,3 +96,26 @@ a.mode:hover{border-color:var(--brand)}
   .brand .logo{width:30px;height:30px}
   .nav-link{padding:6px 10px;font-size:13px}
 }
+
+/* ---------- adaptação a telas pequenas e baixas ---------- */
+.modos{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:640px){
+  .hero{padding:18px;margin-bottom:14px}
+  .hero p{font-size:14.5px}
+  .section-title{margin:16px 0 10px}
+  .wrap{padding-top:12px;padding-bottom:24px}
+  .card{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:12px;row-gap:4px;padding:14px}
+  .card .sigla{grid-row:1 / span 3;align-self:start}
+  .card h2,.card p,.card .chips{grid-column:2}
+  .card .chips{margin-top:4px}
+  .mode{padding:14px;gap:6px}
+  .mode .ico{width:40px;height:40px;font-size:19px}
+  .mode h2{font-size:1.05rem}
+  .mode p{font-size:13.5px}
+}
+@media (max-width:360px){ .modos{grid-template-columns:1fr} }
+@media (max-height:700px){ .hero p{display:none} }
+
+.mbloco{display:flex;flex-direction:column;gap:8px;min-width:0}
+.mbloco .mode{flex:1}
+.btn.dl{font-size:14px;min-height:42px;padding:8px 12px;width:100%}

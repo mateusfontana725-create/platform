@@ -15,7 +15,9 @@
   var app = document.getElementById('app');
   var params = new URLSearchParams(location.search);
   var mId = params.get('m');
-  var M = mId && window.achaMateria ? window.achaMateria(mId) : null;
+  // Modo offline: o arquivo baixado já traz tudo embutido (window.QUIZ_OFFLINE) e não tem links para o resto da plataforma.
+  var OFF = !!window.QUIZ_OFFLINE;
+  var M = OFF ? (window.MATERIAS || [])[0] : (mId && window.achaMateria ? window.achaMateria(mId) : null);
 
   var D = null;       // dados carregados
   var ordem = [];     // índices das questões em D.questoes, na ordem da rodada
@@ -118,12 +120,15 @@
   // ---- telas
   function tituloQuiz() { return D ? D.titulo : (M ? M.nome : 'Quiz'); }
   function cabecalho(extra) {
-    var crumb = M
+    var crumb = OFF
+      ? '<span>' + esc(M.nome) + '</span><span class="sep">›</span><span>Quiz</span>'
+      : M
       ? '<a href="index.html">Início</a><span class="sep">›</span><a href="materia.html?m=' + encodeURIComponent(M.id) + '">' + esc(M.nome) + '</a><span class="sep">›</span><span>Quiz</span>'
       : '<a href="index.html">Início</a><span class="sep">›</span><span>Quiz</span>';
     return '<header class="site-header"><div class="in">' +
-      '<a class="brand" href="index.html"><span class="logo">EF</span><span>Estudos Fontana</span></a>' +
-      (extra || '<a class="nav-link" href="index.html">Todas as matérias</a>') +
+      (OFF ? '<span class="brand"><span class="logo">EF</span><span>Estudos Fontana</span></span>'
+           : '<a class="brand" href="index.html"><span class="logo">EF</span><span>Estudos Fontana</span></a>') +
+      (OFF ? '' : (extra || '<a class="nav-link" href="index.html">Todas as matérias</a>')) +
       '</div></header>' +
       '<nav class="crumbs" style="margin-top:18px" aria-label="Trilha">' + crumb + '</nav>';
   }
@@ -147,7 +152,8 @@
         '<li>No teclado: setas para navegar, números para escolher e Enter para confirmar.</li>' +
       '</ul>' +
       '<div class="btns" style="margin-top:18px"><button class="btn primary" id="comecar" type="button">Começar</button>' +
-      (M ? '<a class="btn" href="materia.html?m=' + encodeURIComponent(M.id) + '">Voltar à matéria</a>' : '') + '</div>' +
+      (M && !OFF ? '<a class="btn" href="materia.html?m=' + encodeURIComponent(M.id) + '">Voltar à matéria</a>' : '') +
+      (M && !OFF && M.quizOffline ? '<a class="btn" href="' + M.quizOffline + '" download>⬇ Baixar quiz (.html)</a>' : '') + '</div>' +
       '</section></div>';
     document.getElementById('comecar').addEventListener('click', function () {
       novaRodada(embaralha(D.questoes.map(function (_, i) { return i; })));
@@ -156,90 +162,112 @@
     });
   }
 
-  function cardHTML(di) {
+  var abas = {};      // aba de explicação aberta por questão ("exp" ou "simples")
+
+  function feedbackHTML(di) {
+    var q = D.questoes[di], r = R[di];
+    var aba = abas[di] || 'exp';
+    var h = '';
+    if (r.estado === 'certo') {
+      h += '<div class="fb ok"><strong>✓ Correto!</strong><div class="resp">Resposta: <b>' + esc(q.resposta) + '</b></div></div>';
+    } else {
+      var seu = q.tipo === 'escolha' ? q.opcoes[r.escolha] : r.texto;
+      h += '<div class="fb bad"><strong>✗ Não foi dessa vez.</strong>' +
+        '<div class="resp">Você respondeu: ' + esc(seu) + '</div>' +
+        '<div class="resp">Correta: <b>' + esc(q.resposta) + '</b></div></div>';
+    }
+    h += '<div class="tabs" role="tablist">' +
+      '<button type="button" role="tab" data-aba="exp" aria-selected="' + (aba === 'exp') + '">Explicação</button>' +
+      '<button type="button" role="tab" data-aba="simples" aria-selected="' + (aba === 'simples') + '">Em outras palavras</button></div>';
+    h += '<div class="exp painel' + (aba === 'exp' ? ' ativo' : '') + '" data-painel="exp"><h3>Explicação</h3><p>' + esc(q.explicacao) + '</p></div>';
+    h += '<div class="exp simples painel' + (aba === 'simples' ? ' ativo' : '') + '" data-painel="simples"><h3>Em outras palavras</h3><p>' + esc(q.emOutrasPalavras) + '</p></div>';
+    return h;
+  }
+
+  function respostaHTML(di) {
     var q = D.questoes[di];
-    var r = R[di] || {};
+    if (respondida(di)) return feedbackHTML(di);
+    if (q.tipo === 'escolha') {
+      var h = '<div class="opts" role="group" aria-label="Alternativas">';
+      q.opcoes.forEach(function (op, i) {
+        h += '<button class="opt" type="button" data-op="' + i + '"><span class="letra">' + String.fromCharCode(65 + i) +
+          '</span><span class="txt">' + esc(op) + '</span></button>';
+      });
+      return h + '</div>';
+    }
+    return '<form class="txtform" id="formtexto" autocomplete="off"><input id="entrada" type="text" placeholder="Digite o nome da peça" ' +
+      'aria-label="Resposta" autocapitalize="sentences" spellcheck="false" enterkeyhint="done">' +
+      '<button class="btn primary" type="submit">Confirmar</button></form>';
+  }
+
+  function quizHTML(di) {
+    var q = D.questoes[di];
     var resp = respondida(di);
-    var n = pos + 1, total = ordem.length;
-    var h = '<article class="qcard" aria-live="polite">';
-    h += '<div class="qtop"><span class="badge">' + esc(q.assunto) + '</span><span class="small muted">Questão ' + n + ' de ' + total + '</span></div>';
+    var total = ordem.length, ultima = pos === total - 1;
+    var h = '<div class="qgrid' + (resp ? ' resp' : '') + '"><section class="qleft">';
+    h += '<span class="badge">' + esc(q.assunto) + '</span>';
     if (q.alvo) {
-      var fig = D.figuras[q.alvo.fig];
-      var classe = q.alvo.fig === 'f1' ? 'grande' : 'pequena';
-      h += '<div class="figwrap"><div class="figbox ' + classe + '" title="Figura">' + figuraSVG(q.alvo, false) + '</div>' +
+      h += '<div class="figwrap"><div class="figbox ' + (q.alvo.fig === 'f1' ? 'grande' : 'pequena') + '">' + figuraSVG(q.alvo, false) + '</div>' +
         '<button class="figbtn" type="button" data-ampliar="' + di + '">🔍 Ver figura inteira</button></div>';
     }
     h += '<div class="enunc-row"><h2 class="enunc">' + esc(q.enunciado) + '</h2>' +
       '<button class="dicabtn" type="button" aria-label="Mostrar dica" aria-expanded="' + (dicaAberta[di] ? 'true' : 'false') + '" data-dica="' + di + '">?</button></div>';
     h += '<div class="dica" id="dica-' + di + '"' + (dicaAberta[di] ? '' : ' hidden') + '><strong>Dica:</strong> ' + esc(q.dica) + '</div>';
-
-    if (q.tipo === 'escolha') {
-      h += '<div class="opts" role="group" aria-label="Alternativas">';
-      q.opcoes.forEach(function (op, i) {
-        var cls = 'opt', dis = resp ? ' disabled' : '';
-        if (resp) {
-          if (i === q.correta) cls += ' ok';
-          else if (i === r.escolha) cls += ' bad';
-          else cls += ' dim';
-        }
-        h += '<button class="' + cls + '" type="button" data-op="' + i + '"' + dis + '>' +
-          '<span class="letra">' + String.fromCharCode(65 + i) + '</span><span class="txt">' + esc(op) + '</span></button>';
-      });
-      h += '</div>';
-    } else {
-      var val = resp ? esc(r.texto) : '';
-      var cls = resp ? (r.estado === 'certo' ? ' ok' : ' bad') : '';
-      h += '<form class="txtform" id="formtexto" autocomplete="off"><input id="entrada" class="' + cls + '" type="text" placeholder="Digite o nome da peça" value="' + val + '"' +
-        (resp ? ' disabled' : '') + ' aria-label="Nome da peça" autocapitalize="sentences" spellcheck="false">' +
-        (resp ? '' : '<button class="btn primary" type="submit">Confirmar</button>') + '</form>';
-    }
-
-    if (resp) {
-      if (r.estado === 'certo') {
-        h += '<div class="fb ok"><strong>✓ Correto!</strong></div>';
-      } else {
-        h += '<div class="fb bad"><strong>✗ Não foi dessa vez.</strong><div class="resp">Resposta correta: <b>' + esc(q.resposta) + '</b></div></div>';
-      }
-      h += '<div class="exp"><h3>Explicação</h3><p>' + esc(q.explicacao) + '</p></div>';
-      h += '<div class="exp simples"><h3>Em outras palavras</h3><p>' + esc(q.emOutrasPalavras) + '</p></div>';
-    }
-
-    var ultima = pos === total - 1;
-    h += '<div class="qnav">' +
-      '<button class="btn" type="button" id="ant"' + (pos === 0 ? ' disabled' : '') + '>← Anterior</button>' +
-      '<div class="direita">' +
-      (resp ? '' : '<button class="btn" type="button" id="pular">Pular</button>') +
-      (resp
-        ? '<button class="btn primary" type="button" id="prox">' + (ultima ? 'Ver resultado' : 'Próxima →') + '</button>'
-        : (ultima ? '<button class="btn" type="button" id="fim">Ver resultado</button>' : '')) +
-      '</div></div>';
-    h += '</article>';
+    h += '</section><section class="qright" aria-live="polite">' + respostaHTML(di) + '</section></div>';
     return h;
   }
 
-  function mapaHTML() {
-    var h = '<div class="mapa" role="navigation" aria-label="Mapa de questões">';
-    ordem.forEach(function (di, k) {
-      var est = estadoDe(di);
-      h += '<button type="button" data-ir="' + k + '" class="' + est + (k === pos ? ' atual' : '') + '" aria-label="Questão ' + (k + 1) + '">' + (k + 1) + '</button>';
-    });
-    h += '</div>';
-    h += '<div class="legenda"><span>■ <span style="color:var(--ok)">acerto</span></span><span>■ <span style="color:var(--bad)">erro</span></span><span>▭ pulada</span></div>';
-    return h;
+  function rodapeHTML() {
+    var di = ordem[pos], resp = respondida(di), ultima = pos === ordem.length - 1;
+    return '<button class="btn" type="button" id="ant"' + (pos === 0 ? ' disabled' : '') + '>← Anterior</button>' +
+      (resp
+        ? '<button class="btn primary" type="button" id="prox">' + (ultima ? 'Ver resultado' : 'Próxima →') + '</button>'
+        : '<button class="btn" type="button" id="pular">' + (ultima ? 'Pular e finalizar' : 'Pular →') + '</button>');
   }
 
   function telaQuiz() {
     var c = contagem(), total = ordem.length;
     var feitas = c.certo + c.errado;
     var pct = total ? Math.round(feitas / total * 100) : 0;
-    app.innerHTML = cabecalho('<button class="btn" type="button" id="finalizar" style="min-height:40px;padding:8px 14px">Finalizar</button>') +
-      '<div class="qwrap">' +
-      '<div class="qbar"><span class="info">' + feitas + ' de ' + total + ' respondidas · ✓ ' + c.certo + ' · ✗ ' + c.errado + '</span></div>' +
-      '<div class="progress" aria-hidden="true"><i style="width:' + pct + '%"></i></div>' +
-      cardHTML(ordem[pos]) +
-      mapaHTML() +
+    var voltar = M ? 'materia.html?m=' + encodeURIComponent(M.id) : 'index.html';
+    app.innerHTML =
+      '<div class="qapp">' +
+      '<header class="qhead">' +
+        (OFF ? '<button class="iconbtn" type="button" id="sair" aria-label="Voltar ao início do quiz">←</button>'
+             : '<a class="iconbtn" href="' + voltar + '" aria-label="Sair do quiz">←</a>') +
+        '<div class="qprog"><div class="qinfo"><b>' + (pos + 1) + '/' + total + '</b><span>✓ ' + c.certo + ' · ✗ ' + c.errado + '</span></div>' +
+        '<div class="progress" aria-hidden="true"><i style="width:' + pct + '%"></i></div></div>' +
+        '<button class="iconbtn" type="button" id="abrirmapa" aria-label="Mapa de questões">▦</button>' +
+        '<button class="iconbtn txt" type="button" id="finalizar">Fim</button>' +
+      '</header>' +
+      '<main class="qmain" id="qmain">' + quizHTML(ordem[pos]) + '</main>' +
+      '<footer class="qfoot" id="qfoot">' + rodapeHTML() + '</footer>' +
       '</div>';
     ligaEventosQuiz();
+    var m = document.getElementById('qmain'); if (m) m.scrollTop = 0;
+  }
+
+  function abrirMapa() {
+    var ov = document.createElement('div');
+    ov.className = 'ov sheet';
+    ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true'); ov.setAttribute('aria-label', 'Mapa de questões');
+    var g = '';
+    ordem.forEach(function (di, k) {
+      g += '<button type="button" data-ir="' + k + '" class="' + estadoDe(di) + (k === pos ? ' atual' : '') + '" aria-label="Questão ' + (k + 1) + '">' + (k + 1) + '</button>';
+    });
+    ov.innerHTML = '<div class="sheetbox"><div class="sheethead"><b>Mapa de questões</b><button class="btn fechar" type="button">Fechar ✕</button></div>' +
+      '<div class="mapagrid">' + g + '</div>' +
+      '<div class="legenda"><span style="color:var(--ok)">■ acerto</span><span style="color:var(--bad)">■ erro</span><span>▭ pulada</span><span>□ pendente</span></div></div>';
+    function fecha() { ov.remove(); document.removeEventListener('keydown', tecla); }
+    function tecla(e) { if (e.key === 'Escape') fecha(); }
+    ov.querySelector('.fechar').addEventListener('click', fecha);
+    ov.addEventListener('click', function (e) { if (e.target === ov) fecha(); });
+    ov.querySelectorAll('[data-ir]').forEach(function (b) {
+      b.addEventListener('click', function () { pos = parseInt(b.getAttribute('data-ir'), 10); fecha(); render(); });
+    });
+    document.addEventListener('keydown', tecla);
+    document.body.appendChild(ov);
+    ov.querySelector('.fechar').focus();
   }
 
   function ligaEventosQuiz() {
@@ -254,15 +282,15 @@
       respondeTexto(v);
     });
     var pular = document.getElementById('pular');
-    if (pular) pular.addEventListener('click', function () { pulaQuestao(); });
+    if (pular) pular.addEventListener('click', pulaQuestao);
     var prox = document.getElementById('prox');
     if (prox) prox.addEventListener('click', proxima);
-    var fim = document.getElementById('fim');
-    if (fim) fim.addEventListener('click', function () { mostraResultado(); });
     var ant = document.getElementById('ant');
     if (ant) ant.addEventListener('click', anterior);
-    var fin = document.getElementById('finalizar');
-    if (fin) fin.addEventListener('click', function () { mostraResultado(); });
+    document.getElementById('finalizar').addEventListener('click', mostraResultado);
+    var sair = document.getElementById('sair');
+    if (sair) sair.addEventListener('click', function () { tela = 'inicio'; render(); });
+    document.getElementById('abrirmapa').addEventListener('click', abrirMapa);
     app.querySelectorAll('[data-dica]').forEach(function (b) {
       b.addEventListener('click', function () {
         var k = parseInt(b.getAttribute('data-dica'), 10);
@@ -275,11 +303,16 @@
     app.querySelectorAll('[data-ampliar]').forEach(function (b) {
       b.addEventListener('click', function () { abrirFigura(D.questoes[parseInt(b.getAttribute('data-ampliar'), 10)].alvo); });
     });
-    app.querySelectorAll('[data-ir]').forEach(function (b) {
-      b.addEventListener('click', function () { pos = parseInt(b.getAttribute('data-ir'), 10); render(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    app.querySelectorAll('[data-aba]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var di = ordem[pos], a = b.getAttribute('data-aba');
+        abas[di] = a;
+        app.querySelectorAll('[data-aba]').forEach(function (x) { x.setAttribute('aria-selected', String(x.getAttribute('data-aba') === a)); });
+        app.querySelectorAll('[data-painel]').forEach(function (x) { x.classList.toggle('ativo', x.getAttribute('data-painel') === a); });
+      });
     });
     var entrada = document.getElementById('entrada');
-    if (entrada && !entrada.disabled) entrada.focus();
+    if (entrada) entrada.focus({ preventScroll: true });
   }
 
   function escolhe(i) {
@@ -304,15 +337,16 @@
     proxima();
   }
   function proxima() {
-    if (pos < ordem.length - 1) { pos++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    if (pos < ordem.length - 1) { pos++; render(); }
     else mostraResultado();
   }
   function anterior() {
-    if (pos > 0) { pos--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    if (pos > 0) { pos--; render(); }
   }
 
   function mostraResultado() {
     tela = 'resultado';
+    document.body.classList.remove('modo-quiz');
     var c = contagem(), total = ordem.length;
     var pct = total ? Math.round(c.certo / total * 100) : 0;
     var msg = pct >= 80 ? 'Muito bem! Seu domínio está forte.' : pct >= 60 ? 'Bom caminho. Revise os erros com as explicações.' : 'Vale revisar com calma. Use as explicações para entender cada ponto.';
@@ -345,22 +379,23 @@
       '<div class="btns" style="justify-content:center;margin-top:18px">' +
         '<button class="btn primary" type="button" id="refazer">Refazer quiz</button>' +
         (erros ? '<button class="btn" type="button" id="revisar">Revisar erros e puladas (' + erros + ')</button>' : '') +
-        (M ? '<a class="btn" href="materia.html?m=' + encodeURIComponent(M.id) + '">Voltar à matéria</a>' : '') +
+        (M && !OFF ? '<a class="btn" href="materia.html?m=' + encodeURIComponent(M.id) + '">Voltar à matéria</a>' : '') +
       '</div>' +
       '</section></div>';
     document.getElementById('refazer').addEventListener('click', function () {
       novaRodada(embaralha(D.questoes.map(function (_, i) { return i; })));
-      tela = 'quiz'; render(); window.scrollTo({ top: 0 });
+      tela = 'quiz'; render();
     });
     var rev = document.getElementById('revisar');
     if (rev) rev.addEventListener('click', function () {
       var ruins = ordem.filter(function (di) { return estadoDe(di) !== 'certo'; });
       novaRodada(embaralha(ruins));
-      tela = 'quiz'; render(); window.scrollTo({ top: 0 });
+      tela = 'quiz'; render();
     });
   }
 
   function render() {
+    document.body.classList.toggle('modo-quiz', tela === 'quiz');
     if (tela === 'inicio') telaInicio();
     else if (tela === 'quiz') telaQuiz();
     else if (tela === 'resultado') mostraResultado();
@@ -389,6 +424,7 @@
   }
 
   if (!M) { semQuiz('Matéria não encontrada'); return; }
+  if (OFF && window.QUIZ_DATA) { D = window.QUIZ_DATA; tela = 'inicio'; render(); return; }
   document.title = 'Quiz · ' + M.nome + ' · Estudos Fontana';
   if (!M.quiz) { semQuiz('Quiz em breve'); return; }
 

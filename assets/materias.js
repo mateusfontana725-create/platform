@@ -8,7 +8,10 @@
  *   descricao resumo curto da matéria
  *   cor       cor de destaque da matéria (hexadecimal)
  *   resumo    caminho da página de resumo (ex.: "resumo/xyz.html") ou null
+ *   resumoPdf caminho do PDF do resumo, oferecido para baixar (uso offline) ou null
  *   quiz      caminho do banco de questões (ex.: "data/xyz.js") ou null
+ *   quizOffline  quiz da matéria em um único .html para baixar: "offline/<id>-quiz.html"
+ *                (gerado por: node tools/gerar-offline.js) ou null
  */
 window.MATERIAS = [
   {
@@ -18,7 +21,9 @@ window.MATERIAS = [
     descricao: 'Resumo do POP-SAR-3201.1: fases do salvamento, guarnições, FEAs, planos e glossário.',
     cor: '#0a7d2c',
     resumo: 'resumo/salvamento-veicular.html',
-    quiz: null
+    resumoPdf: 'resumo/salvamento-veicular.pdf',
+    quiz: null,
+    quizOffline: null
   },
   {
     id: 'epr',
@@ -27,7 +32,9 @@ window.MATERIAS = [
     descricao: 'Peças do conjunto autônomo, identificadas pela figura e pelo nome.',
     cor: '#1e3a8a',
     resumo: null,
-    quiz: 'data/epr.js'
+    resumoPdf: null,
+    quiz: 'data/epr.js',
+    quizOffline: 'offline/epr-quiz.html'
   },
   {
     id: 'espaco-confinado-silos',
@@ -36,7 +43,9 @@ window.MATERIAS = [
     descricao: 'Resumo sobre espaço confinado e silos, em PDF.',
     cor: '#b45309',
     resumo: 'resumo/espaco-confinado-silos.html',
-    quiz: null
+    resumoPdf: 'resumo/espaco-confinado-silos.pdf',
+    quiz: null,
+    quizOffline: null
   }
 ];
 
