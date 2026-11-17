@@ -19,19 +19,21 @@
   </section>
 
   <h2 class="section-title">Matérias</h2>
+  <input type="search" id="busca" class="busca" placeholder="Buscar matéria (nome, sigla ou assunto)" aria-label="Buscar matéria" autocomplete="off">
   <div class="grid" id="lista"></div>
+  <p class="muted" id="vazio" hidden style="margin-top:14px">Nenhuma matéria encontrada.</p>
 </div>
 
 <script src="assets/materias.js"></script>
 <script>
 (function () {
   var lista = document.getElementById('lista');
-  var mats = window.MATERIAS || [];
-  if (!mats.length) {
-    lista.innerHTML = '<div class="panel muted">Nenhuma matéria cadastrada ainda.</div>';
-    return;
-  }
-  lista.innerHTML = mats.map(function (m) {
+  var vazio = document.getElementById('vazio');
+  var busca = document.getElementById('busca');
+  // as mais recentes (últimas do registro) aparecem primeiro
+  var mats = (window.MATERIAS || []).slice().reverse();
+  function norm(t) { return String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
+  function card(m) {
     var resumo = m.resumo ? '<span class="chip on">Resumo</span>' : '<span class="chip off">Resumo em breve</span>';
     var quiz = m.quiz ? '<span class="chip on">Quiz</span>' : '<span class="chip off">Quiz em breve</span>';
     return '<a class="card" href="materia.html?m=' + encodeURIComponent(m.id) + '" style="--cor:' + m.cor + '">' +
@@ -40,7 +42,23 @@
       '<p>' + m.descricao + '</p>' +
       '<div class="chips">' + resumo + quiz + '</div>' +
       '</a>';
-  }).join('');
+  }
+  function mostra() {
+    var termos = norm(busca.value).split(/\s+/).filter(Boolean);
+    var vis = mats.filter(function (m) {
+      var alvo = norm(m.nome + ' ' + m.sigla + ' ' + m.descricao);
+      return termos.every(function (t) { return alvo.indexOf(t) >= 0; });
+    });
+    lista.innerHTML = vis.map(card).join('');
+    vazio.hidden = vis.length > 0;
+  }
+  if (!mats.length) {
+    busca.hidden = true;
+    lista.innerHTML = '<div class="panel muted">Nenhuma matéria cadastrada ainda.</div>';
+    return;
+  }
+  busca.addEventListener('input', mostra);
+  mostra();
 })();
 </script>
 </body>

@@ -6,7 +6,7 @@ Quando o usuário mandar uma matéria (PDF, texto ou vídeo), siga este roteiro,
 ## O que é o projeto
 Plataforma de estudos, em HTML puro, sem servidor. Cada matéria tem **Resumo** e **Quiz**.
 Entrada: início (`index.html`), matéria (`materia.html?m=<id>`), quiz (`quiz.html?m=<id>`).
-A matéria é cadastrada em um único lugar: `assets/materias.js`.
+A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no final** da lista. O início mostra as mais recentes primeiro (ordem inversa do registro) e tem busca por nome, sigla ou descrição.
 
 ## Regras fixas
 1. **Cadastro único.** Toda matéria nova entra em `assets/materias.js`. Não criar página de matéria à mão.

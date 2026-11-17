@@ -1,6 +1,6 @@
 /*
  * Registro de matérias do Estudos Fontana.
- * Para adicionar uma matéria: inclua um item aqui. Os campos "resumo" e "quiz"
+ * Para adicionar uma matéria: inclua um item AO FINAL da lista (o início mostra as mais recentes primeiro). Os campos "resumo" e "quiz"
  * apontam para os arquivos; use null enquanto o conteúdo não existir.
  *   id        identificador (sem espaços, usado na URL: materia.html?m=id)
  *   nome      título exibido

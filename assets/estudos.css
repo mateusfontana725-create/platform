@@ -119,3 +119,6 @@ a.mode:hover{border-color:var(--brand)}
 .mbloco{display:flex;flex-direction:column;gap:8px;min-width:0}
 .mbloco .mode{flex:1}
 .btn.dl{font-size:14px;min-height:42px;padding:8px 12px;width:100%}
+
+.busca{width:100%;box-sizing:border-box;margin:0 0 14px;padding:12px 14px;font:inherit;font-size:16px;color:var(--text,inherit);background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);min-width:0}
+.busca:focus{outline:3px solid var(--accent);outline-offset:2px}
