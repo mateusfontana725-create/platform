@@ -46,6 +46,17 @@ window.MATERIAS = [
     resumoPdf: 'resumo/espaco-confinado-silos.pdf',
     quiz: null,
     quizOffline: null
+  },
+  {
+    id: 'direito-penal',
+    nome: 'Direito Penal e Penal Militar',
+    sigla: 'DPM',
+    descricao: 'Princípios, teoria do crime, CPM, deserção, IPM, legislação extravagante e NUSEG.',
+    cor: '#7f1d1d',
+    resumo: 'resumo/direito-penal.html',
+    resumoPdf: 'resumo/direito-penal.pdf',
+    quiz: 'data/direito-penal.js',
+    quizOffline: 'offline/direito-penal-quiz.html'
   }
 ];
 
