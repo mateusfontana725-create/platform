@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matéria · Estudos Fontana</title>
+<link rel="stylesheet" href="assets/estudos.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site-header"><div class="in">
+    <a class="brand" href="index.html"><span class="logo">EF</span><span>Estudos Fontana</span></a>
+    <a class="nav-link" href="index.html">Todas as matérias</a>
+  </div></header>
+
+  <nav class="crumbs" style="margin-top:18px" aria-label="Trilha"><a href="index.html">Início</a><span class="sep">›</span><span id="crumb-nome">Matéria</span></nav>
+
+  <section class="hero" id="hero">
+    <h1 id="titulo">Matéria</h1>
+    <p id="descricao"></p>
+  </section>
+
+  <h2 class="section-title">O que você quer fazer?</h2>
+  <div class="grid" id="modos" style="grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))"></div>
+</div>
+
+<script src="assets/materias.js"></script>
+<script>
+(function () {
+  var id = new URLSearchParams(location.search).get('m');
+  var m = id && window.achaMateria ? window.achaMateria(id) : null;
+  var hero = document.getElementById('hero');
+  if (!m) {
+    document.getElementById('titulo').textContent = 'Matéria não encontrada';
+    document.getElementById('descricao').textContent = 'Volte à lista e escolha outra matéria.';
+    document.getElementById('modos').innerHTML = '';
+    document.getElementById('crumb-nome').textContent = 'Não encontrada';
+    return;
+  }
+  document.title = m.nome + ' · Estudos Fontana';
+  document.getElementById('titulo').textContent = m.nome;
+  document.getElementById('descricao').textContent = m.descricao;
+  document.getElementById('crumb-nome').textContent = m.nome;
+  hero.style.background = 'linear-gradient(135deg,' + m.cor + ',' + m.cor + 'cc)';
+
+  function modo(href, ico, titulo, texto, ok, emBreve) {
+    if (ok) {
+      return '<a class="mode" href="' + href + '"><div class="ico">' + ico + '</div><h2>' + titulo + '</h2><p>' + texto + '</p></a>';
+    }
+    return '<div class="mode off" aria-disabled="true"><div class="ico">' + ico + '</div><h2>' + titulo + '</h2><p>' + emBreve + '</p></div>';
+  }
+  document.getElementById('modos').innerHTML =
+    modo(m.resumo || '#', '📘', 'Resumo', 'Conteúdo organizado para estudar e revisar os principais pontos.', !!m.resumo, 'Resumo em breve.') +
+    modo('quiz.html?m=' + encodeURIComponent(m.id), '✅', 'Quiz', 'Questões com dica, correção imediata e duas explicações.', !!m.quiz, 'Quiz em breve.');
+})();
+</script>
+</body>
+</html>
