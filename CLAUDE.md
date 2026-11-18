@@ -20,7 +20,7 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
    - **Nunca repetir as alternativas** nas explicações. Explicar o conceito e o motivo.
    - Priorizar o aprendizado, não a memorização.
 6. **Figuras com seta:** a imagem vai em `data/img/<id>-<nome>.jpg`. O alvo é `{fig, s:[x,y], t:[x,y]}`, em que `s` é o início da seta e `t` a ponta, nas coordenadas da figura original. Peças muito próximas usam `vista:[x,y,w,h]` para dar zoom.
-7. **Resumo:** HTML em `resumo/<id>.html`, usando o mesmo cabeçalho e a mesma trilha das outras páginas, e tabelas que empilham no celular. Se o material vier em PDF, o resumo é o próprio PDF em `resumo/<id>.pdf`.
+7. **Resumo:** HTML em `resumo/<id>.html`, usando o mesmo cabeçalho e a mesma trilha das outras páginas. Usar pouca tabela (prefira listas e blocos curtos). **Cada seção termina com duas explicações:** uma "Explicação" técnica, baseada na lei ou no material, e outra "Em outras palavras", simples e informal. As duas ficam em cores diferentes (azul e laranja). Se o material vier em PDF, o resumo é o próprio PDF em `resumo/<id>.pdf`.
 8. **Offline (obrigatório a cada matéria com quiz).** Rodar `node tools/gerar-offline.js <id>`. Isso cria `offline/<id>-quiz.html`, um arquivo único que abre sem internet. Não editar esse arquivo à mão.
 9. **Downloads.** Preencher `resumoPdf` (se houver PDF) e `quizOffline: "offline/<id>-quiz.html"` no registro da matéria.
 10. **Telas.** Antes de publicar, rodar `node tools/testar-telas.js <id>` e `node tools/testar-telas.js <id> --offline`. Os dois precisam estar com "Tudo certo" ou com problemas explicados. O quiz precisa caber na tela sem rolagem em celular, tablet e computador.
