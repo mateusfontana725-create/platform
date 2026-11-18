@@ -42,6 +42,7 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 - **EPR (Equipamento de Proteção Respiratória):** quiz com 50 questões e arquivo offline. Sem resumo.
 - **Espaço Confinado e Silos:** resumo em PDF. Sem quiz.
 - **Direito Penal e Penal Militar:** resumo em HTML e PDF (`resumo/direito-penal.*`) e quiz com 109 questões (4 de texto) e arquivo offline. Prazos do IPM (CPPM art. 20) vieram de fora do material enviado e merecem confirmação.
+- **Direito Disciplinar:** cadastrada como "em breve", sem resumo e sem quiz. Aguardando o material.
 
 ## Pendências
 - Batente do quiz de EPR: o usuário vai enviar um vídeo ou marcações de tempo. O trabalho vai para um branch, não para `main`.

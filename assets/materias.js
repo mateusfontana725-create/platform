@@ -57,6 +57,17 @@ window.MATERIAS = [
     resumoPdf: 'resumo/direito-penal.pdf',
     quiz: 'data/direito-penal.js',
     quizOffline: 'offline/direito-penal-quiz.html'
+  },
+  {
+    id: 'direito-disciplinar',
+    nome: 'Direito Disciplinar',
+    sigla: 'DD',
+    descricao: 'Em breve: resumo e quiz ainda não disponíveis.',
+    cor: '#0e7490',
+    resumo: null,
+    resumoPdf: null,
+    quiz: null,
+    quizOffline: null
   }
 ];
 
