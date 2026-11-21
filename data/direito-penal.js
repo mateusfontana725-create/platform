@@ -1734,6 +1734,278 @@ window.QUIZ_DATA = {
    "dica": "O atendimento é solicitado, cadastrado e acompanhado pela internet.",
    "explicacao": "O atendimento é solicitado, cadastrado e acompanhado por canal digital. O primeiro passo é reunir a documentação da ocorrência ou do procedimento, e o segundo é acessar o Portal Luna, sistema da Defensoria Pública do Paraná.",
    "emOutrasPalavras": "Junte os documentos e entre no Portal Luna da Defensoria."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "O art. 9º do CPM trata de quê?",
+   "opcoes": [
+    "Do cálculo da pena em três fases.",
+    "Das penas principais aplicáveis aos militares.",
+    "Das causas que excluem o crime.",
+    "Da definição dos crimes militares em tempo de paz."
+   ],
+   "correta": 3,
+   "resposta": "Da definição dos crimes militares em tempo de paz.",
+   "dica": "É o artigo que diz quando um fato é crime militar.",
+   "explicacao": "O art. 9º é a porta de entrada da lei penal militar: define em quais situações um fato, em tempo de paz, é crime militar. Ele combina o tipo de crime, a condição do autor, a da vítima e o local ou a situação do fato.",
+   "emOutrasPalavras": "É o artigo que responde: este crime é militar ou é comum?"
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Crimes do CPM definidos de modo diverso na lei penal comum, ou nela não previstos, são crimes militares por qual inciso do art. 9º?",
+   "opcoes": [
+    "§ 1º.",
+    "Inciso I.",
+    "Inciso III.",
+    "Inciso II."
+   ],
+   "correta": 1,
+   "resposta": "Inciso I.",
+   "dica": "É o primeiro inciso, e fala dos crimes que só o CPM conhece ou trata de forma própria.",
+   "explicacao": "O inciso I cobre os crimes que o CPM define de modo diferente da lei comum ou que nem existem nela. Nesses casos, o crime é militar qualquer que seja o agente, salvo disposição especial.",
+   "emOutrasPalavras": "Crime que só existe no CPM, ou que o CPM trata do seu jeito, é militar pelo inciso I."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Um militar da ativa pratica um crime previsto no CPM contra outro militar da ativa. Esse crime é:",
+   "opcoes": [
+    "militar apenas se ocorrer em lugar sujeito à administração militar.",
+    "comum, pois ambos são pessoas físicas.",
+    "militar, pelo art. 9º, II, \"a\", sem depender do local nem de estar em serviço.",
+    "militar apenas se o autor estiver em serviço."
+   ],
+   "correta": 2,
+   "resposta": "militar, pelo art. 9º, II, \"a\", sem depender do local nem de estar em serviço.",
+   "dica": "A alínea \"a\" olha só para a condição dos dois envolvidos.",
+   "explicacao": "A alínea \"a\" do inciso II enquadra como crime militar o fato praticado por militar da ativa contra militar também da ativa. O que pesa é a condição dos dois, e não o local nem o horário.",
+   "emOutrasPalavras": "Militar da ativa contra militar da ativa: já é crime militar, esteja onde estiver."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Um militar da ativa comete, dentro do quartel, um crime previsto no CPM contra um civil. O crime é:",
+   "opcoes": [
+    "militar, pela alínea \"b\" do inciso II (lugar sujeito à administração militar).",
+    "comum, pois o militar não estava em serviço.",
+    "comum, pois a vítima é civil.",
+    "apenas infração disciplinar."
+   ],
+   "correta": 0,
+   "resposta": "militar, pela alínea \"b\" do inciso II (lugar sujeito à administração militar).",
+   "dica": "O lugar do fato muda o enquadramento.",
+   "explicacao": "Na alínea \"b\", o fato praticado por militar da ativa em lugar sujeito à administração militar é crime militar mesmo quando a vítima é militar da reserva, reformado ou civil. O local atrai a lei penal militar.",
+   "emOutrasPalavras": "Dentro do quartel, mesmo contra civil, o crime é militar."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Um militar de folga, à paisana, fora de qualquer lugar militar, comete um crime comum contra um civil, sem relação com a função. Em regra, o crime é:",
+   "opcoes": [
+    "militar, pois a vítima é civil.",
+    "militar, pois o autor é militar.",
+    "da competência da Justiça Militar da União.",
+    "comum, porque não se encaixa nas hipóteses do art. 9º, II."
+   ],
+   "correta": 3,
+   "resposta": "comum, porque não se encaixa nas hipóteses do art. 9º, II.",
+   "dica": "Procure o elo com o serviço, a farda ou o quartel.",
+   "explicacao": "Ser militar não basta para tornar o crime militar. É preciso uma das situações do art. 9º, como serviço, função, lugar sujeito à administração militar, manobras ou lesão ao patrimônio militar.",
+   "emOutrasPalavras": "Só ser militar não basta. Sem ligação com o serviço, a farda ou o quartel, o crime é comum."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Em qual situação o crime de um militar contra civil é militar mesmo fora de lugar sujeito à administração militar?",
+   "opcoes": [
+    "Sempre que a vítima é civil.",
+    "Quando praticado em serviço, em razão da função, em comissão de natureza militar ou em formatura (art. 9º, II, \"c\").",
+    "Quando o autor está de folga.",
+    "Apenas quando o crime é culposo."
+   ],
+   "correta": 1,
+   "resposta": "Quando praticado em serviço, em razão da função, em comissão de natureza militar ou em formatura (art. 9º, II, \"c\").",
+   "dica": "O elo com a atividade militar substitui o lugar.",
+   "explicacao": "A alínea \"c\" dispensa o local: o que atrai a lei penal militar é o fato ter ocorrido com o militar em serviço ou atuando em razão da função, em comissão militar ou em formatura.",
+   "emOutrasPalavras": "Se você estava trabalhando como militar, o crime é militar, mesmo na rua."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Um militar da ativa pratica crime contra o patrimônio sob administração militar. A alínea \"e\" do inciso II do art. 9º o enquadra como crime:",
+   "opcoes": [
+    "comum.",
+    "militar somente acima de certo valor.",
+    "militar.",
+    "disciplinar."
+   ],
+   "correta": 2,
+   "resposta": "militar.",
+   "dica": "O bem protegido é da instituição.",
+   "explicacao": "A alínea \"e\" protege o patrimônio e a ordem administrativa militar: o crime praticado por militar da ativa contra eles é militar. No Direito Penal Militar, a insignificância não se aplica à administração.",
+   "emOutrasPalavras": "Mexeu no patrimônio militar sendo da ativa: crime militar, e valor pequeno não livra."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Um civil furta bem pertencente à administração militar. Pelo art. 9º, III, esse crime é:",
+   "opcoes": [
+    "disciplinar, pois o bem é público.",
+    "comum, pois o autor é civil.",
+    "militar apenas se o civil estiver armado.",
+    "militar, pois atinge o patrimônio das instituições militares."
+   ],
+   "correta": 3,
+   "resposta": "militar, pois atinge o patrimônio das instituições militares.",
+   "dica": "O inciso III trata de crimes contra as instituições militares.",
+   "explicacao": "O inciso III alcança crimes de militar da reserva, reformado ou civil contra as instituições militares, como o patrimônio ou a ordem administrativa militar.",
+   "emOutrasPalavras": "Civil que lesa o patrimônio militar também comete crime militar."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "A Justiça Militar estadual julga civis?",
+   "opcoes": [
+    "Sim, em qualquer crime praticado dentro do quartel.",
+    "Sim, sempre que o crime for militar.",
+    "Não: ela julga os militares dos Estados nos crimes militares definidos em lei (CF, art. 125, § 4º).",
+    "Sim, mas só quando a vítima é militar."
+   ],
+   "correta": 2,
+   "resposta": "Não: ela julga os militares dos Estados nos crimes militares definidos em lei (CF, art. 125, § 4º).",
+   "dica": "A competência da Justiça Militar estadual tem como alvo o militar estadual.",
+   "explicacao": "O art. 125, § 4º, da Constituição atribui à Justiça Militar estadual o julgamento dos militares dos Estados nos crimes militares definidos em lei, sem alcançar civis.",
+   "emOutrasPalavras": "A Justiça Militar do estado julga militar do estado, e não civil."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Um militar comete homicídio doloso contra um civil, em situação que configura crime militar. Quem julga?",
+   "opcoes": [
+    "O Tribunal do Júri (art. 9º, § 1º, do CPM).",
+    "O Conselho de Justiça Militar.",
+    "A Corregedoria, por procedimento administrativo.",
+    "O comandante da unidade."
+   ],
+   "correta": 0,
+   "resposta": "O Tribunal do Júri (art. 9º, § 1º, do CPM).",
+   "dica": "A regra especial cuida dos crimes dolosos contra a vida de civil.",
+   "explicacao": "O § 1º do art. 9º reserva ao Tribunal do Júri os crimes dolosos contra a vida cometidos por militares contra civil. A Constituição (art. 125, § 4º) ressalva a competência do júri quando a vítima é civil.",
+   "emOutrasPalavras": "Matou civil de propósito: quem decide é o júri popular."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Um militar estadual mata dolosamente outro militar estadual, em situação que configura crime militar. Quem julga?",
+   "opcoes": [
+    "O comandante, por procedimento disciplinar.",
+    "A Justiça Militar, pois o júri só prevalece quando a vítima é civil.",
+    "O Tribunal do Júri, sempre que há homicídio doloso.",
+    "A Justiça comum, por ser crime contra a vida."
+   ],
+   "correta": 1,
+   "resposta": "A Justiça Militar, pois o júri só prevalece quando a vítima é civil.",
+   "dica": "O que decide é quem é a vítima.",
+   "explicacao": "A exceção do júri existe quando a vítima é civil. Se a vítima é militar, e o fato é crime militar, a competência permanece com a Justiça Militar.",
+   "emOutrasPalavras": "Vítima civil vai para o júri. Vítima militar fica na Justiça Militar."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Qual foi o efeito da Lei 13.491/2017 sobre o inciso II do art. 9º?",
+   "opcoes": [
+    "Passou a alcançar também crimes previstos na legislação penal comum e extravagante, quando preenchidas as hipóteses das alíneas (crime militar por extensão).",
+    "Limitou o inciso aos crimes do Livro II do CPM.",
+    "Extinguiu a Justiça Militar estadual.",
+    "Transferiu os crimes militares para a Justiça comum."
+   ],
+   "correta": 0,
+   "resposta": "Passou a alcançar também crimes previstos na legislação penal comum e extravagante, quando preenchidas as hipóteses das alíneas (crime militar por extensão).",
+   "dica": "O inciso passou a olhar também para a lei comum.",
+   "explicacao": "Depois da Lei 13.491/2017, crimes previstos na legislação penal, e não só os do CPM, são militares quando praticados nas situações do inciso II. É o chamado crime militar por extensão.",
+   "emOutrasPalavras": "Agora até crime de lei comum vira crime militar se for cometido nas situações do art. 9º."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Para a aplicação da lei penal militar, o militar da reserva ou reformado, quando empregado na administração militar, é:",
+   "opcoes": [
+    "sujeito apenas ao regulamento disciplinar.",
+    "tratado sempre como civil.",
+    "isento da lei penal militar.",
+    "equiparado ao militar da ativa (art. 12)."
+   ],
+   "correta": 3,
+   "resposta": "equiparado ao militar da ativa (art. 12).",
+   "dica": "O vínculo com a administração militar muda o tratamento.",
+   "explicacao": "O art. 12 equipara ao militar da ativa o da reserva ou reformado empregado na administração militar, para fins da lei penal militar. O vínculo com a administração é o que justifica a equiparação.",
+   "emOutrasPalavras": "Quem está na reserva, mas trabalha na administração militar, responde como se fosse da ativa."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "O art. 19 do CPM esclarece que o Código:",
+   "opcoes": [
+    "substitui os regulamentos disciplinares.",
+    "não abrange as infrações dos regulamentos disciplinares.",
+    "pune apenas oficiais.",
+    "só se aplica em tempo de guerra."
+   ],
+   "correta": 1,
+   "resposta": "não abrange as infrações dos regulamentos disciplinares.",
+   "dica": "Crime e transgressão são esferas diferentes.",
+   "explicacao": "O art. 19 separa o crime militar da infração disciplinar: as infrações dos regulamentos disciplinares são tratadas por regime próprio, e não pelo CPM.",
+   "emOutrasPalavras": "Transgressão disciplinar tem regulamento próprio. O CPM trata de crime."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Pelo art. 5º do CPM, considera-se praticado o crime no momento:",
+   "opcoes": [
+    "da sentença.",
+    "da denúncia.",
+    "da ação ou da omissão, ainda que outro seja o do resultado.",
+    "do resultado, e não da conduta."
+   ],
+   "correta": 2,
+   "resposta": "da ação ou da omissão, ainda que outro seja o do resultado.",
+   "dica": "É a teoria da atividade.",
+   "explicacao": "O art. 5º adota a teoria da atividade: o tempo do crime é o da conduta, e não o do resultado. Isso importa para saber qual lei estava em vigor quando o fato ocorreu.",
+   "emOutrasPalavras": "Vale o dia em que a pessoa agiu, e não o dia em que o resultado apareceu."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Pelo art. 6º do CPM, qual é o lugar do crime?",
+   "opcoes": [
+    "Somente onde a conduta foi praticada.",
+    "Onde o autor reside.",
+    "Somente onde o resultado ocorreu.",
+    "Onde se praticou a ação ou omissão, no todo ou em parte, e também onde se produziu o resultado."
+   ],
+   "correta": 3,
+   "resposta": "Onde se praticou a ação ou omissão, no todo ou em parte, e também onde se produziu o resultado.",
+   "dica": "É a teoria da ubiquidade.",
+   "explicacao": "O art. 6º adota a teoria da ubiquidade: tanto o lugar da conduta quanto o do resultado são considerados lugar do crime.",
+   "emOutrasPalavras": "Conta o lugar onde a pessoa agiu e também onde o resultado apareceu."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Art. 9º e aplicação da lei militar",
+   "enunciado": "Em tempo de guerra, as penas previstas para o tempo de paz sofrem, pelo art. 20 do CPM:",
+   "opcoes": [
+    "aumento de um terço.",
+    "aumento pela metade.",
+    "aumento do dobro.",
+    "nenhuma alteração."
+   ],
+   "correta": 0,
+   "resposta": "aumento de um terço.",
+   "dica": "O aumento é uma fração pequena.",
+   "explicacao": "O art. 20 prevê que, em tempo de guerra, as penas do tempo de paz são aumentadas de um terço. A guerra eleva a gravidade da quebra de disciplina.",
+   "emOutrasPalavras": "Na guerra, as penas ficam mais pesadas: um terço a mais."
   }
  ]
 };

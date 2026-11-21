@@ -10,7 +10,7 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 
 ## Regras fixas
 1. **Cadastro único.** Toda matéria nova entra em `assets/materias.js`. Não criar página de matéria à mão.
-2. **Motor genérico.** `assets/quiz.js` e `assets/quiz.css` servem a todas as matérias. Não criar motor de quiz por matéria. Mudanças de visual valem para todas.
+2. **Motor genérico.** `assets/quiz.js` e `assets/quiz.css` servem a todas as matérias. Não criar motor de quiz por matéria. Mudanças de visual valem para todas. Questões sem figura usam enunciado em cima e alternativas embaixo (classe `sem-fig`).
 3. **Dados separados.** O banco de questões vai em `data/<id>.js`, no formato `window.QUIZ_DATA = {id, titulo, figuras, questoes}`.
 4. **Cada questão tem:** `tipo` (`escolha` ou `texto`), `assunto`, `enunciado`, `resposta`, `dica`, `explicacao`, `emOutrasPalavras`. Em questões de escolha, `opcoes` e `correta` (índice). Em questões de texto, `aceitos` (lista de respostas aceitas).
 5. **Textos das questões:**
@@ -41,7 +41,7 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 - **Salvamento Veicular:** resumo em HTML e PDF. Sem quiz.
 - **EPR (Equipamento de Proteção Respiratória):** quiz com 50 questões e arquivo offline. Sem resumo.
 - **Espaço Confinado e Silos:** resumo em PDF. Sem quiz.
-- **Direito Penal e Penal Militar:** resumo em HTML e PDF (`resumo/direito-penal.*`) e quiz com 109 questões (4 de texto) e arquivo offline. Prazos do IPM (CPPM art. 20) vieram de fora do material enviado e merecem confirmação.
+- **Direito Penal e Penal Militar:** resumo em HTML e PDF (`resumo/direito-penal.*`) e quiz com 126 questões (4 de texto, 17 sobre o art. 9º e a aplicação da lei militar) e arquivo offline. Prazos do IPM (CPPM art. 20) vieram de fora do material enviado e merecem confirmação.
 - **Direito Disciplinar:** cadastrada como "em breve", sem resumo e sem quiz. Aguardando o material.
 
 ## Pendências

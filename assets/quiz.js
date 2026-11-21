@@ -204,7 +204,7 @@
     var q = D.questoes[di];
     var resp = respondida(di);
     var total = ordem.length, ultima = pos === total - 1;
-    var h = '<div class="qgrid' + (resp ? ' resp' : '') + '"><section class="qleft">';
+    var h = '<div class="qgrid' + (resp ? ' resp' : '') + (q.alvo ? '' : ' sem-fig') + '"><section class="qleft">';
     h += '<span class="badge">' + esc(q.assunto) + '</span>';
     if (q.alvo) {
       h += '<div class="figwrap"><div class="figbox ' + (q.alvo.fig === 'f1' ? 'grande' : 'pequena') + '">' + figuraSVG(q.alvo, false) + '</div>' +
