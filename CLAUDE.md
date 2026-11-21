@@ -12,7 +12,7 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 1. **Cadastro único.** Toda matéria nova entra em `assets/materias.js`. Não criar página de matéria à mão.
 2. **Motor genérico.** `assets/quiz.js` e `assets/quiz.css` servem a todas as matérias. Não criar motor de quiz por matéria. Mudanças de visual valem para todas. Questões sem figura usam enunciado em cima e alternativas embaixo (classe `sem-fig`).
 3. **Dados separados.** O banco de questões vai em `data/<id>.js`, no formato `window.QUIZ_DATA = {id, titulo, figuras, questoes}`.
-4. **Cada questão tem:** `tipo` (`escolha` ou `texto`), `assunto`, `enunciado`, `resposta`, `dica`, `explicacao`, `emOutrasPalavras`. Em questões de escolha, `opcoes` e `correta` (índice). Em questões de texto, `aceitos` (lista de respostas aceitas).
+4. **Cada questão tem:** `tipo`, `assunto`, `enunciado`, `resposta`, `dica`, `explicacao`, `emOutrasPalavras`. **Só criar questões objetivas** (`tipo: "escolha"`, com `opcoes` e `correta`, o índice). **Nunca criar questões de escrever** (`tipo: "texto"`): o usuário não quer digitar respostas. Se for útil, pode haver verdadeiro ou falso, como questão de escolha. (O motor ainda aceita `texto` por causa do quiz antigo de EPR, mas não usar em matérias novas.)
 5. **Textos das questões:**
    - `dica` ajuda a chegar à resposta, mas **não a entrega**.
    - `explicacao` é técnica e fundamentada no material enviado.
@@ -44,7 +44,7 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 - **Salvamento Veicular:** resumo em HTML e PDF. Sem quiz.
 - **EPR (Equipamento de Proteção Respiratória):** quiz com 50 questões e arquivo offline. Sem resumo.
 - **Espaço Confinado e Silos:** resumo em PDF. Sem quiz.
-- **Direito Penal e Penal Militar:** resumo em HTML e PDF (`resumo/direito-penal.*`) e quiz com 126 questões (4 de texto, 17 sobre o art. 9º e a aplicação da lei militar; alternativas reequilibradas) e arquivo offline. Prazos do IPM (CPPM art. 20) vieram de fora do material enviado e merecem confirmação.
+- **Direito Penal e Penal Militar:** resumo em HTML e PDF (`resumo/direito-penal.*`) e quiz com 126 questões, todas objetivas (17 sobre o art. 9º e a aplicação da lei militar; alternativas reequilibradas) e arquivo offline. Prazos do IPM (CPPM art. 20) vieram de fora do material enviado e merecem confirmação.
 - **Direito Disciplinar:** cadastrada como "em breve", sem resumo e sem quiz. Aguardando o material.
 
 ## Pendências
