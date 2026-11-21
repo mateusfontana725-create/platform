@@ -19,6 +19,9 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
    - `emOutrasPalavras` é a mesma ideia, mais simples e informal.
    - **Nunca repetir as alternativas** nas explicações. Explicar o conceito e o motivo.
    - Priorizar o aprendizado, não a memorização.
+   - **Alternativas equilibradas (obrigatório).** A alternativa correta **não pode ser sempre a mais longa**. As quatro alternativas devem ter tamanho e nível de detalhe parecidos, e as erradas precisam ser plausíveis (mesmo vocabulário e mesmo tipo de afirmação). A correta deve ser a maior em no máximo 35% das questões, e em algumas deve ser a mais curta ou a do meio. Não deixe a correta com ressalvas e detalhes que as erradas não têm.
+   - **Posição da correta distribuída.** Misturar A, B, C e D de forma equilibrada (cada letra entre 18% e 32%), sem a mesma letra 3 vezes seguidas no arquivo. Numa mesma questão, não repetir o padrão "a correta é a última".
+   - Conferir com `node tools/checar-questoes.js <id>` antes de publicar. Se der ✗, reescreva as alternativas.
 6. **Figuras com seta:** a imagem vai em `data/img/<id>-<nome>.jpg`. O alvo é `{fig, s:[x,y], t:[x,y]}`, em que `s` é o início da seta e `t` a ponta, nas coordenadas da figura original. Peças muito próximas usam `vista:[x,y,w,h]` para dar zoom.
 7. **Resumo:** HTML em `resumo/<id>.html`, usando o mesmo cabeçalho e a mesma trilha das outras páginas. Usar pouca tabela (prefira listas e blocos curtos). **Cada seção termina com duas explicações:** uma "Explicação" técnica, baseada na lei ou no material, e outra "Em outras palavras", simples e informal. As duas ficam em cores diferentes (azul e laranja). Se o material vier em PDF, o resumo é o próprio PDF em `resumo/<id>.pdf`.
 8. **Offline (obrigatório a cada matéria com quiz).** Rodar `node tools/gerar-offline.js <id>`. Isso cria `offline/<id>-quiz.html`, um arquivo único que abre sem internet. Não editar esse arquivo à mão.
@@ -32,7 +35,7 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 3. Criar `data/<id>.js` com as questões. Para figuras, colocar as imagens em `data/img/` e apontar `figuras` para elas.
 4. Adicionar a entrada em `assets/materias.js`: `id`, `nome`, `sigla` (até 4 letras), `descricao` (uma linha), `cor` (hexadecimal), `resumo`, `resumoPdf`, `quiz`, `quizOffline`.
 5. Gerar o offline: `node tools/gerar-offline.js <id>`.
-6. Testar: `node tools/testar-telas.js <id>` e `node tools/testar-telas.js <id> --offline`. Requer `python3 -m http.server 8765` na pasta do projeto e `playwright` disponível.
+6. Testar: `node tools/checar-questoes.js <id>` (equilíbrio das alternativas), `node tools/testar-telas.js <id>` e `node tools/testar-telas.js <id> --offline`. Requer `python3 -m http.server 8765` na pasta do projeto e `playwright` disponível.
 7. Conferir o início: `index.html` lista a matéria, com os chips certos.
 8. Commit em `main`, com a mensagem em português explicando o que entrou. Antes de enviar: `git pull --rebase origin main`, depois `git push origin HEAD:main`.
 9. Ao final, responder de forma curta: o que entrou, quantas questões, o que ficou em branco (resumo ou quiz "em breve") e o link do arquivo offline.
@@ -41,7 +44,7 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 - **Salvamento Veicular:** resumo em HTML e PDF. Sem quiz.
 - **EPR (Equipamento de Proteção Respiratória):** quiz com 50 questões e arquivo offline. Sem resumo.
 - **Espaço Confinado e Silos:** resumo em PDF. Sem quiz.
-- **Direito Penal e Penal Militar:** resumo em HTML e PDF (`resumo/direito-penal.*`) e quiz com 126 questões (4 de texto, 17 sobre o art. 9º e a aplicação da lei militar) e arquivo offline. Prazos do IPM (CPPM art. 20) vieram de fora do material enviado e merecem confirmação.
+- **Direito Penal e Penal Militar:** resumo em HTML e PDF (`resumo/direito-penal.*`) e quiz com 126 questões (4 de texto, 17 sobre o art. 9º e a aplicação da lei militar; alternativas reequilibradas) e arquivo offline. Prazos do IPM (CPPM art. 20) vieram de fora do material enviado e merecem confirmação.
 - **Direito Disciplinar:** cadastrada como "em breve", sem resumo e sem quiz. Aguardando o material.
 
 ## Pendências
@@ -52,3 +55,4 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 - `README.md`: visão geral da estrutura.
 - `tools/gerar-offline.js`: gera o `.html` offline.
 - `tools/testar-telas.js`: testa o quiz em vários tamanhos de tela.
+- `tools/checar-questoes.js`: confere o tamanho e a posição das alternativas corretas.
