@@ -10,7 +10,7 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 
 ## Regras fixas
 1. **Cadastro único.** Toda matéria nova entra em `assets/materias.js`. Não criar página de matéria à mão.
-2. **Motor genérico.** `assets/quiz.js` e `assets/quiz.css` servem a todas as matérias. Não criar motor de quiz por matéria. Mudanças de visual valem para todas. Questões sem figura usam enunciado em cima e alternativas embaixo (classe `sem-fig`).
+2. **Motor genérico.** `assets/quiz.js` e `assets/quiz.css` servem a todas as matérias. Não criar motor de quiz por matéria. Mudanças de visual valem para todas. Questões sem figura usam enunciado em cima e alternativas embaixo (classe `sem-fig`). **As alternativas são sempre uma lista vertical (A, B, C, D, uma embaixo da outra)**, em qualquer tela; nunca em duas colunas. Depois de responder, a lista continua visível: a correta fica verde, a marcada errada fica vermelha e as outras ficam apagadas (somem sozinhas se faltar altura).
 3. **Dados separados.** O banco de questões vai em `data/<id>.js`, no formato `window.QUIZ_DATA = {id, titulo, figuras, questoes}`.
 4. **Cada questão tem:** `tipo`, `assunto`, `enunciado`, `resposta`, `dica`, `explicacao`, `emOutrasPalavras`. **Só criar questões objetivas** (`tipo: "escolha"`, com `opcoes` e `correta`, o índice). **Nunca criar questões de escrever** (`tipo: "texto"`): o usuário não quer digitar respostas. Se for útil, pode haver verdadeiro ou falso, como questão de escolha. (O motor ainda aceita `texto` por causa do quiz antigo de EPR, mas não usar em matérias novas.)
 5. **Textos das questões:**
@@ -50,6 +50,9 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 ## Pendências
 - Batente do quiz de EPR: o usuário vai enviar um vídeo ou marcações de tempo. O trabalho vai para um branch, não para `main`.
 - Quizzes antigos (SCI, Afogamento, SCIP, APH, Espaço Confinado e Silos) continuam no histórico do Git. Só migrar quando o usuário pedir.
+
+## Visual
+- Paleta definida em `assets/estudos.css` (variáveis em `:root`, com modo escuro): fundo neutro claro, cabeçalho grafite, cor principal petróleo, destaque âmbar. A cor de cada matéria (`cor`) aparece só em detalhes (selo, faixa do topo, ícones).
 
 ## Arquivos de apoio
 - `README.md`: visão geral da estrutura.

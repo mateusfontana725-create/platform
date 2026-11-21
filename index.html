@@ -13,13 +13,18 @@
     <a class="brand" href="index.html"><span class="logo">EF</span><span>Estudos Fontana</span></a>
   </div></header>
 
-  <section class="hero" style="margin-top:20px">
-    <h1>Estudos Fontana</h1>
-    <p>Escolha uma matéria, leia o resumo e teste o que aprendeu no quiz. Cada questão tem uma dica e duas explicações, uma técnica e outra mais simples.</p>
+  <section class="hero">
+    <p class="eyebrow">Plataforma de estudos</p>
+    <h1>O que vamos estudar hoje?</h1>
+    <p class="longo">Escolha uma matéria, leia o resumo e treine no quiz. Cada questão traz dica, correção na hora e duas explicações: uma técnica e outra em palavras simples.</p>
+    <div class="hero-stats" id="stats"></div>
   </section>
 
-  <h2 class="section-title">Matérias</h2>
-  <input type="search" id="busca" class="busca" placeholder="Buscar matéria (nome, sigla ou assunto)" aria-label="Buscar matéria" autocomplete="off">
+  <h2 class="section-title">Matérias <span class="count" id="conta"></span></h2>
+  <div class="busca-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input type="search" id="busca" class="busca" placeholder="Buscar matéria por nome, sigla ou assunto" aria-label="Buscar matéria" autocomplete="off">
+  </div>
   <div class="grid" id="lista"></div>
   <p class="muted" id="vazio" hidden style="margin-top:14px">Nenhuma matéria encontrada.</p>
 </div>
@@ -30,15 +35,16 @@
   var lista = document.getElementById('lista');
   var vazio = document.getElementById('vazio');
   var busca = document.getElementById('busca');
+  var conta = document.getElementById('conta');
   // as mais recentes (últimas do registro) aparecem primeiro
   var mats = (window.MATERIAS || []).slice().reverse();
   function norm(t) { return String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); }
   function card(m) {
     var resumo = m.resumo ? '<span class="chip on">Resumo</span>' : '<span class="chip off">Resumo em breve</span>';
     var quiz = m.quiz ? '<span class="chip on">Quiz</span>' : '<span class="chip off">Quiz em breve</span>';
-    return '<a class="card" href="materia.html?m=' + encodeURIComponent(m.id) + '" style="--cor:' + m.cor + '">' +
-      '<div class="sigla">' + m.sigla + '</div>' +
-      '<h2>' + m.nome + '</h2>' +
+    return '<a class="card' + (m.resumo || m.quiz ? '' : ' embreve') + '" href="materia.html?m=' + encodeURIComponent(m.id) + '" style="--cor:' + m.cor + '">' +
+      '<div class="topo"><div class="sigla">' + m.sigla + '</div>' +
+      '<h2>' + m.nome + '</h2><span class="seta" aria-hidden="true">›</span></div>' +
       '<p>' + m.descricao + '</p>' +
       '<div class="chips">' + resumo + quiz + '</div>' +
       '</a>';
@@ -50,6 +56,7 @@
       return termos.every(function (t) { return alvo.indexOf(t) >= 0; });
     });
     lista.innerHTML = vis.map(card).join('');
+    conta.textContent = termos.length ? vis.length + ' de ' + mats.length : mats.length + ' no total';
     vazio.hidden = vis.length > 0;
   }
   if (!mats.length) {
@@ -57,6 +64,9 @@
     lista.innerHTML = '<div class="panel muted">Nenhuma matéria cadastrada ainda.</div>';
     return;
   }
+  var nRes = mats.filter(function (m) { return m.resumo; }).length;
+  var nQuiz = mats.filter(function (m) { return m.quiz; }).length;
+  document.getElementById('stats').innerHTML = '<span><b>' + mats.length + '</b> matérias</span><span><b>' + nRes + '</b> com resumo</span><span><b>' + nQuiz + '</b> com quiz</span>';
   busca.addEventListener('input', mostra);
   mostra();
 })();

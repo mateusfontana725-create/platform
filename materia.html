@@ -13,9 +13,10 @@
     <a class="nav-link" href="index.html">Todas as matérias</a>
   </div></header>
 
-  <nav class="crumbs" style="margin-top:18px" aria-label="Trilha"><a href="index.html">Início</a><span class="sep">›</span><span id="crumb-nome">Matéria</span></nav>
+  <nav class="crumbs" aria-label="Trilha"><a href="index.html">Início</a><span class="sep">›</span><span id="crumb-nome">Matéria</span></nav>
 
   <section class="hero" id="hero">
+    <div class="hero-sigla" id="sigla" hidden></div>
     <h1 id="titulo">Matéria</h1>
     <p id="descricao"></p>
   </section>
@@ -42,20 +43,25 @@
   document.getElementById('titulo').textContent = m.nome;
   document.getElementById('descricao').textContent = m.descricao;
   document.getElementById('crumb-nome').textContent = m.nome;
-  hero.style.background = 'linear-gradient(135deg,' + m.cor + ',' + m.cor + 'cc)';
+  document.body.style.setProperty('--cor', m.cor);
+  var sg = document.getElementById('sigla'); sg.textContent = m.sigla; sg.hidden = false;
+  var ICO = {
+    resumo: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h6M8 11h6"/></svg>',
+    quiz: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m8 12 3 3 5-6"/></svg>'
+  };
 
   function modo(href, ico, titulo, texto, ok, emBreve, arquivo, rotuloBaixar) {
     var card = ok
-      ? '<a class="mode" href="' + href + '"><div class="ico">' + ico + '</div><h2>' + titulo + '</h2><p>' + texto + '</p></a>'
+      ? '<a class="mode" href="' + href + '"><div class="ico">' + ico + '</div><h2>' + titulo + '</h2><p>' + texto + '</p><span class="ir">' + (ico === ICO.quiz ? 'Começar quiz' : 'Abrir resumo') + ' →</span></a>'
       : '<div class="mode off" aria-disabled="true"><div class="ico">' + ico + '</div><h2>' + titulo + '</h2><p>' + emBreve + '</p></div>';
     var baixar = ok && arquivo
-      ? '<a class="btn dl" href="' + arquivo + '" download>⬇ ' + rotuloBaixar + '</a>'
+      ? '<a class="btn dl" href="' + arquivo + '" download>↓ ' + rotuloBaixar + '</a>'
       : '';
     return '<div class="mbloco">' + card + baixar + '</div>';
   }
   document.getElementById('modos').innerHTML =
-    modo(m.resumo || '#', '📘', 'Resumo', 'Conteúdo organizado para estudar e revisar os principais pontos.', !!m.resumo, 'Resumo em breve.', m.resumoPdf, 'Baixar resumo (PDF)') +
-    modo('quiz.html?m=' + encodeURIComponent(m.id), '✅', 'Quiz', 'Questões com dica, correção imediata e duas explicações.', !!m.quiz, 'Quiz em breve.', m.quizOffline, 'Baixar quiz (.html)');
+    modo(m.resumo || '#', ICO.resumo, 'Resumo', 'Conteúdo organizado para estudar e revisar os principais pontos.', !!m.resumo, 'Resumo em breve.', m.resumoPdf, 'Baixar resumo (PDF)') +
+    modo('quiz.html?m=' + encodeURIComponent(m.id), ICO.quiz, 'Quiz', 'Questões com dica, correção imediata e duas explicações.', !!m.quiz, 'Quiz em breve.', m.quizOffline, 'Baixar quiz (.html)');
   if (m.resumo || m.quiz) {
     document.getElementById('dica-offline').hidden = false;
   }

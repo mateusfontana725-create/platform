@@ -5,325 +5,434 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Quiz · Equipamento de Proteção Respiratória · Estudos Fontana</title>
 <style>
-/* Estudos Fontana · estilos compartilhados */
+/* Estudos Fontana · estilos compartilhados
+ * Paleta: fundo claro neutro, tinta grafite, cor principal petróleo, destaque âmbar.
+ * Cada matéria entra com a própria cor (--cor) só em detalhes (selo, faixa, ícones). */
 :root{
-  --bg:#f5f7fb; --surface:#ffffff; --surface-2:#eef2f8; --fg:#0f172a; --muted:#5b6578;
-  --line:#dde3ee; --brand:#1e3a8a; --brand-2:#2748b8; --accent:#f59e0b;
-  --ok:#15803d; --ok-bg:#dcfce7; --bad:#b91c1c; --bad-bg:#fee2e2; --shadow:0 1px 2px rgba(15,23,42,.06),0 8px 24px rgba(15,23,42,.06);
-  --radius:16px; --radius-sm:10px;
+  --bg:#f3f4f1; --surface:#ffffff; --surface-2:#f0f1ed; --surface-3:#e6e8e3;
+  --fg:#1b1f23; --muted:#626a72; --line:#dfe2dc; --line-2:#cdd2cb;
+  --ink:#16202a; --ink-fg:#f4f6f3;
+  --brand:#0f5f63; --brand-2:#0b4a4d; --brand-soft:#e2efee; --brand-fg:#ffffff;
+  --accent:#d98a04; --accent-soft:#fdf1da;
+  --info:#1d4f91; --info-soft:#e8eff9;
+  --ok:#17803d; --ok-bg:#e3f4e8; --ok-line:#7cc493;
+  --bad:#b42318; --bad-bg:#fdecea; --bad-line:#eea39b;
+  --shadow:0 1px 2px rgba(22,32,42,.05),0 4px 16px rgba(22,32,42,.06);
+  --shadow-lg:0 2px 4px rgba(22,32,42,.06),0 12px 32px rgba(22,32,42,.10);
+  --radius:14px; --radius-sm:10px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#0b1220; --surface:#131c2e; --surface-2:#1a2640; --fg:#e7ecf6; --muted:#9aa6bd;
-    --line:#26324a; --brand:#7b96ff; --brand-2:#9bb0ff; --accent:#fbbf24;
-    --ok:#4ade80; --ok-bg:#12321f; --bad:#f87171; --bad-bg:#3a1717; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+    --bg:#111518; --surface:#192024; --surface-2:#1f272c; --surface-3:#28323a;
+    --fg:#e8ece9; --muted:#9aa5ab; --line:#2b353b; --line-2:#3a464d;
+    --ink:#0b0f12; --ink-fg:#eef2ef;
+    --brand:#4fb7b4; --brand-2:#6fcac6; --brand-soft:#173335; --brand-fg:#06201f;
+    --accent:#f2b23a; --accent-soft:#3a2c10;
+    --info:#86b3f0; --info-soft:#18263a;
+    --ok:#5fd18a; --ok-bg:#12301e; --ok-line:#2f7a4a;
+    --bad:#ff8a7d; --bad-bg:#3a1915; --bad-line:#8a3a30;
+    --shadow:0 1px 2px rgba(0,0,0,.35),0 4px 16px rgba(0,0,0,.25);
+    --shadow-lg:0 2px 4px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.35);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#0b1220; --surface:#131c2e; --surface-2:#1a2640; --fg:#e7ecf6; --muted:#9aa6bd;
-  --line:#26324a; --brand:#7b96ff; --brand-2:#9bb0ff; --accent:#fbbf24;
-  --ok:#4ade80; --ok-bg:#12321f; --bad:#f87171; --bad-bg:#3a1717; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  --bg:#111518; --surface:#192024; --surface-2:#1f272c; --surface-3:#28323a;
+  --fg:#e8ece9; --muted:#9aa5ab; --line:#2b353b; --line-2:#3a464d;
+  --ink:#0b0f12; --ink-fg:#eef2ef;
+  --brand:#4fb7b4; --brand-2:#6fcac6; --brand-soft:#173335; --brand-fg:#06201f;
+  --accent:#f2b23a; --accent-soft:#3a2c10;
+  --info:#86b3f0; --info-soft:#18263a;
+  --ok:#5fd18a; --ok-bg:#12301e; --ok-line:#2f7a4a;
+  --bad:#ff8a7d; --bad-bg:#3a1915; --bad-line:#8a3a30;
+  --shadow:0 1px 2px rgba(0,0,0,.35),0 4px 16px rgba(0,0,0,.25);
+  --shadow-lg:0 2px 4px rgba(0,0,0,.4),0 12px 32px rgba(0,0,0,.35);
   color-scheme: dark;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 var(--font);
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
-  padding-bottom:env(safe-area-inset-bottom,0px);overflow-x:hidden}
+  padding-bottom:env(safe-area-inset-bottom,0px);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto}
 a{color:var(--brand)}
-h1,h2,h3{line-height:1.25;text-wrap:balance;margin:0 0 .5em}
-h1{font-size:clamp(1.6rem,4vw,2.2rem)} h2{font-size:1.25rem} h3{font-size:1.05rem}
+h1,h2,h3{line-height:1.2;text-wrap:balance;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(1.55rem,4vw,2.1rem);letter-spacing:-.02em} h2{font-size:1.2rem} h3{font-size:1.05rem}
 p{margin:0 0 .9em}
-.wrap{max-width:980px;margin:0 auto;padding-top:20px;padding-bottom:40px;min-width:0}
+.wrap{max-width:1040px;margin:0 auto;padding-top:0;padding-bottom:48px;min-width:0}
 
-/* cabeçalho */
-.site-header{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line);
-  padding-top:env(safe-area-inset-top,0px);margin-left:calc(-1*max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(16px,env(safe-area-inset-right,0px)));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.site-header .in{max-width:980px;margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-weight:800;letter-spacing:-.01em;min-width:0}
-.brand .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#fff;font-size:15px;flex:0 0 auto}
+/* cabeçalho: faixa grafite de ponta a ponta */
+.site-header{position:sticky;top:0;z-index:20;background:var(--ink);color:var(--ink-fg);
+  padding-top:env(safe-area-inset-top,0px);
+  margin-left:calc(-1*max(16px,env(safe-area-inset-left,0px)));margin-right:calc(-1*max(16px,env(safe-area-inset-right,0px)));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+/* pinta a faixa de ponta a ponta sem alargar a página */
+.site-header{box-shadow:0 0 0 100vmax var(--ink);clip-path:inset(0 -100vmax)}
+.site-header .in{max-width:1040px;margin:0 auto;height:58px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font-weight:750;letter-spacing:-.01em;min-width:0;font-size:16.5px}
+.brand .logo{width:32px;height:32px;border-radius:9px;background:var(--accent);display:grid;place-items:center;color:#1b1300;font-size:13px;font-weight:850;flex:0 0 auto;letter-spacing:.02em}
 .brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.nav-link{font-size:14px;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
-.nav-link:hover{color:var(--fg)}
+.nav-link{font-size:14px;color:rgba(244,246,243,.82);text-decoration:none;padding:7px 12px;border-radius:9px;border:1px solid rgba(244,246,243,.18);white-space:nowrap;font-weight:600}
+.nav-link:hover{color:#fff;background:rgba(255,255,255,.08)}
 
 /* trilha */
-.crumbs{font-size:14px;color:var(--muted);margin:0 0 14px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.crumbs{font-size:14px;color:var(--muted);margin:18px 0 14px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .crumbs a{color:var(--muted);text-decoration:none}
 .crumbs a:hover{color:var(--fg);text-decoration:underline}
-.crumbs .sep{opacity:.5}
+.crumbs .sep{opacity:.45}
 
-/* blocos */
-.hero{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;border-radius:var(--radius);padding:clamp(22px,4vw,36px);margin-bottom:22px;box-shadow:var(--shadow)}
-.hero h1{color:#fff;margin-bottom:.35em}
-.hero p{margin:0;opacity:.92;max-width:60ch}
-.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;font-weight:700}
-.section-title{margin:26px 0 12px}
+/* topo das páginas */
+.hero{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(20px,4vw,34px);margin:20px 0 22px;box-shadow:var(--shadow);overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:var(--cor,var(--brand))}
+.hero h1{margin-bottom:.3em}
+.hero p{margin:0;color:var(--muted);max-width:62ch}
+.hero .hero-sigla{display:inline-grid;place-items:center;min-width:46px;height:46px;padding:0 10px;border-radius:12px;font-weight:850;font-size:15px;letter-spacing:.02em;
+  color:var(--cor,var(--brand));background:color-mix(in srgb,var(--cor,var(--brand)) 12%,var(--surface));margin-bottom:14px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:14px;color:var(--muted)}
+.hero-stats b{color:var(--fg);font-size:15px}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;font-weight:750}
+.section-title{margin:28px 0 12px;font-size:1.05rem;display:flex;align-items:baseline;gap:8px}
+.section-title .count{font-size:13px;color:var(--muted);font-weight:600}
 
-.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));min-width:0}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;min-width:0;position:relative;overflow:hidden}
-a.card:hover{border-color:var(--brand)}
-.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--cor,var(--brand))}
-.card .sigla{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-weight:800;color:#fff;background:var(--cor,var(--brand));font-size:14px;letter-spacing:.02em}
-.card h2,.card h3{font-size:1.08rem;margin:0}
-.card p{color:var(--muted);font-size:14.5px;margin:0}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
-.chip{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--surface-2);color:var(--muted);border:1px solid var(--line)}
-.chip.on{background:var(--ok-bg);color:var(--ok);border-color:transparent}
-.chip.off{opacity:.8}
+/* lista de matérias */
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));min-width:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;min-width:0;position:relative;transition:border-color .15s,box-shadow .15s,transform .15s}
+a.card:hover{border-color:var(--line-2);box-shadow:var(--shadow-lg);transform:translateY(-1px)}
+.card .topo{display:flex;align-items:center;gap:12px;min-width:0}
+.card .sigla{flex:0 0 auto;min-width:46px;height:46px;padding:0 8px;border-radius:12px;display:grid;place-items:center;font-weight:850;font-size:14px;letter-spacing:.02em;
+  color:var(--cor,var(--brand));background:color-mix(in srgb,var(--cor,var(--brand)) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--cor,var(--brand)) 22%,transparent)}
+.card h2,.card h3{font-size:1.06rem;margin:0;line-height:1.25}
+.card p{color:var(--muted);font-size:14.5px;margin:0;line-height:1.45}
+.card .seta{margin-left:auto;color:var(--muted);font-size:18px;flex:0 0 auto}
+.card.embreve{opacity:.72}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:650;padding:4px 10px;border-radius:999px;background:var(--surface-2);color:var(--muted);border:1px solid var(--line)}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--line-2)}
+.chip.on{background:var(--brand-soft);color:var(--brand);border-color:transparent}
+.chip.on::before{background:var(--brand)}
+.chip.off{opacity:.9}
 
+/* botões */
 .btns{display:flex;flex-wrap:wrap;gap:10px}
-.btn{appearance:none;border:1px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-weight:700;padding:11px 18px;border-radius:999px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;justify-content:center}
-.btn:hover{border-color:var(--brand)}
-.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
-.btn.primary:hover{filter:brightness(1.08)}
-.btn[disabled],.btn.disabled{opacity:.5;cursor:not-allowed;pointer-events:none}
-.btn:focus-visible,.card:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn{appearance:none;border:1px solid var(--line-2);background:var(--surface);color:var(--fg);font:inherit;font-weight:650;font-size:15px;padding:10px 18px;border-radius:var(--radius-sm);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;justify-content:center;transition:background .15s,border-color .15s,filter .15s}
+.btn:hover{border-color:var(--fg);background:var(--surface-2)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:var(--brand-fg)}
+.btn.primary:hover{background:var(--brand-2);border-color:var(--brand-2)}
+.btn[disabled],.btn.disabled{opacity:.45;cursor:not-allowed;pointer-events:none}
+.btn:focus-visible,.card:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(16px,3vw,24px);min-width:0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:clamp(18px,3vw,28px);min-width:0}
 .muted{color:var(--muted)}
 .small{font-size:14px}
 
 /* seleção de modo na matéria */
-.mode{display:flex;flex-direction:column;gap:10px;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;min-width:0}
-a.mode:hover{border-color:var(--brand)}
-.mode .ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--surface-2);font-size:22px}
-.mode h2{margin:0;font-size:1.15rem}
+.modos{display:grid;gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.mbloco{display:flex;flex-direction:column;gap:8px;min-width:0}
+.mbloco .mode{flex:1}
+.mode{display:flex;flex-direction:column;gap:8px;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;min-width:0;transition:border-color .15s,box-shadow .15s}
+a.mode:hover{border-color:var(--line-2);box-shadow:var(--shadow-lg)}
+.mode .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--cor,var(--brand)) 12%,var(--surface));color:var(--cor,var(--brand))}
+.mode .ico svg{width:22px;height:22px}
+.mode h2{margin:4px 0 0;font-size:1.15rem}
 .mode p{margin:0;color:var(--muted);font-size:14.5px}
-.mode.off{opacity:.6}
+.mode .ir{margin-top:auto;padding-top:6px;font-weight:700;font-size:14.5px;color:var(--brand)}
+.mode.off{opacity:.6;box-shadow:none;background:var(--surface-2)}
+.btn.dl{font-size:14px;min-height:42px;padding:8px 12px;width:100%;background:transparent}
 
-/* resumo: tabelas e colunas que empilham no celular */
+/* busca */
+.busca-box{position:relative;margin:0 0 14px}
+.busca-box svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted);pointer-events:none}
+.busca{width:100%;box-sizing:border-box;margin:0;padding:12px 14px 12px 42px;font:inherit;font-size:16px;color:var(--fg);background:var(--surface);border:1px solid var(--line-2);border-radius:var(--radius-sm);min-width:0}
+.busca::placeholder{color:var(--muted)}
+.busca:focus{outline:3px solid color-mix(in srgb,var(--brand) 35%,transparent);outline-offset:0;border-color:var(--brand)}
+
+/* resumo */
 .resumo-wrap{max-width:900px;margin:0 auto}
 .resumo-wrap .top{border-radius:var(--radius) var(--radius) 0 0}
 .resumo-wrap .tab-wrap{overflow-x:auto}
+
+/* ---------- telas pequenas ---------- */
 @media (max-width:640px){
   .site-header .in{height:52px}
-  .brand .logo{width:30px;height:30px}
+  .brand{font-size:15.5px}
+  .brand .logo{width:28px;height:28px;font-size:12px}
   .nav-link{padding:6px 10px;font-size:13px}
-}
-
-/* ---------- adaptação a telas pequenas e baixas ---------- */
-.modos{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
-@media (max-width:640px){
-  .hero{padding:18px;margin-bottom:14px}
+  .hero{padding:18px;margin:14px 0 14px}
   .hero p{font-size:14.5px}
-  .section-title{margin:16px 0 10px}
-  .wrap{padding-top:12px;padding-bottom:24px}
-  .card{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:12px;row-gap:4px;padding:14px}
-  .card .sigla{grid-row:1 / span 3;align-self:start}
-  .card h2,.card p,.card .chips{grid-column:2}
-  .card .chips{margin-top:4px}
+  .hero .hero-sigla{min-width:40px;height:40px;margin-bottom:10px;font-size:14px}
+  .section-title{margin:18px 0 10px}
+  .crumbs{margin:14px 0 10px}
+  .card{padding:14px;gap:8px}
+  .card .sigla{min-width:42px;height:42px;font-size:13px}
   .mode{padding:14px;gap:6px}
-  .mode .ico{width:40px;height:40px;font-size:19px}
+  .mode .ico{width:38px;height:38px}
   .mode h2{font-size:1.05rem}
   .mode p{font-size:13.5px}
 }
 @media (max-width:360px){ .modos{grid-template-columns:1fr} }
-@media (max-height:700px){ .hero p{display:none} }
+@media (max-height:700px){ .hero p.longo{display:none} }
 
-.mbloco{display:flex;flex-direction:column;gap:8px;min-width:0}
-.mbloco .mode{flex:1}
-.btn.dl{font-size:14px;min-height:42px;padding:8px 12px;width:100%}
-
-/* Motor de quiz do Estudos Fontana · layout que cabe na tela (celular, tablet e computador) */
-.progress{height:6px;background:var(--surface-2);border-radius:999px;overflow:hidden}
-.progress > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--brand-2));border-radius:999px;transition:width .35s ease}
+/* Motor de quiz do Estudos Fontana · layout que cabe na tela (celular, tablet e computador)
+ * Alternativas SEMPRE em lista vertical (A, B, C, D um embaixo do outro), em qualquer tamanho de tela. */
+.progress{height:6px;background:var(--surface-3);border-radius:999px;overflow:hidden}
+.progress > i{display:block;height:100%;width:0;background:var(--brand);border-radius:999px;transition:width .35s ease}
 
 /* ---------- modo quiz: ocupa a altura da tela, só o miolo rola se faltar espaço ---------- */
 body.modo-quiz{padding:0;overflow:hidden}
 body.modo-quiz .wrap{padding:0;max-width:none;margin:0}
-.qapp{height:100vh;height:100dvh;display:flex;flex-direction:column;max-width:1100px;margin:0 auto;background:var(--bg);
-  padding-top:env(safe-area-inset-top,0px)}
-.qhead{flex:0 0 auto;display:flex;align-items:center;gap:8px;padding:8px max(12px,env(safe-area-inset-left,0px)) 8px max(12px,env(safe-area-inset-left,0px));
-  background:var(--surface);border-bottom:1px solid var(--line)}
-.iconbtn{flex:0 0 auto;min-width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);
-  font:inherit;font-size:18px;font-weight:700;display:grid;place-items:center;cursor:pointer;text-decoration:none;padding:0 10px}
-.iconbtn.txt{font-size:14px}
-.iconbtn:hover{border-color:var(--brand)}
+.qapp{height:100vh;height:100dvh;display:flex;flex-direction:column;background:var(--bg);padding-top:env(safe-area-inset-top,0px)}
+.qhead{flex:0 0 auto;background:var(--ink);color:var(--ink-fg)}
+.qhead .in{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:9px max(12px,env(safe-area-inset-left,0px))}
+.iconbtn{flex:0 0 auto;min-width:40px;height:40px;border-radius:10px;border:1px solid rgba(244,246,243,.18);background:transparent;color:inherit;
+  font:inherit;font-size:15px;font-weight:700;display:grid;place-items:center;cursor:pointer;text-decoration:none;padding:0 10px}
+.iconbtn svg{width:20px;height:20px}
+.iconbtn.txt{font-size:14px;padding:0 12px}
+.iconbtn:hover{background:rgba(255,255,255,.08)}
 .qprog{flex:1;min-width:0}
-.qinfo{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--muted);margin-bottom:4px;white-space:nowrap}
-.qinfo b{color:var(--fg)}
-.qmain{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:10px max(14px,env(safe-area-inset-left,0px)) 10px max(14px,env(safe-area-inset-right,0px))}
-.qgrid{display:flex;flex-direction:column;gap:10px;min-height:100%}
-.qleft,.qright{min-width:0}
-.qfoot{flex:0 0 auto;display:flex;gap:10px;padding:10px max(14px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));
-  background:var(--surface);border-top:1px solid var(--line)}
-.qfoot .btn{flex:1 1 0;min-height:46px;padding:10px 12px}
-.qfoot .btn.primary{flex:1.4 1 0}
+.qinfo{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;margin-bottom:6px;white-space:nowrap;color:rgba(244,246,243,.75)}
+.qinfo b{color:#fff;font-size:14px}
+.qinfo .placar{display:flex;gap:10px}
+.qinfo .placar .c{color:#7fdc9f}
+.qinfo .placar .e{color:#ff9d92}
+.qhead .progress{background:rgba(255,255,255,.14)}
+.qhead .progress > i{background:var(--accent)}
 
-.badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--surface-2);color:var(--brand);border:1px solid var(--line);margin-bottom:8px}
+.qmain{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:14px max(14px,env(safe-area-inset-left,0px)) 14px max(14px,env(safe-area-inset-right,0px))}
+.qgrid{display:flex;flex-direction:column;gap:12px;min-height:100%;max-width:1000px;margin:0 auto}
+.qgrid.sem-fig{max-width:760px}
+.qleft,.qright{min-width:0}
+.qfoot{flex:0 0 auto;background:var(--surface);border-top:1px solid var(--line)}
+.qfoot .in{max-width:1000px;margin:0 auto;display:flex;gap:10px;padding:10px max(14px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px))}
+.qfoot .btn{flex:1 1 0;min-height:46px;padding:10px 12px}
+.qfoot .btn.primary{flex:1.5 1 0}
+
+/* cabeçalho da questão: assunto + botão de dica */
+.qmeta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.badge{display:inline-flex;align-items:center;gap:6px;min-width:0;font-size:11.5px;font-weight:750;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)}
+.badge::before{content:"";flex:0 0 auto;width:8px;height:8px;border-radius:2px;background:var(--cor,var(--brand))}
+.badge span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dicabtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);color:var(--fg);
+  font:inherit;font-weight:650;font-size:13.5px;cursor:pointer}
+.dicabtn svg{width:16px;height:16px;color:var(--accent)}
+.dicabtn:hover{border-color:var(--accent)}
+.dicabtn[aria-expanded="true"]{background:var(--accent-soft);border-color:var(--accent)}
+
+.enunc-row{display:block}
+.enunc{font-size:clamp(1.05rem,2.3vw,1.28rem);font-weight:650;margin:0;line-height:1.38;letter-spacing:-.005em;text-wrap:pretty}
+.dica{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:10px;padding:9px 12px;font-size:14.5px;line-height:1.4;margin-top:10px}
+.dica strong{color:color-mix(in srgb,var(--accent) 65%,var(--fg))}
 
 /* figura: altura acompanha a tela */
-.figwrap{text-align:center;margin-bottom:6px}
+.figwrap{text-align:center;margin-bottom:10px}
 .figbox{background:#fff;border-radius:12px;border:1px solid var(--line);overflow:hidden;height:clamp(110px,27dvh,340px);width:100%}
 .figbox svg{display:block;width:100%;height:100%}
-.figbtn{font:inherit;font-size:12.5px;font-weight:700;color:var(--brand);background:none;border:0;padding:4px 2px;cursor:pointer}
+.figbtn{font:inherit;font-size:12.5px;font-weight:650;color:var(--brand);background:none;border:0;padding:4px 2px;cursor:pointer}
 @keyframes pulso{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(2.6)}}
 .pulso{transform-box:fill-box;transform-origin:center;animation:pulso 1.6s ease-out infinite}
 
-.enunc-row{display:flex;align-items:flex-start;gap:10px}
-.enunc{font-size:clamp(1rem,2.4vw,1.2rem);font-weight:700;margin:2px 0 0;flex:1;min-width:0;line-height:1.3;text-wrap:balance}
-.dicabtn{flex:0 0 auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);color:var(--brand);font:inherit;font-weight:800;font-size:16px;cursor:pointer;display:grid;place-items:center}
-.dicabtn:hover{border-color:var(--brand)}
-.dicabtn[aria-expanded="true"]{background:var(--brand);color:#fff;border-color:var(--brand)}
-.dica{background:color-mix(in srgb,var(--accent) 16%,var(--surface));border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));border-radius:10px;padding:8px 12px;font-size:14px;margin-top:8px}
-
-/* alternativas */
-.opts{display:grid;gap:8px;grid-template-columns:1fr}
-.opt{appearance:none;display:flex;align-items:center;gap:10px;text-align:left;width:100%;background:var(--surface);color:var(--fg);border:1.5px solid var(--line);border-radius:12px;
-  padding:8px 12px;font:inherit;font-size:15px;line-height:1.3;cursor:pointer;min-height:46px}
-.opt:hover{border-color:var(--brand)}
-.opt:active{transform:scale(.99)}
-.opt .letra{flex:0 0 auto;width:28px;height:28px;border-radius:8px;background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:13px;color:var(--brand)}
-.opt .txt{min-width:0;overflow-wrap:anywhere}
+/* ---------- alternativas: lista vertical ---------- */
+.opts{display:flex;flex-direction:column;gap:8px;margin:0;padding:0;list-style:none}
+.opt{appearance:none;display:flex;align-items:center;gap:12px;text-align:left;width:100%;background:var(--surface);color:var(--fg);
+  border:1.5px solid var(--line);border-radius:12px;padding:10px 14px 10px 10px;font:inherit;font-size:15.5px;line-height:1.38;cursor:pointer;min-height:50px;
+  box-shadow:0 1px 1px rgba(22,32,42,.03);transition:border-color .12s,background .12s}
+.opt:hover:not([disabled]){border-color:var(--brand);background:color-mix(in srgb,var(--brand) 4%,var(--surface))}
+.opt:hover:not([disabled]) .letra{border-color:var(--brand);color:var(--brand)}
+.opt:active:not([disabled]){transform:scale(.995)}
+.opt .letra{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--surface-2);border:1.5px solid var(--line-2);display:grid;place-items:center;
+  font-weight:750;font-size:13.5px;color:var(--muted)}
+.opt .txt{min-width:0;flex:1;overflow-wrap:anywhere}
+.opt .marca{flex:0 0 auto;font-size:12px;font-weight:750;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
 .opt:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.opt[disabled]{cursor:default}
+/* depois de responder */
+.opt.certa{border-color:var(--ok);background:var(--ok-bg)}
+.opt.certa .letra{background:var(--ok);border-color:var(--ok);color:#fff}
+.opt.certa .marca{color:var(--ok)}
+.opt.errada{border-color:var(--bad);background:var(--bad-bg)}
+.opt.errada .letra{background:var(--bad);border-color:var(--bad);color:#fff}
+.opt.errada .marca{color:var(--bad)}
+.opt.apagada{opacity:.5;box-shadow:none}
 
-.txtform{display:flex;gap:8px;flex-wrap:wrap}
-.txtform input{flex:1 1 180px;min-width:0;font:inherit;font-size:16px;padding:11px 13px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg)}
-.txtform input:focus{outline:3px solid var(--accent);outline-offset:1px;border-color:var(--brand)}
-.txtform .btn{min-height:46px}
-
-/* feedback: no lugar das alternativas, depois de responder */
-.fb{padding:9px 12px;border-radius:12px;font-size:14.5px;line-height:1.35}
+/* feedback e explicações, abaixo das alternativas */
+.fb{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;font-size:15px;line-height:1.35;font-weight:650;margin-top:12px}
+.fb .ic{flex:0 0 auto;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:14px;font-weight:800}
 .fb.ok{background:var(--ok-bg);color:var(--ok)}
+.fb.ok .ic{background:var(--ok)}
 .fb.bad{background:var(--bad-bg);color:var(--bad)}
-.fb strong{font-size:15.5px}
-.fb .resp{color:var(--fg);margin-top:2px;overflow-wrap:anywhere}
-.tabs{display:flex;gap:6px;margin:10px 0 8px}
-.tabs button{flex:1;font:inherit;font-size:14px;font-weight:700;padding:9px 8px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer}
-.tabs button[aria-selected="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
-.exp{display:none;border-left:4px solid var(--brand);background:var(--surface-2);border-radius:0 12px 12px 0;padding:10px 12px;margin:0 0 8px}
+.fb.bad .ic{background:var(--bad)}
+.fb .sub{font-weight:500;color:var(--fg)}
+.tabs{display:flex;gap:4px;margin:12px 0 8px;padding:4px;background:var(--surface-3);border-radius:11px}
+.tabs button{flex:1;font:inherit;font-size:14px;font-weight:650;padding:8px;border-radius:8px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--surface);color:var(--fg);box-shadow:0 1px 3px rgba(22,32,42,.12)}
+.exps{display:grid;gap:8px}
+.exp{display:none;border-left:4px solid var(--info);background:var(--info-soft);border-radius:4px 12px 12px 4px;padding:10px 14px;margin:0}
 .exp.ativo{display:block}
-.exp h3{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--brand);margin:0 0 3px}
-.exp p{margin:0;font-size:15px;line-height:1.45}
-.exp.simples{border-left-color:var(--accent)}
+.exp h3{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--info);margin:0 0 3px}
+.exp p{margin:0;font-size:15px;line-height:1.5}
+.exp.simples{border-left-color:var(--accent);background:var(--accent-soft)}
 .exp.simples h3{color:color-mix(in srgb,var(--accent) 70%,var(--fg))}
 
-/* mapa de questões (painel) */
-.ov{position:fixed;inset:0;z-index:50;background:rgba(2,6,23,.9);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px}
+.txtform{display:flex;gap:8px;flex-wrap:wrap}
+.txtform input{flex:1 1 180px;min-width:0;font:inherit;font-size:16px;padding:11px 13px;border-radius:12px;border:1.5px solid var(--line-2);background:var(--surface);color:var(--fg)}
+.txtform input:focus{outline:3px solid color-mix(in srgb,var(--brand) 35%,transparent);outline-offset:0;border-color:var(--brand)}
+.txtform .btn{min-height:46px}
+.fb .resp{font-weight:500;color:var(--fg)}
+
+/* ---------- painéis sobrepostos (figura inteira, mapa) ---------- */
+.ov{position:fixed;inset:0;z-index:50;background:rgba(8,12,15,.82);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px}
 .ov .fechar{min-height:40px;padding:8px 14px}
 .ov .inner{width:min(100%,920px);max-height:80dvh;overflow:auto;border-radius:12px;background:#fff}
 .ov .inner svg{display:block;width:100%;height:auto}
 .ov .dicas{color:#cbd5e1;font-size:13px;margin-bottom:10px;text-align:center}
 .ov > .fechar:only-of-type{position:absolute;top:max(12px,env(safe-area-inset-top,0px));right:12px}
-.ov.sheet{align-items:center}
-.sheetbox{background:var(--surface);color:var(--fg);border-radius:16px;padding:14px;width:min(100%,560px);max-height:86dvh;overflow:auto}
-.sheethead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.sheetbox{background:var(--surface);color:var(--fg);border-radius:16px;padding:16px;width:min(100%,560px);max-height:86dvh;overflow:auto;box-shadow:var(--shadow-lg)}
+.sheethead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
 .mapagrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(44px,1fr));gap:6px}
-.mapagrid button{height:42px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-weight:700;font-size:14px;cursor:pointer}
-.mapagrid button.certo{background:var(--ok-bg);border-color:var(--ok);color:var(--ok)}
-.mapagrid button.errado{background:var(--bad-bg);border-color:var(--bad);color:var(--bad)}
+.mapagrid button{height:42px;border-radius:9px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-weight:650;font-size:14px;cursor:pointer}
+.mapagrid button.certo{background:var(--ok-bg);border-color:var(--ok-line);color:var(--ok)}
+.mapagrid button.errado{background:var(--bad-bg);border-color:var(--bad-line);color:var(--bad)}
 .mapagrid button.pulada{border-style:dashed;border-color:var(--accent)}
-.mapagrid button.atual{box-shadow:0 0 0 3px var(--accent)}
-.legenda{font-size:12.5px;color:var(--muted);display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+.mapagrid button.atual{box-shadow:0 0 0 3px var(--brand)}
+.legenda{font-size:12.5px;color:var(--muted);display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
+.legenda i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px;border:1.5px solid var(--line-2)}
+.legenda .l-c{background:var(--ok-bg);border-color:var(--ok-line)}
+.legenda .l-e{background:var(--bad-bg);border-color:var(--bad-line)}
+.legenda .l-p{border-style:dashed;border-color:var(--accent)}
 
-/* início e resultado */
-.qwrap{max-width:780px;margin:0 auto;min-width:0}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
-.stat{background:var(--surface-2);border-radius:12px;padding:10px;text-align:center;min-width:0}
-.stat b{display:block;font-size:1.5rem;line-height:1.1}
+/* ---------- início e resultado ---------- */
+.qwrap{max-width:760px;margin:0 auto;min-width:0}
+.qwrap .panel{margin-top:4px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}
+.stat{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:12px 10px;text-align:center;min-width:0}
+.stat b{display:block;font-size:1.55rem;line-height:1.1;letter-spacing:-.02em}
 .stat span{font-size:12.5px;color:var(--muted);font-weight:600}
-.pct{font-size:clamp(2.4rem,9vw,3.4rem);font-weight:800;line-height:1;color:var(--brand);margin:4px 0 2px}
-.assunto{margin:10px 0}
-.assunto .lin{display:flex;justify-content:space-between;font-size:14px;gap:10px;margin-bottom:4px}
-.assunto .barra{height:8px;border-radius:999px;background:var(--surface-2);overflow:hidden;border:1px solid var(--line)}
-.assunto .barra i{display:block;height:100%;background:var(--brand)}
-.ul-clean{margin:8px 0 0;padding-left:20px;font-size:15px}
-.ul-clean li{margin-bottom:5px}
+.pct{font-size:clamp(2.6rem,9vw,3.6rem);font-weight:800;line-height:1;color:var(--brand);margin:6px 0 4px;letter-spacing:-.03em}
+.assunto{margin:12px 0}
+.assunto .lin{display:flex;justify-content:space-between;font-size:14px;gap:10px;margin-bottom:5px}
+.assunto .lin span:last-child{color:var(--muted);white-space:nowrap}
+.assunto .barra{height:8px;border-radius:999px;background:var(--surface-3);overflow:hidden}
+.assunto .barra i{display:block;height:100%;background:var(--brand);border-radius:999px}
+.ul-clean{margin:8px 0 0;padding:0;list-style:none;font-size:15px;display:grid;gap:8px}
+.ul-clean li{position:relative;padding-left:22px}
+.ul-clean li::before{content:"";position:absolute;left:4px;top:.55em;width:7px;height:7px;border-radius:50%;background:var(--brand)}
 .msg{text-align:center;padding:26px 10px}
+.assuntos-lista{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 0}
+.assuntos-lista span{font-size:12.5px;padding:3px 9px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--muted)}
 
-/* ---------- telas baixas (celulares pequenos, teclado aberto) ---------- */
-@media (max-height:640px){
-  .figbox{height:clamp(90px,22dvh,200px)}
-  .badge{display:none}
-  .opt{min-height:40px;padding:6px 10px;font-size:14.5px}
-  .opts{gap:6px}
-  .qfoot .btn{min-height:42px}
-  .fb{padding:6px 10px}
-  .tabs{margin:8px 0 6px}
-  .tabs button{padding:7px 8px}
-  .exp{padding:8px 10px;margin-bottom:6px}
-  .exp p{font-size:14px;line-height:1.4}
-}
-
-/* ---------- tablet em pé: mais espaço vertical, alternativas em duas colunas ---------- */
+/* ---------- tablet e computador ---------- */
 @media (min-width:600px){
-  .opts{grid-template-columns:1fr 1fr}
   .figbox{height:clamp(160px,34dvh,420px)}
-  .qmain{padding-left:24px;padding-right:24px}
-  .qhead,.qfoot{padding-left:24px;padding-right:24px}
-  .opt{font-size:16px}
+  .qmain{padding:20px 24px}
+  .qhead .in{padding-left:24px;padding-right:24px}
+  .qfoot .in{padding-left:24px;padding-right:24px}
+  .opt{font-size:16px;padding:12px 16px 12px 12px;min-height:54px}
+  .qgrid.sem-fig .qleft{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
 }
-
-/* ---------- telas largas ou deitadas: figura à esquerda, resposta à direita ---------- */
+/* questões com figura em telas largas ou deitadas: figura à esquerda, pergunta e alternativas à direita */
 @media (min-width:820px), (orientation:landscape) and (min-width:600px){
-  .qgrid{flex-direction:row;align-items:flex-start;gap:20px}
-  .qleft{flex:1 1 46%}
-  .qright{flex:1 1 54%}
-  .opts{grid-template-columns:1fr}
+  .qgrid:not(.sem-fig){flex-direction:row;align-items:flex-start;gap:24px}
+  .qgrid:not(.sem-fig) .qleft{flex:1 1 46%}
+  .qgrid:not(.sem-fig) .qright{flex:1 1 54%}
   .figbox{height:clamp(150px,52dvh,520px)}
   .qmain{display:flex}
-  .qgrid{width:100%;margin:auto 0}
-}
-@media (min-width:820px) and (min-height:700px){
-  .qapp{margin-top:0}
+  .qgrid{width:100%;margin:auto}
 }
 /* telas largas mostram as duas explicações ao mesmo tempo, sem abas */
 @media (min-width:1000px){
   .tabs{display:none}
+  .exps{margin-top:10px}
   .exp{display:block}
 }
 @media (min-width:600px) and (max-width:999px) and (orientation:portrait){
   .qgrid{flex-direction:column}
   .qleft,.qright{flex:none}
-  .opts{grid-template-columns:1fr 1fr}
 }
 @media (max-width:420px){
   .qfoot .btn{font-size:14px;padding:10px 8px}
+  .qinfo .placar{gap:8px}
 }
 
-/* depois de responder, a figura encolhe em telas baixas para sobrar espaço à explicação */
+/* ---------- respondida: em telas que não comportam tudo, só a escolhida e a correta continuam ---------- */
+/* compactação progressiva, aplicada pelo motor só quando a questão respondida não cabe na tela */
+.qgrid.compacta .opts li.apagada{display:none}
+.qgrid.compacta .figbox{height:clamp(64px,16dvh,150px)}
+.qgrid.compacta .figbtn{display:none}
+.qgrid.compacta2 .opts li.errada{display:none}
+.qgrid.resp.compacta2 .figbox{height:52px}
+.qgrid.compacta2:not(.resp) .figbox{height:clamp(60px,12dvh,110px)}
+.qgrid.compacta2:not(.resp) .opt{min-height:36px;padding-top:3px;padding-bottom:3px}
+.qgrid.compacta2:not(.resp) .opts{gap:5px}
+.qgrid.compacta2:not(.resp) .dica{padding:5px 10px;font-size:13px;margin-top:6px}
+.qgrid.resp.compacta3 .qmeta,.qgrid.resp.compacta3 .dica{display:none}
+.qgrid.compacta3:not(.resp) .badge{visibility:hidden}
+.qgrid.compacta3:not(.resp) .qmeta{margin-bottom:2px}
+.qgrid.compacta3:not(.resp) .enunc{font-size:.95rem;line-height:1.3}
+@media (max-width:599px){ .opt .marca{display:none} }
 @media (max-height:900px) and (max-width:819px){
   .qgrid.resp .figbox{height:clamp(56px,11dvh,120px)}
   .qgrid.resp .figbtn{display:none}
 }
-/* celular deitado e telas muito baixas */
-@media (max-height:500px){
-  .qhead{padding-top:4px;padding-bottom:4px}
-  .iconbtn{height:34px;min-width:34px}
-  .qinfo{margin-bottom:2px}
-  .qfoot{padding-top:6px;padding-bottom:calc(6px + env(safe-area-inset-bottom,0px))}
-  .qfoot .btn{min-height:38px;padding-top:6px;padding-bottom:6px}
-  .qmain{padding-top:6px;padding-bottom:6px}
-  .figbox{height:clamp(80px,36dvh,200px)}
-  .figbtn{display:none}
-  .badge{display:none}
-  .enunc{font-size:1rem}
-  .dicabtn{width:32px;height:32px}
-  .opt{min-height:36px;padding:3px 10px;font-size:14px}
-  .opts{gap:5px}
-  .fb{padding:6px 10px;font-size:13.5px}
-  .fb strong{font-size:14px}
-  .tabs{margin:6px 0}
-  .tabs button{padding:6px}
-  .exp{padding:6px 10px;margin-bottom:6px}
-  .exp p{font-size:14px;line-height:1.35}
-  .exp h3{margin-bottom:1px}
-  .txtform input,.txtform .btn{min-height:40px;padding-top:6px;padding-bottom:6px}
-}
 
-/* celulares pequenos (até 360px de largura) com a dica aberta */
+/* ---------- telas baixas (celulares pequenos, teclado aberto) ---------- */
+@media (max-height:700px){
+  .qmain{padding-top:10px;padding-bottom:10px}
+  .qgrid.resp .figbox{height:52px}
+  .qgrid.resp .enunc{font-size:.98rem}
+  .opt{min-height:44px;padding:7px 12px 7px 9px;font-size:14.5px}
+  .opt .letra{width:26px;height:26px;font-size:12.5px}
+  .opts{gap:6px}
+  .fb{padding:8px 12px;margin-top:8px;font-size:14px}
+  .tabs{margin:8px 0 6px}
+  .tabs button{padding:6px}
+  .exp{padding:8px 12px}
+  .exp p{font-size:14.2px;line-height:1.42}
+  .qgrid.sem-fig .qleft{padding:14px 16px}
+}
+@media (max-height:640px){
+  .figbox{height:clamp(90px,22dvh,200px)}
+  .qmeta{margin-bottom:6px}
+  .enunc{font-size:1rem}
+  .qfoot .btn{min-height:42px}
+}
 @media (max-width:380px) and (max-height:700px){
   .dica{font-size:13px;padding:6px 10px;margin-top:6px}
-  .enunc{font-size:.95rem}
-  .opt{min-height:36px;padding:4px 9px;font-size:14px}
+  .enunc{font-size:.97rem;line-height:1.33}
+  .opt{min-height:40px;padding:5px 10px 5px 8px;font-size:14px;gap:10px}
+  .exp p{font-size:13.8px}
 }
-/* respondida em tela muito baixa: figura menor para caber a explicação */
-@media (max-height:700px){
-  .qgrid.resp .figbox{height:52px}
-  .qgrid.resp .enunc{font-size:.95rem}
+/* celular deitado e telas muito baixas */
+@media (max-height:500px){
+  .qhead .in{padding-top:4px;padding-bottom:4px}
+  .iconbtn{height:34px;min-width:34px}
+  .qinfo{margin-bottom:3px}
+  .qfoot .in{padding-top:6px;padding-bottom:calc(6px + env(safe-area-inset-bottom,0px))}
+  .qfoot .btn{min-height:38px;padding-top:6px;padding-bottom:6px}
+  .qmain{padding-top:8px;padding-bottom:8px}
+  .figbox{height:clamp(80px,36dvh,200px)}
+  .figbtn{display:none}
+  .qmeta{margin-bottom:4px}
+  .dicabtn{height:28px}
+  .enunc{font-size:1rem}
+  .opt{min-height:34px;padding:3px 10px 3px 7px;font-size:14px}
+  .opt .letra{width:24px;height:24px;font-size:12px}
+  .opts{gap:5px}
+  .fb{padding:6px 10px;font-size:13.5px;margin-top:6px}
+  .fb .ic{width:22px;height:22px}
+  .tabs{margin:6px 0}
+  .tabs button{padding:5px}
+  .exp{padding:6px 10px}
+  .exp p{font-size:13.8px;line-height:1.35}
+  .exp h3{margin-bottom:1px}
+  .txtform input,.txtform .btn{min-height:40px;padding-top:6px;padding-bottom:6px}
+  .qgrid.sem-fig .qleft{padding:10px 14px}
+}
+/* celular deitado: enunciado à esquerda, alternativas (em lista) e explicação à direita */
+@media (max-height:500px) and (min-width:600px){
+  .qgrid.sem-fig{flex-direction:row;align-items:flex-start;gap:16px;max-width:none}
+  .qgrid.sem-fig .qleft{flex:1 1 40%}
+  .qgrid.sem-fig .qright{flex:1 1 60%}
 }
 
 </style>
@@ -1868,30 +1977,36 @@ window.QUIZ_DATA = {
            : '<a class="brand" href="index.html"><span class="logo">EF</span><span>Estudos Fontana</span></a>') +
       (OFF ? '' : (extra || '<a class="nav-link" href="index.html">Todas as matérias</a>')) +
       '</div></header>' +
-      '<nav class="crumbs" style="margin-top:18px" aria-label="Trilha">' + crumb + '</nav>';
+      '<nav class="crumbs" aria-label="Trilha">' + crumb + '</nav>';
   }
 
   function telaInicio() {
     var escolha = D.questoes.filter(function (q) { return q.tipo === 'escolha'; }).length;
     var texto = D.questoes.length - escolha;
+    var nomesAssuntos = [];
+    D.questoes.forEach(function (q) { if (q.assunto && nomesAssuntos.indexOf(q.assunto) < 0) nomesAssuntos.push(q.assunto); });
     app.innerHTML = cabecalho() +
-      '<div class="qwrap"><section class="panel" style="margin-top:12px">' +
+      '<div class="qwrap"><section class="panel">' +
       '<p class="eyebrow">Quiz</p>' +
       '<h1>' + esc(D.titulo) + '</h1>' +
       '<div class="stats">' +
         '<div class="stat"><b>' + D.questoes.length + '</b><span>questões</span></div>' +
-        '<div class="stat"><b>' + escolha + '</b><span>de escolha</span></div>' +
-        '<div class="stat"><b>' + texto + '</b><span>para digitar</span></div>' +
+        '<div class="stat"><b>' + nomesAssuntos.length + '</b><span>assuntos</span></div>' +
+        (texto
+          ? '<div class="stat"><b>' + texto + '</b><span>para digitar</span></div>'
+          : '<div class="stat"><b>A–D</b><span>objetivas</span></div>') +
       '</div>' +
       '<ul class="ul-clean">' +
-        '<li>Toque no <b>?</b> para ver uma dica, sem a resposta.</li>' +
+        '<li>Toque em <b>Dica</b> para receber uma pista, sem a resposta.</li>' +
         '<li>Ao responder, veja a <b>explicação</b> e a versão <b>em outras palavras</b>.</li>' +
         '<li>Use <b>Pular</b> para passar sem responder. As questões ficam marcadas no mapa.</li>' +
         '<li>No teclado: setas para navegar, números para escolher e Enter para confirmar.</li>' +
       '</ul>' +
-      '<div class="btns" style="margin-top:18px"><button class="btn primary" id="comecar" type="button">Começar</button>' +
+      (nomesAssuntos.length > 1 ? '<p class="eyebrow" style="margin-top:18px">Assuntos</p><div class="assuntos-lista">' +
+        nomesAssuntos.map(function (a) { return '<span>' + esc(a) + '</span>'; }).join('') + '</div>' : '') +
+      '<div class="btns" style="margin-top:20px"><button class="btn primary" id="comecar" type="button">Começar</button>' +
       (M && !OFF ? '<a class="btn" href="materia.html?m=' + encodeURIComponent(M.id) + '">Voltar à matéria</a>' : '') +
-      (M && !OFF && M.quizOffline ? '<a class="btn" href="' + M.quizOffline + '" download>⬇ Baixar quiz (.html)</a>' : '') + '</div>' +
+      (M && !OFF && M.quizOffline ? '<a class="btn" href="' + M.quizOffline + '" download>↓ Baixar quiz (.html)</a>' : '') + '</div>' +
       '</section></div>';
     document.getElementById('comecar').addEventListener('click', function () {
       novaRodada(embaralha(D.questoes.map(function (_, i) { return i; })));
@@ -1906,33 +2021,48 @@ window.QUIZ_DATA = {
     var q = D.questoes[di], r = R[di];
     var aba = abas[di] || 'exp';
     var h = '';
+    var letraCerta = q.tipo === 'escolha' ? String.fromCharCode(65 + q.correta) : '';
     if (r.estado === 'certo') {
-      h += '<div class="fb ok"><strong>✓ Correto!</strong><div class="resp">Resposta: <b>' + esc(q.resposta) + '</b></div></div>';
+      h += '<div class="fb ok"><span class="ic">✓</span><span>Resposta correta!' +
+        (q.tipo === 'escolha' ? '' : ' <span class="sub">' + esc(q.resposta) + '</span>') + '</span></div>';
+    } else if (q.tipo === 'escolha') {
+      h += '<div class="fb bad"><span class="ic">✗</span><span>Resposta incorreta. <span class="sub">Você marcou <b>' + String.fromCharCode(65 + r.escolha) +
+        '</b>; a correta é a <b>' + letraCerta + '</b>.</span></span></div>';
     } else {
-      var seu = q.tipo === 'escolha' ? q.opcoes[r.escolha] : r.texto;
-      h += '<div class="fb bad"><strong>✗ Não foi dessa vez.</strong>' +
-        '<div class="resp">Você respondeu: ' + esc(seu) + '</div>' +
-        '<div class="resp">Correta: <b>' + esc(q.resposta) + '</b></div></div>';
+      h += '<div class="fb bad"><span class="ic">✗</span><span>Resposta incorreta.' +
+        '<span class="resp" style="display:block">Você respondeu: ' + esc(r.texto) + '</span>' +
+        '<span class="resp" style="display:block">Correta: <b>' + esc(q.resposta) + '</b></span></span></div>';
     }
     h += '<div class="tabs" role="tablist">' +
       '<button type="button" role="tab" data-aba="exp" aria-selected="' + (aba === 'exp') + '">Explicação</button>' +
       '<button type="button" role="tab" data-aba="simples" aria-selected="' + (aba === 'simples') + '">Em outras palavras</button></div>';
+    h += '<div class="exps">';
     h += '<div class="exp painel' + (aba === 'exp' ? ' ativo' : '') + '" data-painel="exp"><h3>Explicação</h3><p>' + esc(q.explicacao) + '</p></div>';
     h += '<div class="exp simples painel' + (aba === 'simples' ? ' ativo' : '') + '" data-painel="simples"><h3>Em outras palavras</h3><p>' + esc(q.emOutrasPalavras) + '</p></div>';
-    return h;
+    return h + '</div>';
+  }
+
+  function opcoesHTML(di) {
+    var q = D.questoes[di], r = R[di], resp = respondida(di);
+    var h = '<ol class="opts" aria-label="Alternativas">';
+    q.opcoes.forEach(function (op, i) {
+      var cls = 'opt', marca = '';
+      if (resp) {
+        if (i === q.correta) { cls += ' certa'; marca = '<span class="marca">Correta</span>'; }
+        else if (i === r.escolha) { cls += ' errada'; marca = '<span class="marca">Sua resposta</span>'; }
+        else cls += ' apagada';
+      }
+      h += '<li' + (cls.indexOf('apagada') >= 0 ? ' class="apagada"' : cls.indexOf('errada') >= 0 ? ' class="errada"' : '') + '><button class="' + cls + '" type="button" data-op="' + i + '"' + (resp ? ' disabled' : '') + '>' +
+        '<span class="letra">' + (resp && i === q.correta ? '✓' : resp && i === r.escolha ? '✗' : String.fromCharCode(65 + i)) + '</span>' +
+        '<span class="txt">' + esc(op) + '</span>' + marca + '</button></li>';
+    });
+    return h + '</ol>';
   }
 
   function respostaHTML(di) {
     var q = D.questoes[di];
+    if (q.tipo === 'escolha') return opcoesHTML(di) + (respondida(di) ? feedbackHTML(di) : '');
     if (respondida(di)) return feedbackHTML(di);
-    if (q.tipo === 'escolha') {
-      var h = '<div class="opts" role="group" aria-label="Alternativas">';
-      q.opcoes.forEach(function (op, i) {
-        h += '<button class="opt" type="button" data-op="' + i + '"><span class="letra">' + String.fromCharCode(65 + i) +
-          '</span><span class="txt">' + esc(op) + '</span></button>';
-      });
-      return h + '</div>';
-    }
     return '<form class="txtform" id="formtexto" autocomplete="off"><input id="entrada" type="text" placeholder="Digite o nome da peça" ' +
       'aria-label="Resposta" autocapitalize="sentences" spellcheck="false" enterkeyhint="done">' +
       '<button class="btn primary" type="submit">Confirmar</button></form>';
@@ -1942,14 +2072,15 @@ window.QUIZ_DATA = {
     var q = D.questoes[di];
     var resp = respondida(di);
     var total = ordem.length, ultima = pos === total - 1;
-    var h = '<div class="qgrid' + (resp ? ' resp' : '') + '"><section class="qleft">';
-    h += '<span class="badge">' + esc(q.assunto) + '</span>';
+    var h = '<div class="qgrid' + (resp ? ' resp' : '') + (q.alvo ? '' : ' sem-fig') + '"><section class="qleft">';
+    var ICO_DICA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.9V16h5v-.2c0-.8.4-1.5 1-1.9A6 6 0 0 0 12 3z"/></svg>';
+    h += '<div class="qmeta"><span class="badge"><span>' + esc(q.assunto) + '</span></span>' +
+      '<button class="dicabtn" type="button" aria-label="Mostrar dica" aria-expanded="' + (dicaAberta[di] ? 'true' : 'false') + '" data-dica="' + di + '">' + ICO_DICA + 'Dica</button></div>';
     if (q.alvo) {
       h += '<div class="figwrap"><div class="figbox ' + (q.alvo.fig === 'f1' ? 'grande' : 'pequena') + '">' + figuraSVG(q.alvo, false) + '</div>' +
         '<button class="figbtn" type="button" data-ampliar="' + di + '">🔍 Ver figura inteira</button></div>';
     }
-    h += '<div class="enunc-row"><h2 class="enunc">' + esc(q.enunciado) + '</h2>' +
-      '<button class="dicabtn" type="button" aria-label="Mostrar dica" aria-expanded="' + (dicaAberta[di] ? 'true' : 'false') + '" data-dica="' + di + '">?</button></div>';
+    h += '<h2 class="enunc">' + esc(q.enunciado) + '</h2>';
     h += '<div class="dica" id="dica-' + di + '"' + (dicaAberta[di] ? '' : ' hidden') + '><strong>Dica:</strong> ' + esc(q.dica) + '</div>';
     h += '</section><section class="qright" aria-live="polite">' + respostaHTML(di) + '</section></div>';
     return h;
@@ -1957,10 +2088,10 @@ window.QUIZ_DATA = {
 
   function rodapeHTML() {
     var di = ordem[pos], resp = respondida(di), ultima = pos === ordem.length - 1;
-    return '<button class="btn" type="button" id="ant"' + (pos === 0 ? ' disabled' : '') + '>← Anterior</button>' +
+    return '<div class="in"><button class="btn" type="button" id="ant"' + (pos === 0 ? ' disabled' : '') + '>← Anterior</button>' +
       (resp
         ? '<button class="btn primary" type="button" id="prox">' + (ultima ? 'Ver resultado' : 'Próxima →') + '</button>'
-        : '<button class="btn" type="button" id="pular">' + (ultima ? 'Pular e finalizar' : 'Pular →') + '</button>');
+        : '<button class="btn" type="button" id="pular">' + (ultima ? 'Pular e finalizar' : 'Pular →') + '</button>') + '</div>';
   }
 
   function telaQuiz() {
@@ -1968,22 +2099,39 @@ window.QUIZ_DATA = {
     var feitas = c.certo + c.errado;
     var pct = total ? Math.round(feitas / total * 100) : 0;
     var voltar = M ? 'materia.html?m=' + encodeURIComponent(M.id) : 'index.html';
+    var SVG = function (d) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + d + '</svg>'; };
+    var icoVoltar = SVG('<path d="M15 18l-6-6 6-6"/>');
+    var icoMapa = SVG('<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>');
     app.innerHTML =
-      '<div class="qapp">' +
-      '<header class="qhead">' +
-        (OFF ? '<button class="iconbtn" type="button" id="sair" aria-label="Voltar ao início do quiz">←</button>'
-             : '<a class="iconbtn" href="' + voltar + '" aria-label="Sair do quiz">←</a>') +
-        '<div class="qprog"><div class="qinfo"><b>' + (pos + 1) + '/' + total + '</b><span>✓ ' + c.certo + ' · ✗ ' + c.errado + '</span></div>' +
+      '<div class="qapp"' + (M && M.cor ? ' style="--cor:' + esc(M.cor) + '"' : '') + '>' +
+      '<header class="qhead"><div class="in">' +
+        (OFF ? '<button class="iconbtn" type="button" id="sair" aria-label="Voltar ao início do quiz">' + icoVoltar + '</button>'
+             : '<a class="iconbtn" href="' + voltar + '" aria-label="Sair do quiz">' + icoVoltar + '</a>') +
+        '<div class="qprog"><div class="qinfo"><span><b>Questão ' + (pos + 1) + '</b> de ' + total + '</span>' +
+        '<span class="placar"><span class="c">✓ ' + c.certo + '</span><span class="e">✗ ' + c.errado + '</span></span></div>' +
         '<div class="progress" aria-hidden="true"><i style="width:' + pct + '%"></i></div></div>' +
-        '<button class="iconbtn" type="button" id="abrirmapa" aria-label="Mapa de questões">▦</button>' +
-        '<button class="iconbtn txt" type="button" id="finalizar">Fim</button>' +
-      '</header>' +
+        '<button class="iconbtn" type="button" id="abrirmapa" aria-label="Mapa de questões">' + icoMapa + '</button>' +
+        '<button class="iconbtn txt" type="button" id="finalizar">Encerrar</button>' +
+      '</div></header>' +
       '<main class="qmain" id="qmain">' + quizHTML(ordem[pos]) + '</main>' +
       '<footer class="qfoot" id="qfoot">' + rodapeHTML() + '</footer>' +
       '</div>';
     ligaEventosQuiz();
     var m = document.getElementById('qmain'); if (m) m.scrollTop = 0;
+    compacta();
   }
+
+  // se a questão não cabe na tela (dica aberta, explicação longa), aperta o layout em etapas.
+  // Respondida: as alternativas que não importam ficam apagadas e, se faltar altura, somem.
+  function compacta() {
+    var m = document.getElementById('qmain'), g = m && m.querySelector('.qgrid');
+    if (!g) return;
+    var niveis = ['compacta', 'compacta2', 'compacta3'];
+    niveis.forEach(function (c) { g.classList.remove(c); });
+    for (var i = 0; i < niveis.length && m.scrollHeight > m.clientHeight + 1; i++) g.classList.add(niveis[i]);
+  }
+  var tReset;
+  window.addEventListener('resize', function () { clearTimeout(tReset); tReset = setTimeout(compacta, 120); });
 
   function abrirMapa() {
     var ov = document.createElement('div');
@@ -1995,7 +2143,7 @@ window.QUIZ_DATA = {
     });
     ov.innerHTML = '<div class="sheetbox"><div class="sheethead"><b>Mapa de questões</b><button class="btn fechar" type="button">Fechar ✕</button></div>' +
       '<div class="mapagrid">' + g + '</div>' +
-      '<div class="legenda"><span style="color:var(--ok)">■ acerto</span><span style="color:var(--bad)">■ erro</span><span>▭ pulada</span><span>□ pendente</span></div></div>';
+      '<div class="legenda"><span><i class="l-c"></i>acerto</span><span><i class="l-e"></i>erro</span><span><i class="l-p"></i>pulada</span><span><i></i>pendente</span></div></div>';
     function fecha() { ov.remove(); document.removeEventListener('keydown', tecla); }
     function tecla(e) { if (e.key === 'Escape') fecha(); }
     ov.querySelector('.fechar').addEventListener('click', fecha);
@@ -2036,6 +2184,7 @@ window.QUIZ_DATA = {
         b.setAttribute('aria-expanded', dicaAberta[k] ? 'true' : 'false');
         var box = document.getElementById('dica-' + k);
         if (box) box.hidden = !dicaAberta[k];
+        compacta();
       });
     });
     app.querySelectorAll('[data-ampliar]').forEach(function (b) {
@@ -2047,6 +2196,7 @@ window.QUIZ_DATA = {
         abas[di] = a;
         app.querySelectorAll('[data-aba]').forEach(function (x) { x.setAttribute('aria-selected', String(x.getAttribute('data-aba') === a)); });
         app.querySelectorAll('[data-painel]').forEach(function (x) { x.classList.toggle('ativo', x.getAttribute('data-painel') === a); });
+        compacta();
       });
     });
     var entrada = document.getElementById('entrada');
@@ -2103,7 +2253,7 @@ window.QUIZ_DATA = {
     }).join('');
     var erros = c.errado + c.pulada;
     app.innerHTML = cabecalho() +
-      '<div class="qwrap"><section class="panel" style="margin-top:12px;text-align:center">' +
+      '<div class="qwrap"><section class="panel" style="text-align:center">' +
       '<p class="eyebrow">Resultado</p>' +
       '<div class="pct">' + pct + '%</div>' +
       '<p style="margin:0 0 6px"><b>Você acertou ' + c.certo + ' de ' + total + '.</b></p>' +
@@ -2156,7 +2306,7 @@ window.QUIZ_DATA = {
 
   // ---- carregamento
   function semQuiz(texto) {
-    app.innerHTML = cabecalho() + '<div class="qwrap"><section class="panel msg" style="margin-top:12px">' +
+    app.innerHTML = cabecalho() + '<div class="qwrap"><section class="panel msg">' +
       '<h1>' + esc(texto) + '</h1><p class="muted">Volte à matéria para ver as opções disponíveis.</p>' +
       '<div class="btns" style="justify-content:center"><a class="btn primary" href="' + (M ? 'materia.html?m=' + encodeURIComponent(M.id) : 'index.html') + '">Voltar</a></div></section></div>';
   }
@@ -2166,7 +2316,7 @@ window.QUIZ_DATA = {
   document.title = 'Quiz · ' + M.nome + ' · Estudos Fontana';
   if (!M.quiz) { semQuiz('Quiz em breve'); return; }
 
-  app.innerHTML = cabecalho() + '<div class="qwrap"><div class="panel msg" style="margin-top:12px"><p class="muted">Carregando quiz…</p></div></div>';
+  app.innerHTML = cabecalho() + '<div class="qwrap"><div class="panel msg"><p class="muted">Carregando quiz…</p></div></div>';
   var s = document.createElement('script');
   s.src = M.quiz;
   s.onload = function () {

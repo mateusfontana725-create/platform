@@ -130,30 +130,36 @@
            : '<a class="brand" href="index.html"><span class="logo">EF</span><span>Estudos Fontana</span></a>') +
       (OFF ? '' : (extra || '<a class="nav-link" href="index.html">Todas as matérias</a>')) +
       '</div></header>' +
-      '<nav class="crumbs" style="margin-top:18px" aria-label="Trilha">' + crumb + '</nav>';
+      '<nav class="crumbs" aria-label="Trilha">' + crumb + '</nav>';
   }
 
   function telaInicio() {
     var escolha = D.questoes.filter(function (q) { return q.tipo === 'escolha'; }).length;
     var texto = D.questoes.length - escolha;
+    var nomesAssuntos = [];
+    D.questoes.forEach(function (q) { if (q.assunto && nomesAssuntos.indexOf(q.assunto) < 0) nomesAssuntos.push(q.assunto); });
     app.innerHTML = cabecalho() +
-      '<div class="qwrap"><section class="panel" style="margin-top:12px">' +
+      '<div class="qwrap"><section class="panel">' +
       '<p class="eyebrow">Quiz</p>' +
       '<h1>' + esc(D.titulo) + '</h1>' +
       '<div class="stats">' +
         '<div class="stat"><b>' + D.questoes.length + '</b><span>questões</span></div>' +
-        '<div class="stat"><b>' + escolha + '</b><span>de escolha</span></div>' +
-        '<div class="stat"><b>' + texto + '</b><span>para digitar</span></div>' +
+        '<div class="stat"><b>' + nomesAssuntos.length + '</b><span>assuntos</span></div>' +
+        (texto
+          ? '<div class="stat"><b>' + texto + '</b><span>para digitar</span></div>'
+          : '<div class="stat"><b>A–D</b><span>objetivas</span></div>') +
       '</div>' +
       '<ul class="ul-clean">' +
-        '<li>Toque no <b>?</b> para ver uma dica, sem a resposta.</li>' +
+        '<li>Toque em <b>Dica</b> para receber uma pista, sem a resposta.</li>' +
         '<li>Ao responder, veja a <b>explicação</b> e a versão <b>em outras palavras</b>.</li>' +
         '<li>Use <b>Pular</b> para passar sem responder. As questões ficam marcadas no mapa.</li>' +
         '<li>No teclado: setas para navegar, números para escolher e Enter para confirmar.</li>' +
       '</ul>' +
-      '<div class="btns" style="margin-top:18px"><button class="btn primary" id="comecar" type="button">Começar</button>' +
+      (nomesAssuntos.length > 1 ? '<p class="eyebrow" style="margin-top:18px">Assuntos</p><div class="assuntos-lista">' +
+        nomesAssuntos.map(function (a) { return '<span>' + esc(a) + '</span>'; }).join('') + '</div>' : '') +
+      '<div class="btns" style="margin-top:20px"><button class="btn primary" id="comecar" type="button">Começar</button>' +
       (M && !OFF ? '<a class="btn" href="materia.html?m=' + encodeURIComponent(M.id) + '">Voltar à matéria</a>' : '') +
-      (M && !OFF && M.quizOffline ? '<a class="btn" href="' + M.quizOffline + '" download>⬇ Baixar quiz (.html)</a>' : '') + '</div>' +
+      (M && !OFF && M.quizOffline ? '<a class="btn" href="' + M.quizOffline + '" download>↓ Baixar quiz (.html)</a>' : '') + '</div>' +
       '</section></div>';
     document.getElementById('comecar').addEventListener('click', function () {
       novaRodada(embaralha(D.questoes.map(function (_, i) { return i; })));
@@ -168,33 +174,48 @@
     var q = D.questoes[di], r = R[di];
     var aba = abas[di] || 'exp';
     var h = '';
+    var letraCerta = q.tipo === 'escolha' ? String.fromCharCode(65 + q.correta) : '';
     if (r.estado === 'certo') {
-      h += '<div class="fb ok"><strong>✓ Correto!</strong><div class="resp">Resposta: <b>' + esc(q.resposta) + '</b></div></div>';
+      h += '<div class="fb ok"><span class="ic">✓</span><span>Resposta correta!' +
+        (q.tipo === 'escolha' ? '' : ' <span class="sub">' + esc(q.resposta) + '</span>') + '</span></div>';
+    } else if (q.tipo === 'escolha') {
+      h += '<div class="fb bad"><span class="ic">✗</span><span>Resposta incorreta. <span class="sub">Você marcou <b>' + String.fromCharCode(65 + r.escolha) +
+        '</b>; a correta é a <b>' + letraCerta + '</b>.</span></span></div>';
     } else {
-      var seu = q.tipo === 'escolha' ? q.opcoes[r.escolha] : r.texto;
-      h += '<div class="fb bad"><strong>✗ Não foi dessa vez.</strong>' +
-        '<div class="resp">Você respondeu: ' + esc(seu) + '</div>' +
-        '<div class="resp">Correta: <b>' + esc(q.resposta) + '</b></div></div>';
+      h += '<div class="fb bad"><span class="ic">✗</span><span>Resposta incorreta.' +
+        '<span class="resp" style="display:block">Você respondeu: ' + esc(r.texto) + '</span>' +
+        '<span class="resp" style="display:block">Correta: <b>' + esc(q.resposta) + '</b></span></span></div>';
     }
     h += '<div class="tabs" role="tablist">' +
       '<button type="button" role="tab" data-aba="exp" aria-selected="' + (aba === 'exp') + '">Explicação</button>' +
       '<button type="button" role="tab" data-aba="simples" aria-selected="' + (aba === 'simples') + '">Em outras palavras</button></div>';
+    h += '<div class="exps">';
     h += '<div class="exp painel' + (aba === 'exp' ? ' ativo' : '') + '" data-painel="exp"><h3>Explicação</h3><p>' + esc(q.explicacao) + '</p></div>';
     h += '<div class="exp simples painel' + (aba === 'simples' ? ' ativo' : '') + '" data-painel="simples"><h3>Em outras palavras</h3><p>' + esc(q.emOutrasPalavras) + '</p></div>';
-    return h;
+    return h + '</div>';
+  }
+
+  function opcoesHTML(di) {
+    var q = D.questoes[di], r = R[di], resp = respondida(di);
+    var h = '<ol class="opts" aria-label="Alternativas">';
+    q.opcoes.forEach(function (op, i) {
+      var cls = 'opt', marca = '';
+      if (resp) {
+        if (i === q.correta) { cls += ' certa'; marca = '<span class="marca">Correta</span>'; }
+        else if (i === r.escolha) { cls += ' errada'; marca = '<span class="marca">Sua resposta</span>'; }
+        else cls += ' apagada';
+      }
+      h += '<li' + (cls.indexOf('apagada') >= 0 ? ' class="apagada"' : cls.indexOf('errada') >= 0 ? ' class="errada"' : '') + '><button class="' + cls + '" type="button" data-op="' + i + '"' + (resp ? ' disabled' : '') + '>' +
+        '<span class="letra">' + (resp && i === q.correta ? '✓' : resp && i === r.escolha ? '✗' : String.fromCharCode(65 + i)) + '</span>' +
+        '<span class="txt">' + esc(op) + '</span>' + marca + '</button></li>';
+    });
+    return h + '</ol>';
   }
 
   function respostaHTML(di) {
     var q = D.questoes[di];
+    if (q.tipo === 'escolha') return opcoesHTML(di) + (respondida(di) ? feedbackHTML(di) : '');
     if (respondida(di)) return feedbackHTML(di);
-    if (q.tipo === 'escolha') {
-      var h = '<div class="opts" role="group" aria-label="Alternativas">';
-      q.opcoes.forEach(function (op, i) {
-        h += '<button class="opt" type="button" data-op="' + i + '"><span class="letra">' + String.fromCharCode(65 + i) +
-          '</span><span class="txt">' + esc(op) + '</span></button>';
-      });
-      return h + '</div>';
-    }
     return '<form class="txtform" id="formtexto" autocomplete="off"><input id="entrada" type="text" placeholder="Digite o nome da peça" ' +
       'aria-label="Resposta" autocapitalize="sentences" spellcheck="false" enterkeyhint="done">' +
       '<button class="btn primary" type="submit">Confirmar</button></form>';
@@ -205,13 +226,14 @@
     var resp = respondida(di);
     var total = ordem.length, ultima = pos === total - 1;
     var h = '<div class="qgrid' + (resp ? ' resp' : '') + (q.alvo ? '' : ' sem-fig') + '"><section class="qleft">';
-    h += '<span class="badge">' + esc(q.assunto) + '</span>';
+    var ICO_DICA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.9V16h5v-.2c0-.8.4-1.5 1-1.9A6 6 0 0 0 12 3z"/></svg>';
+    h += '<div class="qmeta"><span class="badge"><span>' + esc(q.assunto) + '</span></span>' +
+      '<button class="dicabtn" type="button" aria-label="Mostrar dica" aria-expanded="' + (dicaAberta[di] ? 'true' : 'false') + '" data-dica="' + di + '">' + ICO_DICA + 'Dica</button></div>';
     if (q.alvo) {
       h += '<div class="figwrap"><div class="figbox ' + (q.alvo.fig === 'f1' ? 'grande' : 'pequena') + '">' + figuraSVG(q.alvo, false) + '</div>' +
         '<button class="figbtn" type="button" data-ampliar="' + di + '">🔍 Ver figura inteira</button></div>';
     }
-    h += '<div class="enunc-row"><h2 class="enunc">' + esc(q.enunciado) + '</h2>' +
-      '<button class="dicabtn" type="button" aria-label="Mostrar dica" aria-expanded="' + (dicaAberta[di] ? 'true' : 'false') + '" data-dica="' + di + '">?</button></div>';
+    h += '<h2 class="enunc">' + esc(q.enunciado) + '</h2>';
     h += '<div class="dica" id="dica-' + di + '"' + (dicaAberta[di] ? '' : ' hidden') + '><strong>Dica:</strong> ' + esc(q.dica) + '</div>';
     h += '</section><section class="qright" aria-live="polite">' + respostaHTML(di) + '</section></div>';
     return h;
@@ -219,10 +241,10 @@
 
   function rodapeHTML() {
     var di = ordem[pos], resp = respondida(di), ultima = pos === ordem.length - 1;
-    return '<button class="btn" type="button" id="ant"' + (pos === 0 ? ' disabled' : '') + '>← Anterior</button>' +
+    return '<div class="in"><button class="btn" type="button" id="ant"' + (pos === 0 ? ' disabled' : '') + '>← Anterior</button>' +
       (resp
         ? '<button class="btn primary" type="button" id="prox">' + (ultima ? 'Ver resultado' : 'Próxima →') + '</button>'
-        : '<button class="btn" type="button" id="pular">' + (ultima ? 'Pular e finalizar' : 'Pular →') + '</button>');
+        : '<button class="btn" type="button" id="pular">' + (ultima ? 'Pular e finalizar' : 'Pular →') + '</button>') + '</div>';
   }
 
   function telaQuiz() {
@@ -230,22 +252,39 @@
     var feitas = c.certo + c.errado;
     var pct = total ? Math.round(feitas / total * 100) : 0;
     var voltar = M ? 'materia.html?m=' + encodeURIComponent(M.id) : 'index.html';
+    var SVG = function (d) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + d + '</svg>'; };
+    var icoVoltar = SVG('<path d="M15 18l-6-6 6-6"/>');
+    var icoMapa = SVG('<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>');
     app.innerHTML =
-      '<div class="qapp">' +
-      '<header class="qhead">' +
-        (OFF ? '<button class="iconbtn" type="button" id="sair" aria-label="Voltar ao início do quiz">←</button>'
-             : '<a class="iconbtn" href="' + voltar + '" aria-label="Sair do quiz">←</a>') +
-        '<div class="qprog"><div class="qinfo"><b>' + (pos + 1) + '/' + total + '</b><span>✓ ' + c.certo + ' · ✗ ' + c.errado + '</span></div>' +
+      '<div class="qapp"' + (M && M.cor ? ' style="--cor:' + esc(M.cor) + '"' : '') + '>' +
+      '<header class="qhead"><div class="in">' +
+        (OFF ? '<button class="iconbtn" type="button" id="sair" aria-label="Voltar ao início do quiz">' + icoVoltar + '</button>'
+             : '<a class="iconbtn" href="' + voltar + '" aria-label="Sair do quiz">' + icoVoltar + '</a>') +
+        '<div class="qprog"><div class="qinfo"><span><b>Questão ' + (pos + 1) + '</b> de ' + total + '</span>' +
+        '<span class="placar"><span class="c">✓ ' + c.certo + '</span><span class="e">✗ ' + c.errado + '</span></span></div>' +
         '<div class="progress" aria-hidden="true"><i style="width:' + pct + '%"></i></div></div>' +
-        '<button class="iconbtn" type="button" id="abrirmapa" aria-label="Mapa de questões">▦</button>' +
-        '<button class="iconbtn txt" type="button" id="finalizar">Fim</button>' +
-      '</header>' +
+        '<button class="iconbtn" type="button" id="abrirmapa" aria-label="Mapa de questões">' + icoMapa + '</button>' +
+        '<button class="iconbtn txt" type="button" id="finalizar">Encerrar</button>' +
+      '</div></header>' +
       '<main class="qmain" id="qmain">' + quizHTML(ordem[pos]) + '</main>' +
       '<footer class="qfoot" id="qfoot">' + rodapeHTML() + '</footer>' +
       '</div>';
     ligaEventosQuiz();
     var m = document.getElementById('qmain'); if (m) m.scrollTop = 0;
+    compacta();
   }
+
+  // se a questão não cabe na tela (dica aberta, explicação longa), aperta o layout em etapas.
+  // Respondida: as alternativas que não importam ficam apagadas e, se faltar altura, somem.
+  function compacta() {
+    var m = document.getElementById('qmain'), g = m && m.querySelector('.qgrid');
+    if (!g) return;
+    var niveis = ['compacta', 'compacta2', 'compacta3'];
+    niveis.forEach(function (c) { g.classList.remove(c); });
+    for (var i = 0; i < niveis.length && m.scrollHeight > m.clientHeight + 1; i++) g.classList.add(niveis[i]);
+  }
+  var tReset;
+  window.addEventListener('resize', function () { clearTimeout(tReset); tReset = setTimeout(compacta, 120); });
 
   function abrirMapa() {
     var ov = document.createElement('div');
@@ -257,7 +296,7 @@
     });
     ov.innerHTML = '<div class="sheetbox"><div class="sheethead"><b>Mapa de questões</b><button class="btn fechar" type="button">Fechar ✕</button></div>' +
       '<div class="mapagrid">' + g + '</div>' +
-      '<div class="legenda"><span style="color:var(--ok)">■ acerto</span><span style="color:var(--bad)">■ erro</span><span>▭ pulada</span><span>□ pendente</span></div></div>';
+      '<div class="legenda"><span><i class="l-c"></i>acerto</span><span><i class="l-e"></i>erro</span><span><i class="l-p"></i>pulada</span><span><i></i>pendente</span></div></div>';
     function fecha() { ov.remove(); document.removeEventListener('keydown', tecla); }
     function tecla(e) { if (e.key === 'Escape') fecha(); }
     ov.querySelector('.fechar').addEventListener('click', fecha);
@@ -298,6 +337,7 @@
         b.setAttribute('aria-expanded', dicaAberta[k] ? 'true' : 'false');
         var box = document.getElementById('dica-' + k);
         if (box) box.hidden = !dicaAberta[k];
+        compacta();
       });
     });
     app.querySelectorAll('[data-ampliar]').forEach(function (b) {
@@ -309,6 +349,7 @@
         abas[di] = a;
         app.querySelectorAll('[data-aba]').forEach(function (x) { x.setAttribute('aria-selected', String(x.getAttribute('data-aba') === a)); });
         app.querySelectorAll('[data-painel]').forEach(function (x) { x.classList.toggle('ativo', x.getAttribute('data-painel') === a); });
+        compacta();
       });
     });
     var entrada = document.getElementById('entrada');
@@ -365,7 +406,7 @@
     }).join('');
     var erros = c.errado + c.pulada;
     app.innerHTML = cabecalho() +
-      '<div class="qwrap"><section class="panel" style="margin-top:12px;text-align:center">' +
+      '<div class="qwrap"><section class="panel" style="text-align:center">' +
       '<p class="eyebrow">Resultado</p>' +
       '<div class="pct">' + pct + '%</div>' +
       '<p style="margin:0 0 6px"><b>Você acertou ' + c.certo + ' de ' + total + '.</b></p>' +
@@ -418,7 +459,7 @@
 
   // ---- carregamento
   function semQuiz(texto) {
-    app.innerHTML = cabecalho() + '<div class="qwrap"><section class="panel msg" style="margin-top:12px">' +
+    app.innerHTML = cabecalho() + '<div class="qwrap"><section class="panel msg">' +
       '<h1>' + esc(texto) + '</h1><p class="muted">Volte à matéria para ver as opções disponíveis.</p>' +
       '<div class="btns" style="justify-content:center"><a class="btn primary" href="' + (M ? 'materia.html?m=' + encodeURIComponent(M.id) : 'index.html') + '">Voltar</a></div></section></div>';
   }
@@ -428,7 +469,7 @@
   document.title = 'Quiz · ' + M.nome + ' · Estudos Fontana';
   if (!M.quiz) { semQuiz('Quiz em breve'); return; }
 
-  app.innerHTML = cabecalho() + '<div class="qwrap"><div class="panel msg" style="margin-top:12px"><p class="muted">Carregando quiz…</p></div></div>';
+  app.innerHTML = cabecalho() + '<div class="qwrap"><div class="panel msg"><p class="muted">Carregando quiz…</p></div></div>';
   var s = document.createElement('script');
   s.src = M.quiz;
   s.onload = function () {
