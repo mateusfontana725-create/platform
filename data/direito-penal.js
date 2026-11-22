@@ -1,4 +1,4 @@
-// Banco de questões: Direito Penal e Penal Militar (CFP BM 2026). Baseado no roteiro de estudos, nos infográficos, nas anotações do instrutor e no texto do CPM.
+// Banco de questões: Direito Penal e Penal Militar (CFP BM 2026). Baseado no roteiro de estudos, nos infográficos, nas anotações do instrutor, no texto do CPM e no manual "Penal Geral: o filtro da conduta".
 window.QUIZ_DATA = {
  "id": "direito-penal",
  "titulo": "Direito Penal e Penal Militar",
@@ -2019,6 +2019,342 @@ window.QUIZ_DATA = {
    "dica": "O aumento é uma fração pequena.",
    "explicacao": "O art. 20 prevê que, em tempo de guerra, as penas do tempo de paz são aumentadas de um terço. A guerra eleva a gravidade da quebra de disciplina.",
    "emOutrasPalavras": "Na guerra, as penas ficam mais pesadas: um terço a mais."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Criminologia",
+   "enunciado": "Na fase da vingança pública, na Idade Média, o crime passa a ser visto como:",
+   "opcoes": [
+    "pecado contra Deus, resolvido pela reação direta do ofendido.",
+    "conflito entre particulares, resolvido por acordo entre as famílias.",
+    "desvio explicado pelo meio social, tratado com medidas terapêuticas.",
+    "ofensa ao Rei ou ao Estado, punida de forma exemplar."
+   ],
+   "correta": 3,
+   "resposta": "ofensa ao Rei ou ao Estado, punida de forma exemplar.",
+   "dica": "Pense em quem passou a ser o \"ofendido\" quando o poder se concentrou no soberano.",
+   "explicacao": "Na vingança pública, o poder de punir se concentra no soberano: o crime ofende o Rei ou o Estado, a pena é desproporcional e busca causar terror em praça pública, e a confissão obtida sob tortura era comum. Falta ainda qualquer freio técnico ou legal.",
+   "emOutrasPalavras": "Antes, a briga era entre pessoas. Aqui, o rei toma a frente e pune de forma exagerada para dar medo em todo mundo."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Criminologia",
+   "enunciado": "O que mudou na \"virada de chave\" do século XVIII, com a Escola Clássica de Beccaria?",
+   "opcoes": [
+    "A pena passou a depender do juízo pessoal do soberano, sem registro escrito.",
+    "O criminoso passou a ser estudado por seus traços biológicos hereditários.",
+    "O Estado ganhou freios: só é crime o que a lei já definiu, com pena proporcional.",
+    "A confissão obtida sob tortura virou a principal prova do processo."
+   ],
+   "correta": 2,
+   "resposta": "O Estado ganhou freios: só é crime o que a lei já definiu, com pena proporcional.",
+   "dica": "Dois princípios nasceram para limitar o poder de punir.",
+   "explicacao": "A Escola Clássica reagiu aos excessos da punição medieval e criou limites ao Estado: nasceram a legalidade (só é crime o que está previamente escrito em lei) e a proporcionalidade (a pena deve ser medida pela gravidade do fato).",
+   "emOutrasPalavras": "Antes valia a vontade do rei. Depois, o Estado passou a ter regras: só pune se a lei já avisou antes, e a pena tem que ser do tamanho do erro."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Teoria do crime",
+   "enunciado": "No filtro analítico do crime, a pergunta \"existe permissão na lei para agir assim?\" corresponde a qual camada?",
+   "opcoes": [
+    "A ilicitude.",
+    "O fato típico.",
+    "A culpabilidade.",
+    "O nexo causal."
+   ],
+   "correta": 0,
+   "resposta": "A ilicitude.",
+   "dica": "Lembre das situações em que o Direito autoriza uma conduta que, em tese, seria proibida.",
+   "explicacao": "Depois de verificar se o fato cabe no molde legal, o segundo filtro pergunta se o ordenamento autorizou a conduta. É onde atuam as excludentes do art. 42 do CPM. Se houver permissão, o filtro se encerra aí e não há crime.",
+   "emOutrasPalavras": "Primeiro vê se o ato está descrito na lei. Depois pergunta: a lei deixou você fazer isso naquela situação? Se deixou, acabou, não tem crime."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Teoria do crime",
+   "enunciado": "Na terceira camada do filtro (culpabilidade), o que o Estado passa a analisar?",
+   "opcoes": [
+    "O resultado material produzido e o nexo causal entre a conduta e ele.",
+    "A mente do autor: se era exigível que ele agisse de forma diferente.",
+    "A previsão exata do fato no molde descrito pela lei penal vigente.",
+    "A existência de permissão legal para a conduta, como nas excludentes."
+   ],
+   "correta": 1,
+   "resposta": "A mente do autor: se era exigível que ele agisse de forma diferente.",
+   "dica": "A análise sai do ato físico e vai para dentro de quem agiu.",
+   "explicacao": "Superados o fato típico e a ilicitude, o juízo deixa o plano do ato e examina o agente: era imputável, maior de idade, estava livre de coação irresistível? Em suma, era possível cobrar dele outro comportamento (exigibilidade de conduta diversa)?",
+   "emOutrasPalavras": "Aqui o foco não é mais o que foi feito, e sim quem fez: a pessoa tinha condições de agir diferente naquele momento?"
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Teoria do crime",
+   "enunciado": "No Código Penal comum atual, que segue o finalismo, onde o dolo é avaliado e o que sobra para a culpabilidade?",
+   "opcoes": [
+    "O dolo fica na culpabilidade; o fato típico apenas descreve o resultado.",
+    "O dolo fica na ilicitude; a culpabilidade mede o dano que foi causado.",
+    "O dolo fica no fato típico; a culpabilidade mede só se o agente era cobrável.",
+    "O dolo fica fora do crime; a culpabilidade só serve para fixar a pena."
+   ],
+   "correta": 2,
+   "resposta": "O dolo fica no fato típico; a culpabilidade mede só se o agente era cobrável.",
+   "dica": "Compare com o causalismo, em que a intenção ficava \"escondida\" no final.",
+   "explicacao": "Para o finalismo, a conduta humana é dirigida a um fim, então o dolo é examinado já no fato típico. A culpabilidade fica esvaziada de dolo e culpa e avalia apenas a reprovabilidade: imputabilidade, consciência da ilicitude e exigibilidade de outra conduta.",
+   "emOutrasPalavras": "No Código comum, a intenção é analisada logo no começo, junto com o ato. No fim, só se pergunta se dava para cobrar aquela pessoa."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Teoria do crime",
+   "enunciado": "Por que se diz que o conceito analítico de crime funciona como um funil de eliminação de injustiças?",
+   "opcoes": [
+    "Porque os três filtros somam pontos, e o crime existe quando a maioria deles é atendida pela conduta.",
+    "Porque a análise começa pela culpabilidade e só depois examina o fato praticado pelo agente.",
+    "Porque basta o fato típico para haver crime, e os demais filtros só servem para reduzir a pena.",
+    "Porque a conduta só é crime se passar pelos três filtros, e ser barrada em um já encerra a análise."
+   ],
+   "correta": 3,
+   "resposta": "Porque a conduta só é crime se passar pelos três filtros, e ser barrada em um já encerra a análise.",
+   "dica": "Pense em uma peneira: o que fica retido não passa para a etapa seguinte.",
+   "explicacao": "Os elementos do crime são cumulativos e examinados em ordem. Se a conduta não é típica, não se discute ilicitude; se é lícita, não se discute culpabilidade. Só a conduta que atravessa as três peneiras chega à condição de crime.",
+   "emOutrasPalavras": "É um passo a passo. Se o ato travar em qualquer etapa, para ali e não vira crime. Só chega ao fim o que passou por todas."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Qual diploma e qual teoria marcam a estrutura do crime no Código Penal Militar?",
+   "opcoes": [
+    "O Decreto-Lei 1.001/1969, de raiz causalista.",
+    "A Lei 7.209/1984, de raiz finalista.",
+    "O Decreto-Lei 1.001/1969, de raiz finalista.",
+    "A Lei 7.209/1984, de raiz causalista."
+   ],
+   "correta": 0,
+   "resposta": "O Decreto-Lei 1.001/1969, de raiz causalista.",
+   "dica": "O CPM é uma espécie de \"cápsula do tempo\" anterior à reforma do Código comum.",
+   "explicacao": "O CPM é de 1969 e nasceu sob o causalismo clássico, enquanto o Código Penal comum foi atualizado em 1984 e adotou o finalismo. Por isso os dois sistemas organizam o dolo e a culpa em lugares diferentes da teoria do crime.",
+   "emOutrasPalavras": "O Código militar é mais antigo e parou numa forma antiga de pensar o crime. O comum foi atualizado depois, e hoje pensa diferente."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "O art. 33 do CPM traz a palavra \"culpabilidade\" logo acima das definições de crime doloso e culposo. O que isso revela?",
+   "opcoes": [
+    "Que o legislador militar dispensou o dolo nos crimes de menor gravidade.",
+    "Que, no CPM, dolo e culpa pertencem à culpabilidade, e não à conduta inicial.",
+    "Que a culpabilidade foi restringida aos militares de maior graduação.",
+    "Que o CPM adotou desde a origem o finalismo do Código comum."
+   ],
+   "correta": 1,
+   "resposta": "Que, no CPM, dolo e culpa pertencem à culpabilidade, e não à conduta inicial.",
+   "dica": "Observe em que \"bloco\" da lei o legislador colocou o dolo e a culpa.",
+   "explicacao": "Ao posicionar dolo e culpa sob o título da culpabilidade, o legislador militar mostra a estrutura causalista: a intenção não integra a conduta, mas é o nexo psicológico que liga o agente ao fato criminoso e fundamenta a reprovação.",
+   "emOutrasPalavras": "A própria lei militar guarda a intenção dentro da culpa, e não no ato em si. É assim que o Código foi montado."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Qual é a \"regra de ouro\" do Direito Penal Militar apontada no material?",
+   "opcoes": [
+    "Nenhuma culpa sem regulamento escrito.",
+    "Nenhuma disciplina sem sanção penal.",
+    "Nenhuma pena sem culpabilidade.",
+    "Nenhuma pena sem hierarquia violada."
+   ],
+   "correta": 2,
+   "resposta": "Nenhuma pena sem culpabilidade.",
+   "dica": "A frase fala do que precisa existir antes de qualquer castigo.",
+   "explicacao": "Como a intenção (dolo ou culpa) mora na culpabilidade, sem ela não há reprovação possível. Isso reforça a responsabilidade pessoal: ninguém é punido penalmente apenas pelo resultado ou por ocupar um posto na hierarquia.",
+   "emOutrasPalavras": "Ninguém leva pena só porque algo deu errado. Tem que haver culpa de verdade da pessoa."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "No Código Penal Militar, a consciência da ilicitude é:",
+   "opcoes": [
+    "um elemento autônomo, que fica fora do dolo.",
+    "dispensável para a existência do crime.",
+    "um requisito usado só para fixar a pena.",
+    "um elemento interno do próprio dolo."
+   ],
+   "correta": 3,
+   "resposta": "um elemento interno do próprio dolo.",
+   "dica": "No Código comum ela mora fora do dolo; no militar, a posição é outra.",
+   "explicacao": "O dolo do CPM é o dolus malus: além de saber o que faz e querer o resultado, o agente precisa saber que a conduta é proibida. A consciência da ilicitude, portanto, integra o próprio dolo, e sua falta afasta o dolo por inteiro.",
+   "emOutrasPalavras": "No Código militar, não basta querer o ato: você precisa saber que ele é proibido. Esse saber faz parte da própria intenção."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Um militar pratica um ato de boa-fé, sem ter como saber que era proibido (erro de direito inevitável). No CPM, qual é a consequência?",
+   "opcoes": [
+    "O crime se mantém, e a pena é apenas atenuada.",
+    "O dolo é excluído por inteiro e o crime não se configura.",
+    "O fato passa a ser crime culposo obrigatoriamente.",
+    "O crime se mantém, com a culpabilidade reduzida pela metade."
+   ],
+   "correta": 1,
+   "resposta": "O dolo é excluído por inteiro e o crime não se configura.",
+   "dica": "Se a consciência da ilicitude faz parte do dolo, o que acontece quando ela não existe?",
+   "explicacao": "Segundo a matriz do material, no CPM o erro de direito inevitável elimina o elemento normativo e, com ele, todo o dolo, e o crime cai. No Código comum, o mesmo tipo de erro é tratado como erro de proibição, com efeitos distintos sobre a culpabilidade. Esse ponto do material merece confirmação com o instrutor.",
+   "emOutrasPalavras": "Se você realmente não tinha como saber que era errado, no Código militar a sua intenção \"some\", e o crime também."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Quais são os três elementos do dolus malus militar?",
+   "opcoes": [
+    "Conduta, resultado e nexo causal.",
+    "Imputabilidade, maioridade e exigibilidade.",
+    "Intelectivo, volitivo e normativo.",
+    "Representação, resultado e tipicidade."
+   ],
+   "correta": 2,
+   "resposta": "Intelectivo, volitivo e normativo.",
+   "dica": "Um elemento é de saber, outro de querer e o terceiro é ligado à norma.",
+   "explicacao": "O dolus malus combina três camadas: a representação do que se faz (intelectivo), a vontade de produzir o resultado ou assumir o risco (volitivo) e a consciência de que a conduta é proibida (normativo). Faltando qualquer uma, o dolo militar não se completa.",
+   "emOutrasPalavras": "Para ter dolo no militar, você precisa entender o que faz, querer fazer e saber que é proibido. São três partes."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Qual elemento do dolus malus corresponde a saber, mesmo que de forma leiga, que a conduta é proibida pelo regulamento?",
+   "opcoes": [
+    "O elemento intelectivo, que trata da representação do ato.",
+    "O elemento volitivo, que trata de querer o resultado.",
+    "O elemento causal, que liga a conduta ao fato.",
+    "O elemento normativo, a consciência da ilicitude."
+   ],
+   "correta": 3,
+   "resposta": "O elemento normativo, a consciência da ilicitude.",
+   "dica": "É o único dos três que se refere diretamente à regra violada.",
+   "explicacao": "O elemento normativo é o que distingue o dolo militar do dolo neutro: não basta conhecer o ato e querê-lo, é preciso perceber, ainda que como leigo, que ele afronta uma norma ou um regulamento. É nele que o erro de direito atua.",
+   "emOutrasPalavras": "É o \"eu sabia que isso era proibido\". Não precisa ser jurista, basta ter noção de que não podia."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "O elemento intelectivo do dolus malus consiste em:",
+   "opcoes": [
+    "saber fisicamente o que se está fazendo.",
+    "querer o resultado ou assumir o risco de produzi-lo.",
+    "saber que a conduta é proibida pelo regulamento.",
+    "ter saúde mental para entender uma ordem recebida."
+   ],
+   "correta": 0,
+   "resposta": "saber fisicamente o que se está fazendo.",
+   "dica": "É o \"saber\" que vem antes do querer e antes do juízo sobre a proibição.",
+   "explicacao": "A representação é a percepção consciente da própria conduta e de suas circunstâncias. Se o agente não entende o que está fazendo, por exemplo, porque a ordem era vaga, falta o elemento intelectivo e o dolo não se forma.",
+   "emOutrasPalavras": "É perceber o que você está fazendo na hora em que faz. Se você nem entendeu o que estava acontecendo, falta isso."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Dizer que, no CPM, o dolo é \"colorido pela má-fé\" significa que:",
+   "opcoes": [
+    "ele só existe quando o crime é praticado por motivo torpe.",
+    "ele exige a consciência de afrontar a norma, e não só querer o ato.",
+    "ele é presumido em todo crime praticado por um militar.",
+    "ele dispensa a vontade e se satisfaz com a mera consciência."
+   ],
+   "correta": 1,
+   "resposta": "ele exige a consciência de afrontar a norma, e não só querer o ato.",
+   "dica": "A \"cor\" do dolo militar vem de um saber, e não de um motivo.",
+   "explicacao": "O dolus malus, ao incorporar o elemento normativo, vincula o dolo à intenção consciente de violar a norma, e não apenas à vontade de realizar o ato. Daí o dolo militar não ser neutro, mas qualificado pela consciência de estar agindo contra o dever.",
+   "emOutrasPalavras": "No militar, a intenção só conta como \"dolo\" se você sabia que estava indo contra a regra."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Uma ordem vaga é transmitida pelo rádio, e o soldado a interpreta de forma errada, deixando de cumpri-la. Na análise do STM, o que faltou?",
+   "opcoes": [
+    "O elemento normativo, pois ele não sabia que o regulamento proibia.",
+    "O nexo causal entre a ordem e o resultado final.",
+    "A imputabilidade, pois o soldado não tinha saúde mental.",
+    "O elemento intelectivo, pois não houve intenção clara de desafiar."
+   ],
+   "correta": 3,
+   "resposta": "O elemento intelectivo, pois não houve intenção clara de desafiar.",
+   "dica": "O soldado chegou a entender o que lhe foi mandado?",
+   "explicacao": "Quando o comando é dúbio e o militar o entende mal, ele não representa corretamente a ordem que supostamente descumpre. Falta o elemento intelectivo do dolus malus, não há intenção de desafiar a autoridade, e a decisão tende à absolvição.",
+   "emOutrasPalavras": "Se o soldado entendeu errado por culpa de uma ordem confusa, ele não quis desobedecer, e isso não é crime."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Para a prisão penal por recusa de obediência, o STM exige mais do que o simples não fazer físico. O que mais é exigido?",
+   "opcoes": [
+    "A intenção direta de afrontar a autoridade e romper a hierarquia.",
+    "Um resultado danoso, devidamente comprovado, ao serviço da corporação.",
+    "A reincidência do militar em infrações disciplinares já registradas antes.",
+    "A participação de pelo menos dois militares na mesma recusa combinada."
+   ],
+   "correta": 0,
+   "resposta": "A intenção direta de afrontar a autoridade e romper a hierarquia.",
+   "dica": "O foco está na vontade do militar, e não só em seu comportamento.",
+   "explicacao": "O descumprimento material de uma ordem, sozinho, não basta. Como o dolo militar é qualificado, a lei penal exige a vontade consciente de menosprezar o comando e subverter a disciplina. Sem essa má-fé real, a conduta fica no campo disciplinar.",
+   "emOutrasPalavras": "Não obedecer não basta para ser crime. Tem que ter sido de propósito, para desafiar o chefe e quebrar a hierarquia."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Um bombeiro recusa uma ordem sob exaustão extrema em um incêndio, sem intenção de afrontar o comando. O que o STM tende a fazer?",
+   "opcoes": [
+    "Aplicar o art. 163 normalmente, pois a intenção do militar é irrelevante.",
+    "Enquadrar como motim, por causa do contexto operacional de risco.",
+    "Desclassificar para infração disciplinar, pela falta do dolus malus.",
+    "Absolver sem qualquer sanção, nem mesmo na esfera disciplinar."
+   ],
+   "correta": 2,
+   "resposta": "Desclassificar para infração disciplinar, pela falta do dolus malus.",
+   "dica": "O estresse retira um elemento do dolo, mas não apaga a quebra de regra.",
+   "explicacao": "Sob estresse extremo, exaustão ou abalo psicológico, falta a vontade consciente de romper a hierarquia, ou seja, o dolus malus. O fato deixa de ser crime militar e tende a ser tratado como infração disciplinar, no regulamento interno.",
+   "emOutrasPalavras": "Se a pessoa não aguentou mais, e não quis desafiar o chefe, o caso vira questão de disciplina interna, e não de cadeia."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Por que o componente de grupo agrava o enquadramento de uma recusa de ordem?",
+   "opcoes": [
+    "Porque a recusa em grupo é presumida dolosa, sem necessidade de prova.",
+    "Porque transforma uma infração pessoal em ameaça estrutural à corporação.",
+    "Porque o art. 163 vale só para oficiais, e o art. 149, só para praças.",
+    "Porque o motim dispensa a consciência de que se age em grupo."
+   ],
+   "correta": 1,
+   "resposta": "Porque transforma uma infração pessoal em ameaça estrutural à corporação.",
+   "dica": "Pense no efeito que a ação de vários militares tem sobre a corporação.",
+   "explicacao": "Quando dois ou mais militares recusam a mesma ordem, cientes de agir em conjunto, a conduta deixa de ser um desvio individual e ameaça a disciplina da corporação. O enquadramento migra do art. 163 para o motim (art. 149), com pena muito maior.",
+   "emOutrasPalavras": "Um desobedecer é problema pessoal. Vários combinados é perigo para a corporação inteira, e a pena sobe."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Segundo o checklist do material, para que serve o Filtro Tripartido (fato típico, ilicitude e culpabilidade) ao bombeiro militar?",
+   "opcoes": [
+    "Acelera o julgamento das infrações disciplinares praticadas nos quartéis.",
+    "Substitui a análise do dolo nos crimes puramente militares e comuns.",
+    "Protege o militar contra a tirania, limitando o poder de punir do Estado.",
+    "Garante pena mínima aos militares réus primários e de bons antecedentes."
+   ],
+   "correta": 2,
+   "resposta": "Protege o militar contra a tirania, limitando o poder de punir do Estado.",
+   "dica": "O filtro funciona como uma garantia, e não como um atalho.",
+   "explicacao": "A estrutura em três camadas obriga o Estado a demonstrar, passo a passo, que a conduta é típica, ilícita e reprovável antes de punir. Esse método limita o arbítrio e assegura que ninguém seja punido sem preencher todos os requisitos legais.",
+   "emOutrasPalavras": "O filtro é um escudo: o Estado só pode punir você se provar cada etapa, uma por uma."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Dolo e culpabilidade no CPM",
+   "enunciado": "Qual alternativa compara corretamente o Código Penal comum e o CPM?",
+   "opcoes": [
+    "Comum: finalista, com o dolo no fato típico. CPM: causalista, com o dolo na culpabilidade.",
+    "Comum: causalista, com o dolo na culpabilidade. CPM: finalista, com o dolo no fato típico.",
+    "Ambos finalistas, mas com a consciência da ilicitude dentro do dolo só no CPM.",
+    "Ambos causalistas, mas com o dolo no fato típico apenas no Código comum."
+   ],
+   "correta": 0,
+   "resposta": "Comum: finalista, com o dolo no fato típico. CPM: causalista, com o dolo na culpabilidade.",
+   "dica": "Procure o par que casa a teoria com o lugar onde fica a intenção.",
+   "explicacao": "O Código comum, atualizado em 1984, adota o finalismo e localiza o dolo na conduta típica. O CPM, de 1969, mantém a estrutura causalista e posiciona o dolo (e a culpa) na culpabilidade, o que explica a consciência da ilicitude integrar o dolo militar.",
+   "emOutrasPalavras": "Comum: a intenção entra logo no começo, junto com o ato. Militar: ela fica no final, dentro da culpa."
   }
  ]
 };
