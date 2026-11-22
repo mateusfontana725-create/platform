@@ -44,7 +44,7 @@ A matéria é cadastrada em um único lugar: `assets/materias.js`, sempre **no f
 - **Salvamento Veicular:** resumo em HTML e PDF. Sem quiz.
 - **EPR (Equipamento de Proteção Respiratória):** quiz com 50 questões e arquivo offline. Sem resumo.
 - **Espaço Confinado e Silos:** resumo em PDF. Sem quiz.
-- **Direito Penal e Penal Militar:** resumo em HTML e PDF (`resumo/direito-penal.*`) e quiz com 147 questões, todas objetivas (17 sobre o art. 9º e a aplicação da lei militar; 15 sobre dolo e culpabilidade no CPM, filtro do crime e aplicação no STM, vindas do manual "Penal Geral"; alternativas reequilibradas) e arquivo offline. O resumo tem 28 seções; o PDF foi regerado com o Chromium (Playwright). A comparação sobre o erro de proibição no Código comum (seção 25) vem do infográfico e merece confirmação com o instrutor. Prazos do IPM (CPPM art. 20) vieram de fora do material enviado e merecem confirmação.
+- **Direito Penal e Penal Militar:** resumo em HTML e PDF (`resumo/direito-penal.*`) e quiz com 138 questões, todas objetivas, com enunciados e alternativas curtos e sem decoreba de números (17 sobre o art. 9º e a aplicação da lei militar; 15 sobre dolo e culpabilidade no CPM, filtro do crime e aplicação no STM, vindas do manual "Penal Geral"; alternativas reequilibradas) e arquivo offline. O resumo tem 28 seções; o PDF foi regerado com o Chromium (Playwright). A comparação sobre o erro de proibição no Código comum (seção 25) vem do infográfico e merece confirmação com o instrutor. Prazos do IPM (CPPM art. 20) vieram de fora do material enviado e merecem confirmação.
 - **Direito Disciplinar:** cadastrada como "em breve", sem resumo e sem quiz. Aguardando o material.
 
 ## Pendências
