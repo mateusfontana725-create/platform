@@ -119,47 +119,15 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Princípios e fundamentos",
-   "enunciado": "Um processo é encerrado por erro de forma (como falta de pagamento de custas), sem julgar o fato. O que isso significa?",
-   "opcoes": [
-    "O processo acabou, mas a ação pode ser proposta de novo.",
-    "O réu foi absolvido de forma definitiva.",
-    "A decisão não pode mais ser discutida de modo nenhum.",
-    "O juiz decidiu que o fato não é crime."
-   ],
-   "correta": 0,
-   "resposta": "O processo acabou, mas a ação pode ser proposta de novo.",
-   "dica": "O juiz chegou a analisar se a conduta era crime?",
-   "explicacao": "A coisa julgada formal apenas encerra o processo por questão processual, sem julgar a conduta. A coisa julgada material ocorre quando o juiz examina o fato e decide sobre ele, tornando a decisão imutável.",
-   "emOutrasPalavras": "Extinguiu por papelada: ninguém julgou o fato, dá para abrir de novo. Julgar o fato é outra história."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Princípios e fundamentos",
-   "enunciado": "O princípio da insignificância (bagatela) pode ser aplicado na esfera administrativa?",
-   "opcoes": [
-    "Sim, sempre que o dano for pequeno.",
-    "Não, ele não se aplica na administração.",
-    "Sim, desde que o superior concorde.",
-    "Sim, mas apenas em favor de oficiais."
-   ],
-   "correta": 1,
-   "resposta": "Não, ele não se aplica na administração.",
-   "dica": "O instrutor destacou que esse princípio tem limite fora do campo penal.",
-   "explicacao": "Segundo a orientação do instrutor, a insignificância não se aplica na administração. Na esfera disciplinar a falta é apurada ainda que de pequeno valor.",
-   "emOutrasPalavras": "Na parte administrativa não existe a desculpa de que foi coisa pequena."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Princípios e fundamentos",
    "enunciado": "Qual a diferença principal entre o Direito Penal comum e o Penal Militar?",
    "opcoes": [
     "O militar só vale em tempo de guerra.",
-    "O comum protege só a vida; o militar só protege bens materiais.",
-    "O comum protege a convivência social; o militar protege também a hierarquia e a disciplina.",
+    "O comum protege só a vida; o militar protege só os bens da corporação.",
+    "O militar também protege a hierarquia e a disciplina.",
     "Não há diferença: o CPM só copia o Código Penal."
    ],
    "correta": 2,
-   "resposta": "O comum protege a convivência social; o militar protege também a hierarquia e a disciplina.",
+   "resposta": "O militar também protege a hierarquia e a disciplina.",
    "dica": "Pense no bem especial protegido nas corporações.",
    "explicacao": "O comum protege a convivência social ampla. O militar protege as instituições, com foco em hierarquia e disciplina, inclusive em tempo de paz (art. 9º).",
    "emOutrasPalavras": "O Penal comum cuida da sociedade em geral. O Penal Militar cuida da farda: hierarquia e disciplina."
@@ -167,7 +135,7 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Princípios e fundamentos",
-   "enunciado": "O que o art. 19 do CPM estabelece sobre as infrações dos regulamentos disciplinares?",
+   "enunciado": "O que o CPM diz sobre as infrações dos regulamentos disciplinares?",
    "opcoes": [
     "Elas são julgadas pela Justiça Militar com pena de detenção ou reclusão.",
     "Elas só existem para os oficiais e são punidas com perda do posto.",
@@ -179,22 +147,6 @@ window.QUIZ_DATA = {
    "dica": "Separe o que é crime do que é falta de regulamento.",
    "explicacao": "O art. 19 deixa claro que o CPM não trata das infrações dos regulamentos disciplinares. Essas faltas são apuradas no âmbito administrativo e não se confundem com crime.",
    "emOutrasPalavras": "Falta de regulamento é problema disciplinar, não crime do Código Penal Militar."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Princípios e fundamentos",
-   "enunciado": "Quem importa mercadoria permitida, mas não paga os tributos devidos, comete:",
-   "opcoes": [
-    "Receptação, por adquirir mercadoria de origem ilícita.",
-    "Contrabando, por tratar de mercadoria proibida.",
-    "Descaminho (crime tributário).",
-    "Peculato, por desviar bem da administração."
-   ],
-   "correta": 2,
-   "resposta": "Descaminho (crime tributário).",
-   "dica": "A mercadoria é lícita. O problema é o imposto.",
-   "explicacao": "Descaminho é fugir do pagamento dos tributos de mercadoria permitida. Já o contrabando envolve mercadoria proibida. A diferença está na natureza da mercadoria e do prejuízo.",
-   "emOutrasPalavras": "Mercadoria liberada sem pagar imposto é descaminho. Mercadoria proibida é contrabando."
   },
   {
    "tipo": "escolha",
@@ -231,70 +183,6 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Criminologia",
-   "enunciado": "O que quer dizer a ideia do \"caldo de cultura\", da Escola de Lyon?",
-   "opcoes": [
-    "Que o criminoso já nasce com defeitos físicos.",
-    "Que o meio social faz o crime se desenvolver, como o caldo faz o micróbio crescer.",
-    "Que o crime é uma escolha calculada de custo e benefício.",
-    "Que a sociedade não tem nenhuma influência no crime."
-   ],
-   "correta": 1,
-   "resposta": "Que o meio social faz o crime se desenvolver, como o caldo faz o micróbio crescer.",
-   "dica": "Quem fornece o líquido onde o micróbio se multiplica?",
-   "explicacao": "Na Escola de Lyon, o meio social é o caldo de cultura. O indivíduo só pratica a infração quando encontra esse meio favorável. Daí a ideia de que as sociedades têm os criminosos que merecem.",
-   "emOutrasPalavras": "A pessoa sozinha é inofensiva. O ambiente é que faz o crime fermentar."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Criminologia",
-   "enunciado": "Qual é o alerta histórico feito sobre a Escola Positiva no Brasil do século XX?",
-   "opcoes": [
-    "Aboliu as penas privativas de liberdade em todos os crimes militares.",
-    "Proibiu o estudo da criminologia nas escolas militares e policiais.",
-    "Sua tese biológica alimentou o racismo estrutural e políticas higienistas.",
-    "Defendeu a vingança pública como regra geral, sem limites para a pena."
-   ],
-   "correta": 2,
-   "resposta": "Sua tese biológica alimentou o racismo estrutural e políticas higienistas.",
-   "dica": "A ideia de criminoso nato por traços biológicos teve um efeito social grave.",
-   "explicacao": "Ao ligar o crime a traços biológicos, a tese positivista foi usada no Brasil para justificar discriminação racial e políticas higienistas, o que a torna um alerta histórico.",
-   "emOutrasPalavras": "Dizer que o crime é coisa de biologia serviu de desculpa para preconceito."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Criminologia",
-   "enunciado": "Na Terza Scuola, o que separa quem recebe pena de quem recebe medida de segurança?",
-   "opcoes": [
-    "A patente do agente na corporação.",
-    "A gravidade do dano causado.",
-    "A confissão feita durante o inquérito.",
-    "A capacidade de entender a lei e se intimidar com ela."
-   ],
-   "correta": 3,
-   "resposta": "A capacidade de entender a lei e se intimidar com ela.",
-   "dica": "Pense em quem consegue ser freado pela ameaça da lei.",
-   "explicacao": "Para as escolas intermediárias, o imputável possui discernimento e uma mente que processa a ameaça da lei como contrapeso. Por isso recebe pena, com foco em intimidação e ressocialização.",
-   "emOutrasPalavras": "Quem entende e se deixa frear pela lei leva pena. Quem não tem esse discernimento recebe tratamento."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Criminologia",
-   "enunciado": "Qual a sequência das escolas criminológicas indicada no roteiro de estudos?",
-   "opcoes": [
-    "Positivista, Clássica, Consenso, Macrossociológicas e Crítica.",
-    "Macrossociológicas, Clássica, Positivista, Crítica e Consenso.",
-    "Clássica, Macrossociológicas, Positivista, Consenso e Crítica.",
-    "Clássica, Positivista, Macrossociológicas, Consenso e Crítica."
-   ],
-   "correta": 3,
-   "resposta": "Clássica, Positivista, Macrossociológicas, Consenso e Crítica.",
-   "dica": "Comece pelo século XVIII e avance no tempo.",
-   "explicacao": "O roteiro apresenta a evolução do pensamento criminológico: Escola Clássica, depois a Positivista, em seguida as Macrossociológicas e, por fim, as correntes do Consenso e Crítica.",
-   "emOutrasPalavras": "É uma linha do tempo: primeiro a Clássica, depois a Positivista, depois as que olham a sociedade."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Criminologia",
    "enunciado": "A Lei de Talião (olho por olho), típica da fase do caos da punição, se caracteriza por:",
    "opcoes": [
     "tratamento terapêutico do infrator, com acompanhamento médico.",
@@ -307,54 +195,6 @@ window.QUIZ_DATA = {
    "dica": "Antes dos freios do Estado, a punição era movida por quê?",
    "explicacao": "Na Antiguidade o crime era visto como pecado e a punição seguia a Lei de Talião, sem critério técnico, movida por vingança e emoção. Só mais tarde surgem a legalidade e a proporcionalidade.",
    "emOutrasPalavras": "No começo era vingança pura, sem regra e sem limite."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Criminologia",
-   "enunciado": "Quem formulou a Teoria Bipartida, dividindo a ação em força física e força moral?",
-   "opcoes": [
-    "Liszt.",
-    "Beccaria.",
-    "Beling.",
-    "Carmignani."
-   ],
-   "correta": 3,
-   "resposta": "Carmignani.",
-   "dica": "Século XIX, dois componentes: dano material e culpabilidade.",
-   "explicacao": "Giovanni Carmignani, no século XIX, dividiu a ação em força física (o dano material) e força moral (a culpabilidade). Mais tarde o modelo evoluiu para a divisão em três elementos.",
-   "emOutrasPalavras": "Carmignani dividiu o crime em dois: o dano e a culpa."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Criminologia",
-   "enunciado": "Em 1906, Ernst Beling acrescentou ao conceito de crime qual elemento?",
-   "opcoes": [
-    "A culpabilidade, como vínculo psicológico entre o agente e o fato.",
-    "A tipicidade: o fato precisa se encaixar na descrição da lei.",
-    "A punibilidade, como quarto elemento do conceito de crime.",
-    "A ilicitude, como contrariedade do fato ao ordenamento jurídico."
-   ],
-   "correta": 1,
-   "resposta": "A tipicidade: o fato precisa se encaixar na descrição da lei.",
-   "dica": "O molde legal precisa ser exato.",
-   "explicacao": "Beling introduziu a tipicidade, exigindo que o fato corresponda precisamente à descrição legal. Com Liszt, isso consolidou o modelo tripartido: fato típico, ilicitude e culpabilidade.",
-   "emOutrasPalavras": "Beling criou o molde: o fato precisa caber direitinho no que a lei descreve."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Criminologia",
-   "enunciado": "No causalismo clássico (Liszt e Beling), onde ficavam o dolo e a culpa?",
-   "opcoes": [
-    "Na tipicidade, como parte integrante da conduta humana voluntária.",
-    "Na ilicitude, como causa de justificação da conduta praticada.",
-    "Fora do conceito de crime, sendo analisados só na dosimetria da pena.",
-    "Na culpabilidade, como vínculo psicológico entre o agente e o fato."
-   ],
-   "correta": 3,
-   "resposta": "Na culpabilidade, como vínculo psicológico entre o agente e o fato.",
-   "dica": "A intenção ficava escondida no último filtro.",
-   "explicacao": "No modelo causalista, a conduta era vista de forma objetiva, e a intenção (dolo ou culpa) ficava na culpabilidade. É essa a lógica que o Código Penal Militar de 1969 preserva.",
-   "emOutrasPalavras": "No modelo antigo a intenção só era analisada no final, na culpabilidade."
   },
   {
    "tipo": "escolha",
@@ -379,10 +219,10 @@ window.QUIZ_DATA = {
    "opcoes": [
     "Há crime, mas com a pena reduzida de um a dois terços pelo juiz.",
     "Há crime, mas o juiz deixa de aplicar a pena por clemência.",
-    "Não há crime, porque o filtro é interrompido na segunda camada.",
-    "Há crime, e o juiz aplica medida de segurança ao agente."
+    "Há crime, e o juiz aplica medida de segurança ao agente.",
+    "Não há crime, porque o filtro é interrompido na segunda camada."
    ],
-   "correta": 2,
+   "correta": 3,
    "resposta": "Não há crime, porque o filtro é interrompido na segunda camada.",
    "dica": "Se uma das peneiras barra o fato, a análise acaba ali.",
    "explicacao": "A ilicitude é a segunda camada. Se o ordenamento permite a conduta (por exemplo, por estado de necessidade), o fato deixa de ser crime e a análise não chega à culpabilidade.",
@@ -394,12 +234,12 @@ window.QUIZ_DATA = {
    "enunciado": "Numa operação de resgate, a guarnição quebra a porta de uma casa para salvar uma pessoa. Como se analisa o dano à porta?",
    "opcoes": [
     "É crime, porque ninguém pode danificar bem alheio.",
-    "É fato típico, mas justificado pelo estado de necessidade, e por isso não é crime.",
-    "Não é fato típico, porque a guarnição é órgão público.",
+    "É fato típico, mas não é crime: há estado de necessidade.",
+    "Não é fato típico, porque a guarnição é órgão público e age pelo Estado.",
     "É crime culposo, pois a guarnição devia esperar autorização."
    ],
    "correta": 1,
-   "resposta": "É fato típico, mas justificado pelo estado de necessidade, e por isso não é crime.",
+   "resposta": "É fato típico, mas não é crime: há estado de necessidade.",
    "dica": "O fato cabe no molde, mas o Direito autorizou a ação.",
    "explicacao": "O dano ao patrimônio cabe na descrição legal (fato típico). Porém, foi praticado para salvar uma vida em perigo atual, o que configura estado de necessidade.",
    "emOutrasPalavras": "Quebrar a porta é dano, mas para salvar uma vida a lei permite. Resultado: zero crime."
@@ -419,38 +259,6 @@ window.QUIZ_DATA = {
    "dica": "É a primeira peneira, a do molde.",
    "explicacao": "O fato típico exige uma conduta, o resultado, a ligação entre os dois (nexo causal) e o enquadramento exato na descrição legal (tipicidade). Os demais conjuntos pertencem a outros temas da teoria do crime.",
    "emOutrasPalavras": "Fato típico é: o que a pessoa fez, o que resultou, a ligação entre os dois e a previsão em lei."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Teoria do crime",
-   "enunciado": "Crime material (de resultado naturalístico) exige:",
-   "opcoes": [
-    "reincidência do agente em crime da mesma espécie.",
-    "apenas a conduta do agente, sem exigir qualquer resultado concreto.",
-    "materialidade: uma alteração concreta, como o corpo no homicídio.",
-    "dolo direto obrigatoriamente, sem admitir o dolo eventual."
-   ],
-   "correta": 2,
-   "resposta": "materialidade: uma alteração concreta, como o corpo no homicídio.",
-   "dica": "Pense no crime que deixa vestígio concreto.",
-   "explicacao": "No crime material o tipo descreve conduta e resultado, e a consumação depende da produção desse resultado, que deixa vestígio no mundo físico. No homicídio, por exemplo, exige-se o corpo.",
-   "emOutrasPalavras": "Crime material deixa marca no mundo. No homicídio, existe o corpo."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Teoria do crime",
-   "enunciado": "Qual dos crimes abaixo é formal, consumando-se sem exigir resultado naturalístico?",
-   "opcoes": [
-    "Corrupção passiva (solicitar, receber ou aceitar vantagem).",
-    "Lesão corporal, que exige lesão efetiva à integridade da vítima.",
-    "Furto consumado, que exige a subtração e a posse do bem.",
-    "Homicídio consumado, que exige a morte como resultado."
-   ],
-   "correta": 0,
-   "resposta": "Corrupção passiva (solicitar, receber ou aceitar vantagem).",
-   "dica": "O instrutor citou corrupção, insubordinação e porte ilegal de arma.",
-   "explicacao": "Nos crimes formais, o legislador antecipa a consumação: basta a conduta, ainda que o resultado visado não ocorra. Corrupção, insubordinação e porte ilegal de arma são exemplos citados em aula.",
-   "emOutrasPalavras": "No crime formal basta fazer a conduta. Não precisa dar resultado."
   },
   {
    "tipo": "escolha",
@@ -503,22 +311,6 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Teoria do crime",
-   "enunciado": "No crime preterdoloso, o agente age com:",
-   "opcoes": [
-    "dolo na conduta antecedente e culpa no resultado mais grave.",
-    "dolo direto tanto na conduta quanto no resultado mais grave produzido.",
-    "culpa na conduta inicial e dolo no resultado final, mais grave.",
-    "dolo eventual na conduta e dolo direto no resultado, ao mesmo tempo."
-   ],
-   "correta": 0,
-   "resposta": "dolo na conduta antecedente e culpa no resultado mais grave.",
-   "dica": "A palavra tem “dolo” e “além”: a conduta é dolosa e o resultado passa do que se queria.",
-   "explicacao": "No preterdolo, o agente quer a conduta inicial, mas o resultado final, mais grave, ocorre por culpa, ou seja, sem ter sido desejado nem aceito.",
-   "emOutrasPalavras": "Você quis uma coisa, mas deu algo pior que você não queria."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Teoria do crime",
    "enunciado": "Qual a sequência correta das fases do iter criminis?",
    "opcoes": [
     "Preparação, cogitação, execução e consumação (com o exaurimento ao final).",
@@ -539,30 +331,14 @@ window.QUIZ_DATA = {
    "opcoes": [
     "A tentativa: execução interrompida por fato alheio.",
     "A consumação: o crime já se completou e é punível.",
-    "A cogitação: o pensamento, sozinho, não é crime.",
-    "A execução: atos já praticados contra o bem jurídico."
+    "A execução: atos já praticados contra o bem jurídico.",
+    "A cogitação: o pensamento, sozinho, não é crime."
    ],
-   "correta": 2,
+   "correta": 3,
    "resposta": "A cogitação: o pensamento, sozinho, não é crime.",
    "dica": "Ninguém é punido pelo que apenas pensa.",
    "explicacao": "Em regra, só se pune a partir do início da execução. A cogitação não passa de pensamento, e os atos preparatórios, em regra, também não são puníveis.",
    "emOutrasPalavras": "Pensar em crime não é crime. A punição começa quando se começa a executar."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Teoria do crime",
-   "enunciado": "Segundo o art. 30 do CPM, o crime tentado é, em regra, punido com:",
-   "opcoes": [
-    "a mesma pena do consumado, sem nenhuma diminuição em regra.",
-    "metade da pena mínima do consumado, aplicada em todos os casos.",
-    "somente medida de segurança, aplicada a quem tenta o crime.",
-    "a pena do crime consumado diminuída de um a dois terços."
-   ],
-   "correta": 3,
-   "resposta": "a pena do crime consumado diminuída de um a dois terços.",
-   "dica": "O Código prevê uma diminuição que varia entre frações.",
-   "explicacao": "O art. 30 define a tentativa e estabelece que sua pena é a do crime consumado diminuída de um a dois terços. Em caso de excepcional gravidade, o juiz pode aplicar a pena do consumado.",
-   "emOutrasPalavras": "Tentou e não conseguiu: leva a pena do crime completo, mas com desconto."
   },
   {
    "tipo": "escolha",
@@ -647,7 +423,7 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Ilicitude e culpabilidade",
-   "enunciado": "Segundo o art. 44 do CPM, age em legítima defesa quem:",
+   "enunciado": "Age em legítima defesa quem:",
    "opcoes": [
     "age depois de cessada a agressão, para castigar o agressor pelo que fez.",
     "responde com força excessiva, pois a agressão sofrida foi injusta e grave.",
@@ -663,47 +439,15 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Ilicitude e culpabilidade",
-   "enunciado": "Quem excede culposamente os limites de uma excludente de ilicitude, segundo o art. 45:",
-   "opcoes": [
-    "tem a pena agravada pela metade em razão do excesso.",
-    "responde pelo fato, se ele for punível a título de culpa.",
-    "fica sempre isento de pena, pela existência da excludente.",
-    "responde sempre por dolo, como se não houvesse excludente."
-   ],
-   "correta": 1,
-   "resposta": "responde pelo fato, se ele for punível a título de culpa.",
-   "dica": "Excesso culposo: a pessoa ultrapassou por falta de cuidado.",
-   "explicacao": "O art. 45 trata do excesso culposo: quem extrapola os limites de uma excludente por falta de cautela responde pelo fato, desde que o crime admita a forma culposa.",
-   "emOutrasPalavras": "Se você passou do ponto por descuido, responde por culpa, e não por dolo."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Ilicitude e culpabilidade",
-   "enunciado": "O excesso, no art. 45, não é punível quando decorre de:",
-   "opcoes": [
-    "ser o agente oficial e ter posto de comando.",
-    "ter ocorrido em tempo de paz e em serviço.",
-    "escusável surpresa ou perturbação de ânimo.",
-    "superioridade hierárquica do agente sobre a vítima."
-   ],
-   "correta": 2,
-   "resposta": "escusável surpresa ou perturbação de ânimo.",
-   "dica": "Pense em um susto que tira o controle de quem se defende.",
-   "explicacao": "O parágrafo único do art. 45 prevê o excesso escusável: não se pune quando o excesso resulta de surpresa ou perturbação de ânimo justificáveis diante da situação.",
-   "emOutrasPalavras": "Se o susto foi tão grande que a reação saiu do controle de um jeito compreensível, não pune."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Ilicitude e culpabilidade",
    "enunciado": "No estado de necessidade, o agente pratica um fato para:",
    "opcoes": [
     "vingar uma ofensa recebida no passado.",
     "cumprir uma ordem claramente ilegal do superior.",
-    "defender um bem qualquer, mesmo sem perigo nenhum.",
-    "evitar um perigo real e atual, que ele não provocou, para si ou para outra pessoa."
+    "defender um bem qualquer, mesmo sem nenhum perigo real e imediato à vista.",
+    "evitar um perigo atual, que não provocou, contra si ou outra pessoa."
    ],
    "correta": 3,
-   "resposta": "evitar um perigo real e atual, que ele não provocou, para si ou para outra pessoa.",
+   "resposta": "evitar um perigo atual, que não provocou, contra si ou outra pessoa.",
    "dica": "Pense em quem enfrenta um perigo real que não criou.",
    "explicacao": "O estado de necessidade pressupõe perigo certo e atual, não provocado pelo agente, e uma conduta sem outra saída razoável. Conforme o valor dos bens em conflito, ele exclui a ilicitude ou a culpabilidade.",
    "emOutrasPalavras": "Você só sacrifica um bem quando é a única saída para escapar de um perigo real que não causou."
@@ -727,7 +471,7 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Ilicitude e culpabilidade",
-   "enunciado": "De acordo com o art. 38 do CPM, quem pratica o fato em estrita obediência a ordem direta de superior hierárquico, em matéria de serviço:",
+   "enunciado": "Quem pratica o fato em estrita obediência a ordem direta de superior, em matéria de serviço:",
    "opcoes": [
     "só é isento se a ordem vier de oficial do mais alto posto.",
     "é culpado, mas tem a pena reduzida de um a dois terços.",
@@ -743,7 +487,7 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Ilicitude e culpabilidade",
-   "enunciado": "Se a ordem do superior tem por objeto ato manifestamente criminoso (art. 38, § 2º), o subordinado:",
+   "enunciado": "Se a ordem do superior é claramente criminosa, o subordinado que a cumpre:",
    "opcoes": [
     "só responde se descumprir a ordem manifestamente criminosa.",
     "também é punível, pois não deve cumprir ordem manifestamente criminosa.",
@@ -775,7 +519,7 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Ilicitude e culpabilidade",
-   "enunciado": "Segundo o art. 48, é inimputável quem, ao tempo do fato:",
+   "enunciado": "É inimputável quem, ao tempo do fato:",
    "opcoes": [
     "era militar de baixa graduação e desconhecia as normas do regulamento.",
     "agiu sob forte emoção ou paixão, o que reduziu seu autocontrole.",
@@ -787,22 +531,6 @@ window.QUIZ_DATA = {
    "dica": "A causa é de ordem mental, e não emocional ou voluntária.",
    "explicacao": "A inimputabilidade depende da incapacidade de entender o caráter ilícito do fato ou de agir de acordo com esse entendimento, por causa mental. Embriaguez voluntária e emoção não excluem a imputabilidade.",
    "emOutrasPalavras": "Só não pode ser punido quem, por problema mental, não entendia o que fazia."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Ilicitude e culpabilidade",
-   "enunciado": "A embriaguez afasta a imputabilidade (art. 49) quando é:",
-   "opcoes": [
-    "culposa, por excesso do próprio agente ao beber.",
-    "completa e decorrente de caso fortuito ou força maior.",
-    "preordenada, buscada para ganhar coragem e praticar o crime.",
-    "voluntária, desde que completa e sem finalidade criminosa."
-   ],
-   "correta": 1,
-   "resposta": "completa e decorrente de caso fortuito ou força maior.",
-   "dica": "O agente não escolheu ficar embriagado.",
-   "explicacao": "Só a embriaguez completa, proveniente de caso fortuito ou força maior (ou seja, sem culpa do agente), deixa a pessoa inteiramente incapaz de entender o caráter criminoso do fato e exclui a imputabilidade.",
-   "emOutrasPalavras": "Só vale se a embriaguez foi total e acidental. Beber por vontade própria não é desculpa."
   },
   {
    "tipo": "escolha",
@@ -819,86 +547,6 @@ window.QUIZ_DATA = {
    "dica": "O roteiro lista a menoridade entre as causas que excluem a culpabilidade.",
    "explicacao": "O roteiro de estudos coloca a menoridade entre as hipóteses de inimputabilidade, que excluem a culpabilidade, ao lado da doença mental e da embriaguez completa acidental.",
    "emOutrasPalavras": "Menor de idade não é cobrado na esfera penal, porque a lei o considera inimputável."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Ilicitude e culpabilidade",
-   "enunciado": "O erro de tipo é o engano do agente sobre:",
-   "opcoes": [
-    "a identidade do autor do crime, que o agente confunde com outra pessoa.",
-    "o caráter ilícito do fato, que ele julgava permitido pelo ordenamento.",
-    "uma elementar do tipo, isto é, um dado da realidade que compõe o crime.",
-    "o prazo de prescrição do crime, que acreditava já ter se esgotado."
-   ],
-   "correta": 2,
-   "resposta": "uma elementar do tipo, isto é, um dado da realidade que compõe o crime.",
-   "dica": "Ele se engana sobre um fato, e não sobre a lei.",
-   "explicacao": "No erro de tipo, o agente não conhece ou conhece mal um elemento do tipo penal (por exemplo, acha que a coisa é sua). Isso afasta o dolo. Já o erro sobre a ilicitude é erro de proibição.",
-   "emOutrasPalavras": "Você se enganou sobre os fatos, como pegar a mochila errada achando que era a sua."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Ilicitude e culpabilidade",
-   "enunciado": "O erro de proibição consiste em:",
-   "opcoes": [
-    "errar a pessoa atingida pelo golpe, sem perceber a troca da vítima prevista na lei.",
-    "ignorar um elemento da descrição do crime, ao praticar a conduta.",
-    "confundir quem é o superior hierárquico e a quem deve obediência.",
-    "um juízo equivocado sobre a ilicitude: o agente crê que o fato é permitido."
-   ],
-   "correta": 3,
-   "resposta": "um juízo equivocado sobre a ilicitude: o agente crê que o fato é permitido.",
-   "dica": "Aqui o engano é sobre a lei, e não sobre o fato.",
-   "explicacao": "No erro de proibição, o agente tem plena noção do fato, mas pensa que sua conduta é lícita. Atinge a potencial consciência da ilicitude, que é elemento da culpabilidade.",
-   "emOutrasPalavras": "Você sabia o que fazia, só achava que era permitido."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Pena, ação penal e IPM",
-   "enunciado": "Qual destas penas principais existe no CPM, mas não no Código Penal comum?",
-   "opcoes": [
-    "Impedimento, em que o condenado fica na unidade sem prejuízo da instrução.",
-    "Prestação de serviços à comunidade.",
-    "Perda de bens e valores.",
-    "Advertência verbal registrada em boletim."
-   ],
-   "correta": 0,
-   "resposta": "Impedimento, em que o condenado fica na unidade sem prejuízo da instrução.",
-   "dica": "É uma pena ligada à vida na caserna, que o Código comum não conhece.",
-   "explicacao": "O CPM prevê penas próprias do meio militar, como o impedimento, a suspensão do posto, graduação, cargo ou função, e a reforma (art. 55). O Código comum trabalha com outras, como a prestação de serviços à comunidade.",
-   "emOutrasPalavras": "Algumas penas só existem para militares, como o impedimento. Serviço comunitário e perda de bens são do Código comum."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Pena, ação penal e IPM",
-   "enunciado": "No critério trifásico de dosimetria da pena, a segunda fase considera:",
-   "opcoes": [
-    "as causas de diminuição e de aumento de pena.",
-    "as circunstâncias judiciais, que fixam a pena-base.",
-    "as circunstâncias atenuantes e agravantes.",
-    "o regime inicial de cumprimento da pena."
-   ],
-   "correta": 2,
-   "resposta": "as circunstâncias atenuantes e agravantes.",
-   "dica": "A ordem é: judiciais, depois agravantes e atenuantes, depois causas.",
-   "explicacao": "O cálculo da pena segue três etapas em ordem fixa.",
-   "emOutrasPalavras": "Segunda fase: o juiz ajusta a pena por agravantes e atenuantes."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Pena, ação penal e IPM",
-   "enunciado": "Na terceira fase da dosimetria da pena, o juiz aplica:",
-   "opcoes": [
-    "as causas de diminuição e de aumento de pena.",
-    "a conversão da pena privativa de liberdade em multa.",
-    "as atenuantes e agravantes genéricas.",
-    "as circunstâncias judiciais, para fixar a pena-base."
-   ],
-   "correta": 0,
-   "resposta": "as causas de diminuição e de aumento de pena.",
-   "dica": "É a última etapa do cálculo.",
-   "explicacao": "Depois de fixar a pena-base (1ª fase) e ajustá-la por atenuantes e agravantes (2ª fase), o juiz aplica na 3ª fase as causas de diminuição e de aumento, que usam frações previstas em lei.",
-   "emOutrasPalavras": "Terceira fase: entram os aumentos e as diminuições por fração."
   },
   {
    "tipo": "escolha",
@@ -919,38 +567,6 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Pena, ação penal e IPM",
-   "enunciado": "Quanto aos oficiais, como se dá a perda do posto e da patente?",
-   "opcoes": [
-    "Pelo juiz de 1ª instância, na própria sentença condenatória, de ofício.",
-    "Por representação ao Tribunal competente, em processo autônomo (CF, art. 125, § 4º).",
-    "Por decisão do comandante-geral, sem necessidade de processo.",
-    "Automaticamente, com o trânsito em julgado de qualquer condenação criminal por crime doloso."
-   ],
-   "correta": 1,
-   "resposta": "Por representação ao Tribunal competente, em processo autônomo (CF, art. 125, § 4º).",
-   "dica": "A Constituição reserva esse julgamento a um tribunal.",
-   "explicacao": "A perda do posto e da patente do oficial não é decretada por juiz comum de 1ª instância. Exige representação perante o Tribunal de Justiça (ou TJ Militar) em processo autônomo, conforme o art.",
-   "emOutrasPalavras": "Oficial só perde o posto por processo próprio no Tribunal."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Pena, ação penal e IPM",
-   "enunciado": "Quanto às praças, a perda da graduação ocorre:",
-   "opcoes": [
-    "somente por processo autônomo no Tribunal, nos mesmos moldes dos oficiais do próprio militar.",
-    "nunca, pois a graduação é vitalícia e só se perde por morte ou renúncia.",
-    "por procedimento interno da instituição ou por determinação direta da sentença penal.",
-    "apenas por requisição do Ministério Público, em ação própria no Tribunal."
-   ],
-   "correta": 2,
-   "resposta": "por procedimento interno da instituição ou por determinação direta da sentença penal.",
-   "dica": "O caminho das praças é diferente do dos oficiais.",
-   "explicacao": "Para as praças, a perda da graduação pode se dar por procedimento interno da instituição ou por determinação direta da sentença penal.",
-   "emOutrasPalavras": "Praça perde a graduação por procedimento interno ou pela própria sentença."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Pena, ação penal e IPM",
    "enunciado": "Quem é o titular da ação penal na persecução penal militar?",
    "opcoes": [
     "A vítima ou o seu superior hierárquico.",
@@ -963,38 +579,6 @@ window.QUIZ_DATA = {
    "dica": "O roteiro destaca a titularidade exclusiva.",
    "explicacao": "Na persecução penal militar a titularidade é exclusiva do Ministério Público, que apresenta a denúncia. O comandante pode instaurar o IPM, mas não propõe a ação penal.",
    "emOutrasPalavras": "Quem entra com a ação penal militar é o MP, e ninguém mais."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Pena, ação penal e IPM",
-   "enunciado": "A ação penal pública condicionada à representação depende:",
-   "opcoes": [
-    "da manifestação do ofendido autorizando o Ministério Público a agir.",
-    "apenas da vontade do comandante da unidade do ofendido.",
-    "de uma queixa-crime apresentada por advogado do ofendido no prazo.",
-    "de nada, pois o MP age sempre por conta própria e sem consulta."
-   ],
-   "correta": 0,
-   "resposta": "da manifestação do ofendido autorizando o Ministério Público a agir.",
-   "dica": "O MP só começa depois que a vítima autoriza.",
-   "explicacao": "Na ação pública condicionada, o MP continua sendo o titular, mas só pode agir se o ofendido representar, isto é, manifestar o desejo de ver o fato apurado. Na incondicionada, não há essa exigência.",
-   "emOutrasPalavras": "O MP só age depois que a vítima disser que quer que apure."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Pena, ação penal e IPM",
-   "enunciado": "Na ação penal privada subsidiária da pública:",
-   "opcoes": [
-    "o MP perde definitivamente a titularidade e não pode mais intervir.",
-    "o particular pode agir quando o MP não oferece a denúncia no prazo legal.",
-    "a vítima passa a substituir o MP em qualquer crime, a qualquer momento.",
-    "só se aplica a crimes militares praticados por oficiais."
-   ],
-   "correta": 1,
-   "resposta": "o particular pode agir quando o MP não oferece a denúncia no prazo legal.",
-   "dica": "Ela surge diante da inércia do titular.",
-   "explicacao": "A ação privada subsidiária existe como garantia contra a inércia do Ministério Público: se ele não atua no prazo, o ofendido pode propor a ação. O MP continua podendo retomar a ação.",
-   "emOutrasPalavras": "Se o MP não faz nada no prazo, a vítima pode assumir."
   },
   {
    "tipo": "escolha",
@@ -1015,22 +599,6 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Crimes militares",
-   "enunciado": "O que diferencia a revolta do motim no CPM?",
-   "opcoes": [
-    "Na revolta os agentes estão armados.",
-    "No motim os agentes estão armados.",
-    "Na revolta só existe conduta culposa.",
-    "Na revolta só participam oficiais."
-   ],
-   "correta": 0,
-   "resposta": "Na revolta os agentes estão armados.",
-   "dica": "A diferença está em um único elemento material.",
-   "explicacao": "O art. 149 do CPM define o motim e, no parágrafo único, prevê a revolta quando os agentes estão armados. O restante da conduta é o mesmo, mas a pena da revolta é bem maior.",
-   "emOutrasPalavras": "Motim com arma vira revolta."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
    "enunciado": "Como se chama o crime em que militares se reúnem e agem contra a ordem de um superior, e que vira \"revolta\" se estiverem armados?",
    "opcoes": [
     "Deserção",
@@ -1047,39 +615,7 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Crimes militares",
-   "enunciado": "Quem lidera o motim (os \"cabeças\") tem a pena:",
-   "opcoes": [
-    "reduzida pela metade.",
-    "igual à dos demais, sem diferença.",
-    "aumentada em um terço.",
-    "trocada por uma advertência."
-   ],
-   "correta": 2,
-   "resposta": "aumentada em um terço.",
-   "dica": "Pense em quem puxou o grupo.",
-   "explicacao": "No motim (art. 149), os cabeças respondem com a pena aumentada em um terço, porque têm maior responsabilidade pelo fato.",
-   "emOutrasPalavras": "Quem puxa o grupo leva uma pena maior que os outros."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
-   "enunciado": "O crime de organização de grupo para prática de violência pune:",
-   "opcoes": [
-    "o militar que se ausenta da unidade por mais de oito dias.",
-    "quem recusa obedecer a uma ordem de serviço.",
-    "quem dorme durante o serviço de sentinela.",
-    "a reunião de militares, com armamento militar, para praticar violência."
-   ],
-   "correta": 3,
-   "resposta": "a reunião de militares, com armamento militar, para praticar violência.",
-   "dica": "Pense em um grupo armado praticando violência.",
-   "explicacao": "O art.",
-   "emOutrasPalavras": "Militares em grupo, com arma da corporação, praticando violência."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
-   "enunciado": "O crime de recusa de obediência (art. 163) consiste em:",
+   "enunciado": "O crime de recusa de obediência consiste em:",
    "opcoes": [
     "ofender o superior com palavras ou gestos durante o serviço ou em razão dele hierárquico.",
     "afastar-se do posto ou do lugar de serviço antes de concluí-lo, sem ordem.",
@@ -1111,38 +647,6 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Crimes militares",
-   "enunciado": "Um soldado não cumpre uma ordem porque acredita, de boa-fé, que ela viola normas de segurança. Segundo o STM, o que tende a acontecer?",
-   "opcoes": [
-    "Condenação por motim.",
-    "Absolvição, pois faltou a intenção de afrontar a autoridade.",
-    "Condenação por deserção.",
-    "Condenação por recusa, pois a intenção não importa."
-   ],
-   "correta": 1,
-   "resposta": "Absolvição, pois faltou a intenção de afrontar a autoridade.",
-   "dica": "No CPM o dolo está ligado à consciência da ilicitude.",
-   "explicacao": "No sistema militar, o dolo é colorido pela má-fé (dolus malus) e inclui a consciência da ilicitude.",
-   "emOutrasPalavras": "Se ele realmente achava que estava certo, não havia intenção de afrontar o comando."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
-   "enunciado": "A recusa de obediência sob extremo estresse ou exaustão, sem intenção de afrontar a autoridade, tende a ser tratada pelo STM como:",
-   "opcoes": [
-    "mera infração disciplinar, por faltar o dolus malus.",
-    "crime de revolta, com pena de reclusão de 8 a 20 anos.",
-    "crime de motim, com pena de reclusão de 4 a 8 anos.",
-    "crime culposo de recusa de obediência, por falta de cautela."
-   ],
-   "correta": 0,
-   "resposta": "mera infração disciplinar, por faltar o dolus malus.",
-   "dica": "Não existe recusa culposa no CPM.",
-   "explicacao": "O STM exige a intenção direta e consciente de afrontar a autoridade e romper a hierarquia.",
-   "emOutrasPalavras": "Quando a falha vem do cansaço e não de rebeldia, normalmente é falta disciplinar, não crime."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
    "enunciado": "Como se chama o crime do militar que se ausenta da unidade, sem licença, por mais de oito dias?",
    "opcoes": [
     "Abandono de posto",
@@ -1155,38 +659,6 @@ window.QUIZ_DATA = {
    "dica": "O prazo de graça de oito dias é o ponto-chave.",
    "explicacao": "A deserção (art. 187 do CPM) consiste em ausentar-se o militar, sem licença, da unidade em que serve ou do lugar em que deve permanecer, por mais de oito dias.",
    "emOutrasPalavras": "Sumir por mais de 8 dias sem licença é deserção."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
-   "enunciado": "A pena da deserção é agravada quando o agente é:",
-   "opcoes": [
-    "soldado.",
-    "oficial.",
-    "praça com bons antecedentes.",
-    "militar recém-incorporado."
-   ],
-   "correta": 1,
-   "resposta": "oficial.",
-   "dica": "Quem tem mais responsabilidade na carreira responde mais.",
-   "explicacao": "Na deserção (art. 187), a pena é de detenção e fica agravada quando o agente é oficial, que tem maior dever de exemplo.",
-   "emOutrasPalavras": "Quem é oficial leva pena maior pela deserção."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
-   "enunciado": "A deserção é classificada como crime:",
-   "opcoes": [
-    "comum (qualquer pessoa pode praticar) e instantâneo.",
-    "comum (qualquer pessoa pode praticar) e permanente.",
-    "próprio (exige a qualidade de militar) e permanente.",
-    "próprio (exige a qualidade de militar) e instantâneo."
-   ],
-   "correta": 2,
-   "resposta": "próprio (exige a qualidade de militar) e permanente.",
-   "dica": "Só quem é militar pode cometer, e a consumação se estende no tempo.",
-   "explicacao": "O crime é próprio porque só o militar pode praticá-lo, e é permanente porque a consumação se prolonga enquanto durar a ausência. Protege o serviço militar e o cumprimento do dever.",
-   "emOutrasPalavras": "Só militar deserta, e a deserção continua enquanto ele estiver ausente."
   },
   {
    "tipo": "escolha",
@@ -1223,38 +695,6 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Crimes militares",
-   "enunciado": "Segundo o roteiro de estudos, o abandono de posto é um delito de:",
-   "opcoes": [
-    "resultado naturalístico, que exige vítima e lesão concreta.",
-    "dano, que exige prejuízo patrimonial efetivo à administração.",
-    "perigo abstrato, que não exige lapso temporal prolongado.",
-    "mera conduta, que só se consuma após oito dias de afastamento."
-   ],
-   "correta": 2,
-   "resposta": "perigo abstrato, que não exige lapso temporal prolongado.",
-   "dica": "Basta o afastamento do posto, sem esperar efeitos.",
-   "explicacao": "No abandono de posto, o perigo à disciplina e ao serviço é presumido pela lei.",
-   "emOutrasPalavras": "Saiu do posto sem ordem: já é crime, mesmo sem ter dado problema."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
-   "enunciado": "Na distinção entre concussão e corrupção passiva, o núcleo da concussão é:",
-   "opcoes": [
-    "solicitar vantagem indevida.",
-    "exigir vantagem indevida.",
-    "aceitar promessa de vantagem indevida.",
-    "receber vantagem indevida."
-   ],
-   "correta": 1,
-   "resposta": "exigir vantagem indevida.",
-   "dica": "É a mais forte das condutas: o agente impõe.",
-   "explicacao": "Na concussão o agente exige a vantagem. Na corrupção passiva, os núcleos são solicitar, receber ou aceitar promessa. A diferença é o grau de imposição.",
-   "emOutrasPalavras": "Concussão é exigir. Corrupção é pedir, receber ou aceitar."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
    "enunciado": "Qual crime ocorre quando o funcionário solicita, recebe ou aceita promessa de vantagem indevida em razão da função?",
    "opcoes": [
     "Corrupção passiva (receber vantagem).",
@@ -1275,46 +715,14 @@ window.QUIZ_DATA = {
    "opcoes": [
     "Só a corrupção é crime militar.",
     "A prevaricação exige a participação de três pessoas.",
-    "Na prevaricação, o motivo é interesse ou sentimento pessoal; na corrupção, há vantagem indevida.",
-    "Ambas exigem vantagem econômica e só mudam na pena."
+    "Na prevaricação, o motivo é pessoal; na corrupção, há vantagem indevida.",
+    "Ambas exigem vantagem econômica e mudam apenas na pena prevista no Código Militar."
    ],
    "correta": 2,
-   "resposta": "Na prevaricação, o motivo é interesse ou sentimento pessoal; na corrupção, há vantagem indevida.",
+   "resposta": "Na prevaricação, o motivo é pessoal; na corrupção, há vantagem indevida.",
    "dica": "Na prevaricação não precisa existir dinheiro envolvido.",
    "explicacao": "A prevaricação consiste em retardar ou deixar de praticar ato funcional (ou praticá-lo contra a lei) para satisfazer interesse ou sentimento pessoal.",
    "emOutrasPalavras": "Prevaricar é agir por vontade própria ou pessoal. Corrupção é agir por vantagem."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
-   "enunciado": "No peculato culposo, a reparação do dano antes da sentença:",
-   "opcoes": [
-    "transforma o fato em infração disciplinar.",
-    "agrava a pena, por confessar o erro.",
-    "extingue a punibilidade.",
-    "é irrelevante para a punibilidade."
-   ],
-   "correta": 2,
-   "resposta": "extingue a punibilidade.",
-   "dica": "O roteiro destaca um efeito benéfico para quem repara cedo.",
-   "explicacao": "Conforme o roteiro, no peculato culposo a reparação do dano, se prévia à sentença, extingue a punibilidade. Já a reparação posterior à sentença apenas reduz a pena.",
-   "emOutrasPalavras": "Devolveu o prejuízo antes da sentença, e o crime culposo deixa de ser punido."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
-   "enunciado": "Quais são as modalidades de peculato citadas no roteiro?",
-   "opcoes": [
-    "Apropriação, estelionato, extorsão e culposo.",
-    "Apropriação, desvio, furto e culposo.",
-    "Furto, roubo, dano e culposo.",
-    "Desvio, concussão, prevaricação e doloso."
-   ],
-   "correta": 1,
-   "resposta": "Apropriação, desvio, furto e culposo.",
-   "dica": "O peculato envolve bens a que o agente tem acesso pela função.",
-   "explicacao": "O roteiro menciona o peculato-apropriação, o peculato-desvio, o peculato-furto e o peculato culposo. O ponto comum é a lesão ao patrimônio da administração por quem tem relação com a função.",
-   "emOutrasPalavras": "Peculato é mexer em bem da administração: apropriar, desviar, furtar ou deixar acontecer por culpa."
   },
   {
    "tipo": "escolha",
@@ -1331,38 +739,6 @@ window.QUIZ_DATA = {
    "dica": "Há uma relação de superioridade funcional.",
    "explicacao": "O assédio sexual exige constrangimento com o objetivo de obter favorecimento sexual e prevalência de relação de hierarquia ou ascendência inerente ao exercício de cargo ou função.",
    "emOutrasPalavras": "Assédio sexual: o chefe usa o cargo para pressionar por favor sexual."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Crimes militares",
-   "enunciado": "Importunação sexual (art. 215-A do CP) consiste em:",
-   "opcoes": [
-    "recusar obediência a ordem de superior sobre assunto de serviço.",
-    "praticar ato libidinoso contra alguém sem sua anuência, sem exigir hierarquia.",
-    "constranger alguém, valendo-se de superioridade hierárquica, para obter favor sexual.",
-    "exigir vantagem indevida para si, em razão da função pública exercida."
-   ],
-   "correta": 1,
-   "resposta": "praticar ato libidinoso contra alguém sem sua anuência, sem exigir hierarquia.",
-   "dica": "Dispensa a relação de superioridade.",
-   "explicacao": "A importunação sexual é a prática de ato libidinoso contra a vítima, sem sua anuência. Ao contrário do assédio, não exige relação de hierarquia ou ascendência.",
-   "emOutrasPalavras": "Importunação: ato sexual sem consentimento. Não precisa ser chefe nem subordinado."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Cálculo de prazos",
-   "enunciado": "Regra: o dia da apresentação não conta, e a deserção se consuma à zero hora do 9º dia de ausência. Um soldado deveria se apresentar em 10/11 e não voltou. Quando a deserção se consuma?",
-   "opcoes": [
-    "Em 18/11, às 23h59.",
-    "Em 17/11, à zero hora.",
-    "Em 20/11, à zero hora.",
-    "Em 19/11, à zero hora."
-   ],
-   "correta": 3,
-   "resposta": "Em 19/11, à zero hora.",
-   "dica": "O 1º dia de ausência é 11/11. Conte oito dias de graça e vá para o seguinte.",
-   "explicacao": "O dia da apresentação (10/11) não entra no cômputo. O 1º dia de ausência é 11/11 e o 8º é 18/11, o último do período de graça. A deserção se consuma à zero hora do 9º dia, que é 19/11.",
-   "emOutrasPalavras": "Conte 11, 12, 13, 14, 15, 16, 17, 18 (8 dias). Virou o 19, é deserção."
   },
   {
    "tipo": "escolha",
@@ -1385,13 +761,13 @@ window.QUIZ_DATA = {
    "assunto": "Cálculo de prazos",
    "enunciado": "Um sentinela se afasta do posto por alguns minutos, sem ordem superior e antes de concluir o serviço. Qual o crime?",
    "opcoes": [
-    "Abandono de posto (art. 195), pois não exige lapso prolongado.",
-    "Dormir em serviço (art. 203), pois houve afastamento do posto.",
-    "Deserção (art. 187), pois houve ausência sem licença da unidade.",
+    "Abandono de posto, pois não exige lapso prolongado.",
+    "Dormir em serviço, pois houve afastamento do posto.",
+    "Deserção, pois houve ausência sem licença da unidade.",
     "Nenhum crime, porque a ausência foi muito curta e sem prejuízo."
    ],
    "correta": 0,
-   "resposta": "Abandono de posto (art. 195), pois não exige lapso prolongado.",
+   "resposta": "Abandono de posto, pois não exige lapso prolongado.",
    "dica": "Procure o crime que se consuma no ato do afastamento.",
    "explicacao": "O abandono de posto é de perigo abstrato e instantâneo: consuma-se quando o militar se afasta do posto sem autorização, antes de concluir o serviço.",
    "emOutrasPalavras": "Não precisa passar dias fora. Saiu do posto sem ordem, já é abandono."
@@ -1415,31 +791,15 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Legislação extravagante",
-   "enunciado": "A condenação por tortura (Lei 9.455) tem como efeito:",
-   "opcoes": [
-    "inabilitação por 8 anos para a função pública, após cumprir a pena.",
-    "perda do cargo somente depois de duas condenações por tortura.",
-    "mera advertência, sem reflexo na carreira do militar.",
-    "perda da função pública e interdição pelo dobro do prazo da pena aplicada."
-   ],
-   "correta": 3,
-   "resposta": "perda da função pública e interdição pelo dobro do prazo da pena aplicada.",
-   "dica": "O prazo de interdição é o dobro da pena.",
-   "explicacao": "A Lei de Tortura prevê, como efeito da condenação, a perda do cargo, função ou emprego público e a interdição para seu exercício pelo dobro do prazo da pena aplicada.",
-   "emOutrasPalavras": "Tortura: perde a função e fica impedido pelo dobro do tempo da pena."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Legislação extravagante",
    "enunciado": "Quando um crime de lei extravagante (fora do Código Penal) é julgado pela Justiça Militar estadual?",
    "opcoes": [
-    "Sempre que o autor é militar, mesmo de folga.",
+    "Sempre que o autor é militar, mesmo de folga, à paisana e longe do quartel.",
     "Nunca: leis extravagantes vão sempre à Justiça comum.",
     "Só se a pena for maior que quatro anos.",
-    "Quando é crime militar, isto é, praticado em serviço, fardado ou com as facilidades do cargo."
+    "Quando é crime militar: em serviço, fardado ou usando o cargo."
    ],
    "correta": 3,
-   "resposta": "Quando é crime militar, isto é, praticado em serviço, fardado ou com as facilidades do cargo.",
+   "resposta": "Quando é crime militar: em serviço, fardado ou usando o cargo.",
    "dica": "O elo com a função militar atrai a competência.",
    "explicacao": "A Justiça Militar é atraída pela ligação do fato com a função: em atividade, fardado ou com as facilidades do cargo, desde que o fato seja crime militar (art. 9º).",
    "emOutrasPalavras": "Se o crime foi ligado ao serviço, à farda ou ao cargo, vai para a Justiça Militar."
@@ -1462,99 +822,19 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Legislação extravagante",
-   "enunciado": "O descumprimento de medida protetiva na Lei Henry Borel (art. 25) configura:",
-   "opcoes": [
-    "mera infração disciplinar, sem repercussão penal.",
-    "fato atípico, pois a medida protetiva é só civil.",
-    "crime autônomo, com detenção de 3 meses a 2 anos.",
-    "crime autônomo, punido com reclusão de 4 a 8 anos."
-   ],
-   "correta": 2,
-   "resposta": "crime autônomo, com detenção de 3 meses a 2 anos.",
-   "dica": "O descumprimento gera um crime novo, independentemente do processo original.",
-   "explicacao": "O descumprimento de qualquer medida protetiva gera novo crime, de detenção de três meses a dois anos, independentemente do juízo civil ou criminal em que a medida foi imposta.",
-   "emOutrasPalavras": "Descumprir a medida protetiva já é crime por si só."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Legislação extravagante",
-   "enunciado": "O art. 28 da Lei Henry Borel proíbe a substituição da pena por:",
-   "opcoes": [
-    "medida de segurança, quando o réu for inimputável.",
-    "prestação pecuniária, cesta básica ou pagamento isolado de multa.",
-    "qualquer pena restritiva de direitos, como a prestação de serviços.",
-    "prisão em regime fechado, quando a pena for superior a oito anos."
-   ],
-   "correta": 1,
-   "resposta": "prestação pecuniária, cesta básica ou pagamento isolado de multa.",
-   "dica": "A lei veda as penas consideradas brandas.",
-   "explicacao": "O art. 28 veda a substituição por penas de cesta básica, prestações pecuniárias ou pagamento isolado de multa.",
-   "emOutrasPalavras": "A lei não aceita trocar a pena por cesta básica, dinheiro ou multa."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Legislação extravagante",
-   "enunciado": "Pelo Estatuto do Desarmamento (Lei 10.826), a condenação definitiva por crime doloso, mesmo fora do âmbito funcional, leva a:",
-   "opcoes": [
-    "multa administrativa e advertência por escrito.",
-    "nenhuma consequência para o porte, por ser fato fora do serviço.",
-    "perda automática do posto, sem necessidade de processo.",
-    "cassação do registro e do porte de arma funcional."
-   ],
-   "correta": 3,
-   "resposta": "cassação do registro e do porte de arma funcional.",
-   "dica": "O efeito atinge o instrumento de trabalho.",
-   "explicacao": "O Estatuto prevê a cassação do registro e do porte de arma para quem sofre condenação definitiva por crime doloso, mesmo fora do âmbito funcional.",
-   "emOutrasPalavras": "Condenado por crime doloso: perde o porte de arma, mesmo que o crime nada tenha a ver com o serviço."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Legislação extravagante",
-   "enunciado": "Qual é o gatilho primário para a exclusão de oficiais e praças?",
-   "opcoes": [
-    "Condenação a pena privativa de liberdade superior a 2 anos.",
-    "Qualquer condenação, ainda que apenas à pena de multa.",
-    "Condenação a pena privativa de liberdade superior a 4 anos.",
-    "Condenação a pena privativa de liberdade superior a 1 ano."
-   ],
-   "correta": 0,
-   "resposta": "Condenação a pena privativa de liberdade superior a 2 anos.",
-   "dica": "O material chama de gatilho convergente.",
-   "explicacao": "Para ambas as classes, o gatilho primário da perda do posto e patente (oficiais) ou da graduação (praças) é a condenação a pena privativa de liberdade superior a 2 anos. Muda apenas o procedimento.",
-   "emOutrasPalavras": "Pena de prisão acima de 2 anos já pode custar a carreira."
-  },
-  {
-   "tipo": "escolha",
    "assunto": "NUSEG e assistência jurídica",
    "enunciado": "O que é o NUSEG?",
    "opcoes": [
     "Associação de classe paga pelos militares.",
-    "Núcleo da corregedoria que apura transgressões.",
+    "Núcleo da corregedoria que apura transgressões e crimes militares nos quartéis.",
     "Órgão do Ministério Público que fiscaliza a polícia.",
-    "Núcleo da Defensoria Pública que defende gratuitamente agentes de segurança por fatos do serviço."
+    "Núcleo da Defensoria que defende de graça agentes de segurança."
    ],
    "correta": 3,
-   "resposta": "Núcleo da Defensoria Pública que defende gratuitamente agentes de segurança por fatos do serviço.",
+   "resposta": "Núcleo da Defensoria que defende de graça agentes de segurança.",
    "dica": "A sigla remete à Defensoria Pública do Estado.",
    "explicacao": "O NUSEG é o Núcleo de Atendimento e Defesa dos Agentes de Segurança Pública, órgão especializado da Defensoria Pública do Estado do Paraná.",
    "emOutrasPalavras": "É a Defensoria que defende de graça o policial e o bombeiro por problemas de serviço."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "NUSEG e assistência jurídica",
-   "enunciado": "Quem pode ser atendido pelo NUSEG?",
-   "opcoes": [
-    "Policiais militares, bombeiros, policiais civis e penais e peritos da Polícia Científica.",
-    "Somente militares associados a uma entidade de classe, que paguem mensalidade.",
-    "Apenas oficiais da PMPR e do CBMPR, que respondam por fatos ligados ao serviço ou familiar.",
-    "Qualquer pessoa da população, para qualquer causa jurídica, inclusive cível."
-   ],
-   "correta": 0,
-   "resposta": "Policiais militares, bombeiros, policiais civis e penais e peritos da Polícia Científica.",
-   "dica": "O atendimento é para agentes de segurança pública.",
-   "explicacao": "O NUSEG atende agentes de segurança pública: PMPR, CBMPR, policiais civis e penais e peritos da Polícia Científica. Não depende de filiação a associação, pois é um serviço estatal.",
-   "emOutrasPalavras": "Atende toda a segurança pública do estado, não só um grupo."
   },
   {
    "tipo": "escolha",
@@ -1571,54 +851,6 @@ window.QUIZ_DATA = {
    "dica": "É um serviço da Defensoria Pública.",
    "explicacao": "Por ser da Defensoria Pública, a assistência do NUSEG é gratuita. A cobrança de mensalidade é característica das associações de classe.",
    "emOutrasPalavras": "No NUSEG não se paga nada."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "NUSEG e assistência jurídica",
-   "enunciado": "Qual demanda NÃO é atendida pelo NUSEG?",
-   "opcoes": [
-    "Acompanhamento em auto de prisão em flagrante por uso da força.",
-    "Defesa na Vara da Auditoria da Justiça Militar em ocorrência de serviço.",
-    "Defesa em PAD originado de ocorrência operacional.",
-    "Direito de família, como divórcio e pensão."
-   ],
-   "correta": 3,
-   "resposta": "Direito de família, como divórcio e pensão.",
-   "dica": "O atendimento exige ligação com o uniforme e a função pública.",
-   "explicacao": "O NUSEG só atua quando há vínculo com a função: flagrantes e inquéritos, defesa na esfera judicial e em PADs de ocorrências operacionais.",
-   "emOutrasPalavras": "Se o assunto nada tem a ver com o trabalho, o NUSEG não atende."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "NUSEG e assistência jurídica",
-   "enunciado": "Quem pode atender demandas civis e familiares dos militares, mediante mensalidade, conforme o estatuto próprio?",
-   "opcoes": [
-    "As associações de classe.",
-    "A Corregedoria da corporação.",
-    "O próprio NUSEG, por meio do Portal Luna.",
-    "O Ministério Público estadual."
-   ],
-   "correta": 0,
-   "resposta": "As associações de classe.",
-   "dica": "Existem entidades privadas que complementam o apoio estatal.",
-   "explicacao": "As associações de classe mantêm departamentos jurídicos que cobrem lacunas que o Estado não abrange, como questões cíveis e familiares.",
-   "emOutrasPalavras": "Para assunto de família e cível, a saída é a associação de classe, que costuma cobrar mensalidade."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "NUSEG e assistência jurídica",
-   "enunciado": "Como se aciona o NUSEG?",
-   "opcoes": [
-    "Por requerimento escrito ao comandante da unidade, que o encaminha à Defensoria Pública estadual.",
-    "Presencialmente, em qualquer quartel, com o comandante de plantão.",
-    "Por ofício ao Ministério Público, com cópia dos documentos da ocorrência.",
-    "Por canal digital, o Portal Luna da Defensoria Pública, com a documentação da ocorrência."
-   ],
-   "correta": 3,
-   "resposta": "Por canal digital, o Portal Luna da Defensoria Pública, com a documentação da ocorrência.",
-   "dica": "O atendimento é solicitado, cadastrado e acompanhado pela internet.",
-   "explicacao": "O atendimento é solicitado, cadastrado e acompanhado por canal digital.",
-   "emOutrasPalavras": "Junte os documentos e entre no Portal Luna da Defensoria."
   },
   {
    "tipo": "escolha",
@@ -1639,31 +871,15 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Art. 9º e aplicação da lei militar",
-   "enunciado": "Crimes do CPM definidos de modo diverso na lei penal comum, ou nela não previstos, são crimes militares por qual inciso do art. 9º?",
-   "opcoes": [
-    "§ 1º.",
-    "Inciso III.",
-    "Inciso II.",
-    "Inciso I."
-   ],
-   "correta": 3,
-   "resposta": "Inciso I.",
-   "dica": "É o primeiro inciso, e fala dos crimes que só o CPM conhece ou trata de forma própria.",
-   "explicacao": "O inciso I cobre os crimes que o CPM define de modo diferente da lei comum ou que nem existem nela. Nesses casos, o crime é militar qualquer que seja o agente, salvo disposição especial.",
-   "emOutrasPalavras": "Crime que só existe no CPM, ou que o CPM trata do seu jeito, é militar pelo inciso I."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Art. 9º e aplicação da lei militar",
    "enunciado": "Um militar da ativa pratica um crime previsto no CPM contra outro militar da ativa. Esse crime é:",
    "opcoes": [
     "militar apenas se ocorrer em lugar sujeito à administração militar.",
     "comum, pois ambos são pessoas físicas sujeitas à mesma lei.",
-    "militar, pelo art. 9º, II, \"a\", mesmo fora do serviço e do quartel.",
+    "militar, mesmo fora do serviço e do quartel.",
     "militar apenas se o autor estiver em serviço no momento do fato."
    ],
    "correta": 2,
-   "resposta": "militar, pelo art. 9º, II, \"a\", mesmo fora do serviço e do quartel.",
+   "resposta": "militar, mesmo fora do serviço e do quartel.",
    "dica": "A alínea \"a\" olha só para a condição dos dois envolvidos.",
    "explicacao": "A alínea \"a\" do inciso II enquadra como crime militar o fato praticado por militar da ativa contra militar também da ativa. O que pesa é a condição dos dois, e não o local nem o horário.",
    "emOutrasPalavras": "Militar da ativa contra militar da ativa: já é crime militar, esteja onde estiver."
@@ -1671,31 +887,15 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Art. 9º e aplicação da lei militar",
-   "enunciado": "Um militar da ativa comete, dentro do quartel, um crime previsto no CPM contra um civil. O crime é:",
-   "opcoes": [
-    "comum, pois o militar não estava em serviço naquele momento.",
-    "militar, pela alínea \"b\" do inciso II, pelo local do fato.",
-    "comum, pois a vítima é civil e não pertence à corporação.",
-    "apenas infração disciplinar, pois a vítima é civil e não militar."
-   ],
-   "correta": 1,
-   "resposta": "militar, pela alínea \"b\" do inciso II, pelo local do fato.",
-   "dica": "O lugar do fato muda o enquadramento.",
-   "explicacao": "Na alínea \"b\", o fato praticado por militar da ativa em lugar sujeito à administração militar é crime militar mesmo quando a vítima é militar da reserva, reformado ou civil.",
-   "emOutrasPalavras": "Dentro do quartel, mesmo contra civil, o crime é militar."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Art. 9º e aplicação da lei militar",
    "enunciado": "Um militar de folga, à paisana, fora de qualquer lugar militar, comete um crime comum contra um civil, sem relação com a função. Em regra, o crime é:",
    "opcoes": [
-    "comum, porque não se encaixa nas hipóteses do art. 9º, II.",
+    "comum, porque não tem ligação com o serviço nem com lugar militar.",
     "militar, pois o autor é militar, ainda que de folga.",
     "militar, pois a vítima é civil e foi atingida por um militar.",
     "da competência da Justiça Militar da União, por ser crime militar."
    ],
    "correta": 0,
-   "resposta": "comum, porque não se encaixa nas hipóteses do art. 9º, II.",
+   "resposta": "comum, porque não tem ligação com o serviço nem com lugar militar.",
    "dica": "Procure o elo com o serviço, a farda ou o quartel.",
    "explicacao": "Ser militar não basta para tornar o crime militar. É preciso uma das situações do art. 9º, como serviço, função, lugar sujeito à administração militar, manobras ou lesão ao patrimônio militar.",
    "emOutrasPalavras": "Só ser militar não basta. Sem ligação com o serviço, a farda ou o quartel, o crime é comum."
@@ -1705,48 +905,16 @@ window.QUIZ_DATA = {
    "assunto": "Art. 9º e aplicação da lei militar",
    "enunciado": "Quando o crime de um militar contra civil é militar mesmo fora de lugar militar?",
    "opcoes": [
-    "Quando o autor está de folga, mas diz ser militar.",
+    "Quando o autor está de folga, à paisana, mas se identifica como militar.",
     "Só quando é culposo e com viatura oficial.",
-    "Quando praticado em serviço, em razão da função, em comissão militar ou em formatura.",
+    "Quando praticado em serviço ou em razão da função.",
     "Sempre que a vítima é civil."
    ],
    "correta": 2,
-   "resposta": "Quando praticado em serviço, em razão da função, em comissão militar ou em formatura.",
+   "resposta": "Quando praticado em serviço ou em razão da função.",
    "dica": "O elo com a atividade militar substitui o lugar.",
    "explicacao": "A alínea \"c\" dispensa o local: o que atrai a lei penal militar é o fato ter ocorrido com o militar em serviço ou atuando em razão da função, em comissão militar ou em formatura.",
    "emOutrasPalavras": "Se você estava trabalhando como militar, o crime é militar, mesmo na rua."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Art. 9º e aplicação da lei militar",
-   "enunciado": "Um militar da ativa pratica crime contra o patrimônio sob administração militar. A alínea \"e\" do inciso II do art. 9º o enquadra como crime:",
-   "opcoes": [
-    "comum.",
-    "militar somente acima de certo valor.",
-    "disciplinar.",
-    "militar."
-   ],
-   "correta": 3,
-   "resposta": "militar.",
-   "dica": "O bem protegido é da instituição.",
-   "explicacao": "A alínea \"e\" protege o patrimônio e a ordem administrativa militar: o crime praticado por militar da ativa contra eles é militar. No Direito Penal Militar, a insignificância não se aplica à administração.",
-   "emOutrasPalavras": "Mexeu no patrimônio militar sendo da ativa: crime militar, e valor pequeno não livra."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Art. 9º e aplicação da lei militar",
-   "enunciado": "Um civil furta bem pertencente à administração militar. Pelo art. 9º, III, esse crime é:",
-   "opcoes": [
-    "disciplinar, pois o bem pertence à administração pública.",
-    "militar, pois atinge o patrimônio das instituições militares.",
-    "comum, pois o autor é civil e não integra a corporação.",
-    "militar apenas se o civil estiver armado e em grupo."
-   ],
-   "correta": 1,
-   "resposta": "militar, pois atinge o patrimônio das instituições militares.",
-   "dica": "O inciso III trata de crimes contra as instituições militares.",
-   "explicacao": "O inciso III alcança crimes de militar da reserva, reformado ou civil contra as instituições militares, como o patrimônio ou a ordem administrativa militar.",
-   "emOutrasPalavras": "Civil que lesa o patrimônio militar também comete crime militar."
   },
   {
    "tipo": "escolha",
@@ -1755,11 +923,11 @@ window.QUIZ_DATA = {
    "opcoes": [
     "Sim, mas só quando a vítima é militar e o fato ocorre no quartel.",
     "Sim, sempre que o crime for militar, seja qual for a condição do autor.",
-    "Não: julga os militares dos Estados nos crimes militares (CF, art. 125, § 4º).",
+    "Não: julga apenas os militares estaduais nos crimes militares.",
     "Sim, em qualquer crime praticado dentro do quartel, inclusive por civis."
    ],
    "correta": 2,
-   "resposta": "Não: julga os militares dos Estados nos crimes militares (CF, art. 125, § 4º).",
+   "resposta": "Não: julga apenas os militares estaduais nos crimes militares.",
    "dica": "A competência da Justiça Militar estadual tem como alvo o militar estadual.",
    "explicacao": "O art. 125, § 4º, da Constituição atribui à Justiça Militar estadual o julgamento dos militares dos Estados nos crimes militares definidos em lei, sem alcançar civis.",
    "emOutrasPalavras": "A Justiça Militar do estado julga militar do estado, e não civil."
@@ -1769,13 +937,13 @@ window.QUIZ_DATA = {
    "assunto": "Art. 9º e aplicação da lei militar",
    "enunciado": "Um militar comete homicídio doloso contra um civil, em situação que configura crime militar. Quem julga?",
    "opcoes": [
-    "O Tribunal do Júri (art. 9º, § 1º, do CPM).",
+    "O Tribunal do Júri.",
     "O comandante da unidade.",
     "A Corregedoria, por procedimento administrativo.",
     "O Conselho de Justiça Militar."
    ],
    "correta": 0,
-   "resposta": "O Tribunal do Júri (art. 9º, § 1º, do CPM).",
+   "resposta": "O Tribunal do Júri.",
    "dica": "A regra especial cuida dos crimes dolosos contra a vida de civil.",
    "explicacao": "O § 1º do art. 9º reserva ao Tribunal do Júri os crimes dolosos contra a vida cometidos por militares contra civil. A Constituição (art. 125, § 4º) ressalva a competência do júri quando a vítima é civil.",
    "emOutrasPalavras": "Matou civil de propósito: quem decide é o júri popular."
@@ -1795,102 +963,6 @@ window.QUIZ_DATA = {
    "dica": "O que decide é quem é a vítima.",
    "explicacao": "A exceção do júri existe quando a vítima é civil. Se a vítima é militar, e o fato é crime militar, a competência permanece com a Justiça Militar.",
    "emOutrasPalavras": "Vítima civil vai para o júri. Vítima militar fica na Justiça Militar."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Art. 9º e aplicação da lei militar",
-   "enunciado": "O que mudou com a Lei 13.491/2017 no art. 9º, inciso II?",
-   "opcoes": [
-    "Passou a incluir também crimes da lei penal comum e extravagante como crime militar.",
-    "Exigiu que o autor fosse oficial.",
-    "Extinguiu a Justiça Militar estadual.",
-    "Limitou o inciso aos crimes do CPM."
-   ],
-   "correta": 0,
-   "resposta": "Passou a incluir também crimes da lei penal comum e extravagante como crime militar.",
-   "dica": "O inciso passou a olhar também para a lei comum.",
-   "explicacao": "Depois da Lei 13.491/2017, crimes previstos na legislação penal, e não só os do CPM, são militares quando praticados nas situações do inciso II. É o chamado crime militar por extensão.",
-   "emOutrasPalavras": "Agora até crime de lei comum vira crime militar se for cometido nas situações do art. 9º."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Art. 9º e aplicação da lei militar",
-   "enunciado": "Para a aplicação da lei penal militar, o militar da reserva ou reformado, quando empregado na administração militar, é:",
-   "opcoes": [
-    "isento da lei penal militar.",
-    "sujeito apenas ao regulamento disciplinar.",
-    "tratado sempre como civil.",
-    "equiparado ao militar da ativa (art. 12)."
-   ],
-   "correta": 3,
-   "resposta": "equiparado ao militar da ativa (art. 12).",
-   "dica": "O vínculo com a administração militar muda o tratamento.",
-   "explicacao": "O art. 12 equipara ao militar da ativa o da reserva ou reformado empregado na administração militar, para fins da lei penal militar. O vínculo com a administração é o que justifica a equiparação.",
-   "emOutrasPalavras": "Quem está na reserva, mas trabalha na administração militar, responde como se fosse da ativa."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Art. 9º e aplicação da lei militar",
-   "enunciado": "O art. 19 do CPM esclarece que o Código:",
-   "opcoes": [
-    "substitui os regulamentos disciplinares nas transgressões graves.",
-    "pune apenas oficiais e não alcança as praças da corporação.",
-    "não abrange as infrações dos regulamentos disciplinares.",
-    "só se aplica em tempo de guerra e em operações."
-   ],
-   "correta": 2,
-   "resposta": "não abrange as infrações dos regulamentos disciplinares.",
-   "dica": "Crime e transgressão são esferas diferentes.",
-   "explicacao": "O art. 19 separa o crime militar da infração disciplinar: as infrações dos regulamentos disciplinares são tratadas por regime próprio, e não pelo CPM.",
-   "emOutrasPalavras": "Transgressão disciplinar tem regulamento próprio. O CPM trata de crime."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Art. 9º e aplicação da lei militar",
-   "enunciado": "Pelo art. 5º do CPM, considera-se praticado o crime no momento:",
-   "opcoes": [
-    "da ação ou da omissão, ainda que outro seja o do resultado.",
-    "da sentença condenatória, pois só então a lei incide.",
-    "do resultado, e não da conduta praticada pelo agente.",
-    "da denúncia, quando o MP imputa o fato ao acusado."
-   ],
-   "correta": 0,
-   "resposta": "da ação ou da omissão, ainda que outro seja o do resultado.",
-   "dica": "É a teoria da atividade.",
-   "explicacao": "O art. 5º adota a teoria da atividade: o tempo do crime é o da conduta, e não o do resultado. Isso importa para saber qual lei estava em vigor quando o fato ocorreu.",
-   "emOutrasPalavras": "Vale o dia em que a pessoa agiu, e não o dia em que o resultado apareceu."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Art. 9º e aplicação da lei militar",
-   "enunciado": "Pelo art. 6º do CPM, qual é o lugar do crime?",
-   "opcoes": [
-    "Onde o autor reside ou tem domicílio, ainda que a conduta ocorra em outro lugar.",
-    "Onde ocorreu a conduta, no todo ou em parte, e também onde se produziu o resultado.",
-    "Somente onde o resultado ocorreu, sem considerar o local da conduta do agente.",
-    "Somente onde a conduta foi praticada, ainda que o resultado ocorra em outro local."
-   ],
-   "correta": 1,
-   "resposta": "Onde ocorreu a conduta, no todo ou em parte, e também onde se produziu o resultado.",
-   "dica": "É a teoria da ubiquidade.",
-   "explicacao": "O art. 6º adota a teoria da ubiquidade: tanto o lugar da conduta quanto o do resultado são considerados lugar do crime.",
-   "emOutrasPalavras": "Conta o lugar onde a pessoa agiu e também onde o resultado apareceu."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Art. 9º e aplicação da lei militar",
-   "enunciado": "Em tempo de guerra, as penas previstas para o tempo de paz sofrem, pelo art. 20 do CPM:",
-   "opcoes": [
-    "aumento de um terço.",
-    "aumento do dobro.",
-    "nenhuma alteração.",
-    "aumento pela metade."
-   ],
-   "correta": 0,
-   "resposta": "aumento de um terço.",
-   "dica": "O aumento é uma fração pequena.",
-   "explicacao": "O art. 20 prevê que, em tempo de guerra, as penas do tempo de paz são aumentadas de um terço. A guerra eleva a gravidade da quebra de disciplina.",
-   "emOutrasPalavras": "Na guerra, as penas ficam mais pesadas: um terço a mais."
   },
   {
    "tipo": "escolha",
@@ -1959,22 +1031,6 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Teoria do crime",
-   "enunciado": "No Código Penal comum (finalista), onde fica o dolo?",
-   "opcoes": [
-    "Na culpabilidade.",
-    "Na ilicitude.",
-    "No fato típico; a culpabilidade só mede se o agente era cobrável.",
-    "Fora do crime, só na pena."
-   ],
-   "correta": 2,
-   "resposta": "No fato típico; a culpabilidade só mede se o agente era cobrável.",
-   "dica": "Compare com o causalismo, em que a intenção ficava \"escondida\" no final.",
-   "explicacao": "Para o finalismo, a conduta humana é dirigida a um fim, então o dolo é examinado já no fato típico. A culpabilidade fica esvaziada de dolo e culpa e avalia apenas a reprovabilidade: imputabilidade, consciência da ilicitude e exigibilidade de outra conduta.",
-   "emOutrasPalavras": "No Código comum, a intenção é analisada logo no começo, junto com o ato. No fim, só se pergunta se dava para cobrar aquela pessoa."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Teoria do crime",
    "enunciado": "Por que se diz que o conceito de crime funciona como um \"funil\"?",
    "opcoes": [
     "Porque basta o fato típico para haver crime.",
@@ -1991,169 +1047,9 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "No art. 33 do CPM, dolo e culpa aparecem sob a palavra \"culpabilidade\". O que isso mostra?",
-   "opcoes": [
-    "Que o dolo é dispensado nos crimes leves.",
-    "Que a culpabilidade vale só para as graduações maiores.",
-    "Que o CPM adotou o finalismo desde a origem.",
-    "Que, no CPM, dolo e culpa fazem parte da culpabilidade."
-   ],
-   "correta": 3,
-   "resposta": "Que, no CPM, dolo e culpa fazem parte da culpabilidade.",
-   "dica": "Observe em que \"bloco\" da lei o legislador colocou o dolo e a culpa.",
-   "explicacao": "Ao posicionar dolo e culpa sob o título da culpabilidade, o legislador militar mostra a estrutura causalista: a intenção não integra a conduta, mas é o nexo psicológico que liga o agente ao fato criminoso e fundamenta a reprovação.",
-   "emOutrasPalavras": "A própria lei militar guarda a intenção dentro da culpa, e não no ato em si. É assim que o Código foi montado."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "Qual é a \"regra de ouro\" do Direito Penal Militar apontada no material?",
-   "opcoes": [
-    "Nenhuma culpa sem regulamento escrito.",
-    "Nenhuma disciplina sem sanção penal.",
-    "Nenhuma pena sem culpabilidade.",
-    "Nenhuma pena sem hierarquia violada."
-   ],
-   "correta": 2,
-   "resposta": "Nenhuma pena sem culpabilidade.",
-   "dica": "A frase fala do que precisa existir antes de qualquer castigo.",
-   "explicacao": "Como a intenção (dolo ou culpa) mora na culpabilidade, sem ela não há reprovação possível. Isso reforça a responsabilidade pessoal: ninguém é punido penalmente apenas pelo resultado ou por ocupar um posto na hierarquia.",
-   "emOutrasPalavras": "Ninguém leva pena só porque algo deu errado. Tem que haver culpa de verdade da pessoa."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "No Código Penal Militar, a consciência da ilicitude é:",
-   "opcoes": [
-    "um elemento autônomo, que fica fora do dolo.",
-    "dispensável para a existência do crime.",
-    "um requisito usado só para fixar a pena.",
-    "um elemento interno do próprio dolo."
-   ],
-   "correta": 3,
-   "resposta": "um elemento interno do próprio dolo.",
-   "dica": "No Código comum ela mora fora do dolo; no militar, a posição é outra.",
-   "explicacao": "O dolo do CPM é o dolus malus: além de saber o que faz e querer o resultado, o agente precisa saber que a conduta é proibida. A consciência da ilicitude, portanto, integra o próprio dolo, e sua falta afasta o dolo por inteiro.",
-   "emOutrasPalavras": "No Código militar, não basta querer o ato: você precisa saber que ele é proibido. Esse saber faz parte da própria intenção."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "Um militar pratica um ato de boa-fé, sem ter como saber que era proibido (erro de direito inevitável). No CPM, qual é a consequência?",
-   "opcoes": [
-    "O crime se mantém, e a pena é apenas atenuada.",
-    "O dolo é excluído por inteiro e o crime não se configura.",
-    "O fato passa a ser crime culposo obrigatoriamente.",
-    "O crime se mantém, com a culpabilidade reduzida pela metade."
-   ],
-   "correta": 1,
-   "resposta": "O dolo é excluído por inteiro e o crime não se configura.",
-   "dica": "Se a consciência da ilicitude faz parte do dolo, o que acontece quando ela não existe?",
-   "explicacao": "Segundo a matriz do material, no CPM o erro de direito inevitável elimina o elemento normativo e, com ele, todo o dolo, e o crime cai. No Código comum, o mesmo tipo de erro é tratado como erro de proibição, com efeitos distintos sobre a culpabilidade. Esse ponto do material merece confirmação com o instrutor.",
-   "emOutrasPalavras": "Se você realmente não tinha como saber que era errado, no Código militar a sua intenção \"some\", e o crime também."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "Quais são os três elementos do dolus malus militar?",
-   "opcoes": [
-    "Conduta, resultado e nexo causal.",
-    "Imputabilidade, maioridade e exigibilidade.",
-    "Intelectivo, volitivo e normativo.",
-    "Representação, resultado e tipicidade."
-   ],
-   "correta": 2,
-   "resposta": "Intelectivo, volitivo e normativo.",
-   "dica": "Um elemento é de saber, outro de querer e o terceiro é ligado à norma.",
-   "explicacao": "O dolus malus combina três camadas: a representação do que se faz (intelectivo), a vontade de produzir o resultado ou assumir o risco (volitivo) e a consciência de que a conduta é proibida (normativo). Faltando qualquer uma, o dolo militar não se completa.",
-   "emOutrasPalavras": "Para ter dolo no militar, você precisa entender o que faz, querer fazer e saber que é proibido. São três partes."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "Qual elemento do dolus malus corresponde a saber, mesmo que de forma leiga, que a conduta é proibida pelo regulamento?",
-   "opcoes": [
-    "O elemento intelectivo, que trata da representação do ato.",
-    "O elemento volitivo, que trata de querer o resultado.",
-    "O elemento causal, que liga a conduta ao fato.",
-    "O elemento normativo, a consciência da ilicitude."
-   ],
-   "correta": 3,
-   "resposta": "O elemento normativo, a consciência da ilicitude.",
-   "dica": "É o único dos três que se refere diretamente à regra violada.",
-   "explicacao": "O elemento normativo é o que distingue o dolo militar do dolo neutro: não basta conhecer o ato e querê-lo, é preciso perceber, ainda que como leigo, que ele afronta uma norma ou um regulamento. É nele que o erro de direito atua.",
-   "emOutrasPalavras": "É o \"eu sabia que isso era proibido\". Não precisa ser jurista, basta ter noção de que não podia."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "O elemento intelectivo do dolus malus consiste em:",
-   "opcoes": [
-    "saber fisicamente o que se está fazendo.",
-    "querer o resultado ou assumir o risco de produzi-lo.",
-    "saber que a conduta é proibida pelo regulamento.",
-    "ter saúde mental para entender uma ordem recebida."
-   ],
-   "correta": 0,
-   "resposta": "saber fisicamente o que se está fazendo.",
-   "dica": "É o \"saber\" que vem antes do querer e antes do juízo sobre a proibição.",
-   "explicacao": "A representação é a percepção consciente da própria conduta e de suas circunstâncias. Se o agente não entende o que está fazendo, por exemplo, porque a ordem era vaga, falta o elemento intelectivo e o dolo não se forma.",
-   "emOutrasPalavras": "É perceber o que você está fazendo na hora em que faz. Se você nem entendeu o que estava acontecendo, falta isso."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "Dizer que, no CPM, o dolo é \"colorido pela má-fé\" significa que:",
-   "opcoes": [
-    "ele só existe quando o crime é praticado por motivo torpe.",
-    "ele exige a consciência de afrontar a norma, e não só querer o ato.",
-    "ele é presumido em todo crime praticado por um militar.",
-    "ele dispensa a vontade e se satisfaz com a mera consciência."
-   ],
-   "correta": 1,
-   "resposta": "ele exige a consciência de afrontar a norma, e não só querer o ato.",
-   "dica": "A \"cor\" do dolo militar vem de um saber, e não de um motivo.",
-   "explicacao": "O dolus malus, ao incorporar o elemento normativo, vincula o dolo à intenção consciente de violar a norma, e não apenas à vontade de realizar o ato. Daí o dolo militar não ser neutro, mas qualificado pela consciência de estar agindo contra o dever.",
-   "emOutrasPalavras": "No militar, a intenção só conta como \"dolo\" se você sabia que estava indo contra a regra."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "Uma ordem vaga é transmitida pelo rádio, e o soldado a interpreta de forma errada, deixando de cumpri-la. Na análise do STM, o que faltou?",
-   "opcoes": [
-    "O elemento normativo, pois ele não sabia que o regulamento proibia.",
-    "O nexo causal entre a ordem e o resultado final.",
-    "A imputabilidade, pois o soldado não tinha saúde mental.",
-    "O elemento intelectivo, pois não houve intenção clara de desafiar."
-   ],
-   "correta": 3,
-   "resposta": "O elemento intelectivo, pois não houve intenção clara de desafiar.",
-   "dica": "O soldado chegou a entender o que lhe foi mandado?",
-   "explicacao": "Quando o comando é dúbio e o militar o entende mal, ele não representa corretamente a ordem que supostamente descumpre. Falta o elemento intelectivo do dolus malus, não há intenção de desafiar a autoridade, e a decisão tende à absolvição.",
-   "emOutrasPalavras": "Se o soldado entendeu errado por culpa de uma ordem confusa, ele não quis desobedecer, e isso não é crime."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "Para a prisão penal por recusa de obediência, o STM exige mais do que o simples não fazer físico. O que mais é exigido?",
-   "opcoes": [
-    "A intenção direta de afrontar a autoridade e romper a hierarquia.",
-    "Um resultado danoso, devidamente comprovado, ao serviço da corporação.",
-    "A reincidência do militar em infrações disciplinares já registradas antes.",
-    "A participação de pelo menos dois militares na mesma recusa combinada."
-   ],
-   "correta": 0,
-   "resposta": "A intenção direta de afrontar a autoridade e romper a hierarquia.",
-   "dica": "O foco está na vontade do militar, e não só em seu comportamento.",
-   "explicacao": "O descumprimento material de uma ordem, sozinho, não basta. Como o dolo militar é qualificado, a lei penal exige a vontade consciente de menosprezar o comando e subverter a disciplina. Sem essa má-fé real, a conduta fica no campo disciplinar.",
-   "emOutrasPalavras": "Não obedecer não basta para ser crime. Tem que ter sido de propósito, para desafiar o chefe e quebrar a hierarquia."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
    "enunciado": "Um bombeiro recusa uma ordem sob exaustão extrema em um incêndio, sem intenção de afrontar o comando. O que o STM tende a fazer?",
    "opcoes": [
-    "Aplicar o art. 163 normalmente, pois a intenção do militar é irrelevante.",
+    "Condenar por recusa de obediência, pois a intenção do militar é irrelevante.",
     "Enquadrar como motim, por causa do contexto operacional de risco.",
     "Desclassificar para infração disciplinar, pela falta do dolus malus.",
     "Absolver sem qualquer sanção, nem mesmo na esfera disciplinar."
@@ -2167,50 +1063,18 @@ window.QUIZ_DATA = {
   {
    "tipo": "escolha",
    "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "Por que o componente de grupo agrava o enquadramento de uma recusa de ordem?",
-   "opcoes": [
-    "Porque a recusa em grupo é presumida dolosa, sem necessidade de prova.",
-    "Porque transforma uma infração pessoal em ameaça estrutural à corporação.",
-    "Porque o art. 163 vale só para oficiais, e o art. 149, só para praças.",
-    "Porque o motim dispensa a consciência de que se age em grupo."
-   ],
-   "correta": 1,
-   "resposta": "Porque transforma uma infração pessoal em ameaça estrutural à corporação.",
-   "dica": "Pense no efeito que a ação de vários militares tem sobre a corporação.",
-   "explicacao": "Quando dois ou mais militares recusam a mesma ordem, cientes de agir em conjunto, a conduta deixa de ser um desvio individual e ameaça a disciplina da corporação. O enquadramento migra do art. 163 para o motim (art. 149), com pena muito maior.",
-   "emOutrasPalavras": "Um desobedecer é problema pessoal. Vários combinados é perigo para a corporação inteira, e a pena sobe."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "Segundo o checklist do material, para que serve o Filtro Tripartido (fato típico, ilicitude e culpabilidade) ao bombeiro militar?",
+   "enunciado": "Para que serve ao bombeiro militar o filtro do crime (fato típico, ilicitude e culpabilidade)?",
    "opcoes": [
     "Acelera o julgamento das infrações disciplinares praticadas nos quartéis.",
     "Substitui a análise do dolo nos crimes puramente militares e comuns.",
-    "Protege o militar contra a tirania, limitando o poder de punir do Estado.",
-    "Garante pena mínima aos militares réus primários e de bons antecedentes."
+    "Garante pena mínima aos militares réus primários e de bons antecedentes.",
+    "Protege o militar contra a tirania, limitando o poder de punir do Estado."
    ],
-   "correta": 2,
+   "correta": 3,
    "resposta": "Protege o militar contra a tirania, limitando o poder de punir do Estado.",
    "dica": "O filtro funciona como uma garantia, e não como um atalho.",
    "explicacao": "A estrutura em três camadas obriga o Estado a demonstrar, passo a passo, que a conduta é típica, ilícita e reprovável antes de punir. Esse método limita o arbítrio e assegura que ninguém seja punido sem preencher todos os requisitos legais.",
    "emOutrasPalavras": "O filtro é um escudo: o Estado só pode punir você se provar cada etapa, uma por uma."
-  },
-  {
-   "tipo": "escolha",
-   "assunto": "Dolo e culpabilidade no CPM",
-   "enunciado": "Qual alternativa compara corretamente o Código Penal comum e o CPM?",
-   "opcoes": [
-    "Comum: dolo no fato típico (finalista). CPM: dolo na culpabilidade (causalista).",
-    "Comum: dolo na culpabilidade. CPM: dolo no fato típico.",
-    "Os dois colocam o dolo no fato típico.",
-    "Os dois colocam o dolo na culpabilidade."
-   ],
-   "correta": 0,
-   "resposta": "Comum: dolo no fato típico (finalista). CPM: dolo na culpabilidade (causalista).",
-   "dica": "Procure o par que casa a teoria com o lugar onde fica a intenção.",
-   "explicacao": "O Código comum, atualizado em 1984, adota o finalismo e localiza o dolo na conduta típica. O CPM, de 1969, mantém a estrutura causalista e posiciona o dolo (e a culpa) na culpabilidade, o que explica a consciência da ilicitude integrar o dolo militar.",
-   "emOutrasPalavras": "Comum: a intenção entra logo no começo, junto com o ato. Militar: ela fica no final, dentro da culpa."
   }
  ]
 };
