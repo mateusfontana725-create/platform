@@ -369,6 +369,18 @@ body.modo-quiz .wrap{padding:0;max-width:none;margin:0}
 .qgrid.compacta3:not(.resp) .badge{visibility:hidden}
 .qgrid.compacta3:not(.resp) .qmeta{margin-bottom:2px}
 .qgrid.compacta3:not(.resp) .enunc{font-size:.95rem;line-height:1.3}
+/* último recurso (enunciados muito longos em tela baixa): fonte e espaços menores */
+.qgrid.compacta4.compacta3 .enunc{font-size:.9rem;line-height:1.26}
+.qgrid.compacta4.compacta3 .opts{gap:4px}
+.qgrid.compacta4.compacta3 .opt{min-height:30px;padding:3px 8px 3px 6px;font-size:12.8px;line-height:1.24;gap:8px;border-radius:9px}
+.qgrid.compacta4.compacta3 .opt .letra{width:21px;height:21px;font-size:11px}
+.qgrid.compacta4.compacta3 .dica{padding:4px 9px;font-size:12.5px;margin-top:4px;line-height:1.3}
+.qgrid.compacta4.compacta3 .qmeta{margin-bottom:2px}
+.qgrid.compacta4.compacta3 .fb{padding:4px 10px;margin-top:5px;font-size:12.8px}
+.qgrid.compacta4.compacta3 .tabs{margin:5px 0 4px}
+.qgrid.compacta4.compacta3 .tabs button{padding:4px}
+.qgrid.compacta4.compacta3 .exp{padding:5px 10px}
+.qgrid.compacta4.compacta3 .exp p{font-size:12.8px;line-height:1.32}
 @media (max-width:599px){ .opt .marca{display:none} }
 @media (max-height:900px) and (max-width:819px){
   .qgrid.resp .figbox{height:clamp(56px,11dvh,120px)}
@@ -2158,6 +2170,366 @@ window.QUIZ_DATA = {
    "dica": "Pense no sentinela que fecha os olhos.",
    "explicacao": "O art. 203 pune o militar que dorme quando em serviço como oficial de quarto ou de ronda, ou como sentinela, vigia, plantão às máquinas ou serviço semelhante.",
    "emOutrasPalavras": "Art. 203: dormiu no serviço."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 01 (Princípio da Legalidade): Para que determinada conduta humana seja considerada crime e sujeita a pena privativa de liberdade no ordenamento jurídico brasileiro, é imprescindível que a sanção e a tipificação estejam previstas em:",
+   "opcoes": [
+    "Decreto do Poder Executivo Federal.",
+    "Lei em sentido estrito oriunda do Congresso Nacional.",
+    "Medida provisória aprovada por maioria absoluta.",
+    "Portaria ministerial ou regulamento setorial.",
+    "Resolução expedida por órgão policial competente."
+   ],
+   "correta": 1,
+   "resposta": "Lei em sentido estrito oriunda do Congresso Nacional.",
+   "dica": "Quem pode criar crimes e penas: o Executivo ou o Legislativo?",
+   "explicacao": "Pela legalidade estrita (CF, art. 5º, XXXIX, e CP, art. 1º), só a lei em sentido estrito (lei ordinária ou complementar aprovada pelo Poder Legislativo) pode criar crimes e cominar penas. Decretos, portarias e resoluções não servem para isso.",
+   "emOutrasPalavras": "Só o Congresso, por lei, cria crime e pena. Decreto, portaria e resolução não valem."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 02 (Princípio da Anterioridade): Em janeiro de 2025, um indivíduo praticou uma conduta que, à época, era penalmente atípica. Em março de 2026, entrou em vigor nova lei que passou a tipificar a referida conduta como crime. Diante disso, a referida lei:",
+   "opcoes": [
+    "Aplica-se imediatamente ao fato de 2025, pois o direito penal rege-se pela teoria da atividade.",
+    "Retroagirá para alcançar o fato anterior, desde que haja representação da vítima.",
+    "Não pode retroagir para punir o fato praticado em 2025, pois a lei penal incriminadora é irretroativa.",
+    "Aplica-se ao caso se a pena cominada for inferior a dois anos de detenção.",
+    "Terá eficácia retroativa apenas se o agente for reincidente em crimes dolosos."
+   ],
+   "correta": 2,
+   "resposta": "Não pode retroagir para punir o fato praticado em 2025, pois a lei penal incriminadora é irretroativa.",
+   "dica": "A lei que cria crime olha para frente ou para trás?",
+   "explicacao": "Pela anterioridade (CF, art. 5º, XL, e CP, art. 1º), a lei penal só alcança fatos futuros. A lei que cria um crime novo (novatio legis incriminadora) é irretroativa e não pode punir fatos anteriores à sua vigência.",
+   "emOutrasPalavras": "Lei nova que cria crime só vale daqui para frente. O que você fez antes não vira crime."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 03 (Princípio do Ne Bis In Idem): Determinado policial militar comete uma falta disciplinar grave que também configura crime de peculato. O agente sofre a pena de demissão no âmbito administrativo e, posteriormente, é condenado à pena privativa de liberdade perante o Tribunal de Justiça. Essa cumulação de sanções:",
+   "opcoes": [
+    "É nula, pois viola diretamente o princípio constitucional do ne bis in idem.",
+    "Configura bis in idem apenas se as penas forem cumpridas no mesmo estabelecimento prisional.",
+    "É válida, pois vigora a independência entre as esferas administrativa, civil e penal.",
+    "Só é permitida se houver prévia autorização da Corregedoria-Geral da corporação.",
+    "Anula os efeitos da condenação penal caso a sanção administrativa seja aplicada primeiro."
+   ],
+   "correta": 2,
+   "resposta": "É válida, pois vigora a independência entre as esferas administrativa, civil e penal.",
+   "dica": "Pense em esferas diferentes punindo o mesmo fato.",
+   "explicacao": "O ne bis in idem veda a dupla punição pelo mesmo fato na mesma esfera punitiva. Como o ordenamento adota a independência das instâncias, é legítimo cumular sanções de naturezas distintas (administrativa e penal) sobre o mesmo fato.",
+   "emOutrasPalavras": "Pode ser punido no quartel e na Justiça pelo mesmo fato, porque são esferas separadas."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 04 (Criminologia – Escola Clássica): A Escola Clássica de Criminologia, representada por expoentes como Cesare Beccaria, fundamentava o crime e a pena com base em qual premissa filosófica?",
+   "opcoes": [
+    "O determinismo biológico, considerando o criminoso um ser atávico e biologicamente inferior.",
+    "O livre-arbítrio e o contrato social, vendo o crime como uma escolha racional e a pena como retribuição justa.",
+    "A análise macrossociológica das estruturas econômicas e da luta de classes como causa primária da criminalidade.",
+    "A prevenção especial positiva voltada exclusivamente para a ressocialização do delinquente.",
+    "A defesa social baseada na periculosidade do agente, prescindindo de culpa moral."
+   ],
+   "correta": 1,
+   "resposta": "O livre-arbítrio e o contrato social, vendo o crime como uma escolha racional e a pena como retribuição justa.",
+   "dica": "Para os clássicos, o criminoso escolhe livremente.",
+   "explicacao": "A Escola Clássica nasce sob o Iluminismo e adota o livre-arbítrio e o contrato social. O homem é racional e escolhe delinquir; a pena é retribuição proporcional ao mal causado e tutela do pacto social.",
+   "emOutrasPalavras": "Para os clássicos, o crime é uma escolha livre, e a pena precisa ser justa e proporcional."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 05 (Criminologia – Escola Positivista): Diferentemente dos clássicos, a Escola Positivista de Criminologia (com Cesare Lombroso, Enrico Ferri e Raffaele Garofalo) substituiu o conceito de livre-arbítrio pelo postulado do:",
+   "opcoes": [
+    "Determinismo biológico e social, enxergando o crime como um fenômeno natural e patológico.",
+    "Consenso social harmônico, onde o crime é mera disfunção institucional corrigível por sanções brandas.",
+    "Etiquetamento social, no qual a criminalidade é produto exclusivo da reação formal do Estado.",
+    "Conflito estrutural de classes decorrente do modo de produção capitalista.",
+    "Pluralismo metódico baseado na escolha utilitarista da pena de multa."
+   ],
+   "correta": 0,
+   "resposta": "Determinismo biológico e social, enxergando o crime como um fenômeno natural e patológico.",
+   "dica": "Se não é escolha livre, o que determina o crime?",
+   "explicacao": "O Positivismo rejeitou o livre-arbítrio e adotou o determinismo. O crime passou a ser estudado como fato natural e patológico, condicionado por fatores biológicos, físicos e sociais do delinquente (criminoso nato, de Lombroso), com foco na defesa social.",
+   "emOutrasPalavras": "Para os positivistas, o crime vem de causas naturais e sociais, e não de uma escolha livre."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 06 (Criminologia – Teorias Macrossociológicas): As teorias macrossociológicas do consenso (como a Teoria da Anomia e a da Associação Diferencial) e do conflito (como a Criminologia Crítica) divergem fundamentalmente porque:",
+   "opcoes": [
+    "As teorias do consenso veem o crime como desvio patológico natural, enquanto as críticas focam na seletividade do sistema penal e no poder.",
+    "As teorias do conflito negam a existência de leis penais, ao passo que as do consenso defendem a abolição total da pena privativa de liberdade.",
+    "Ambas atribuem a gênese do delito exclusivamente aos traços genéticos e atávicos herdados pelo infrator.",
+    "A teoria do consenso fundamenta-se no livre-arbítrio clássico, enquanto a crítica baseia-se no positivismo biológico.",
+    "Não há divergência, pois todas compartilham da mesma visão funcionalista estrita de Durkheim."
+   ],
+   "correta": 0,
+   "resposta": "As teorias do consenso veem o crime como desvio patológico natural, enquanto as críticas focam na seletividade do sistema penal e no poder.",
+   "dica": "Uma vê a sociedade em harmonia; a outra vê dominação.",
+   "explicacao": "As teorias do consenso partem de uma sociedade harmônica, em que o crime é disfunção ou desvio individual. As teorias críticas (do conflito) analisam o direito penal como instrumento de dominação de classe e criticam a seletividade do sistema punitivo.",
+   "emOutrasPalavras": "Consenso: a sociedade é harmônica e o crime é um desvio. Conflito: a lei penal serve a quem manda, e o sistema escolhe quem punir."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 07 (Fato Típico e Iter Criminis): Durante a execução de um furto, o agente, após arrombar a janela do estabelecimento (atos preparatórios/início de execução), é surpreendido por uma viatura policial antes de subtrair qualquer bem, interrompendo a ação por circunstâncias alheias à sua vontade. Essa conduta configura:",
+   "opcoes": [
+    "Crime consumado, pois houve violação de domicílio consumada pelo arrombamento.",
+    "Tentativa perfeita (crime falho), com esgotamento de todos os atos executórios.",
+    "Tentativa imperfeita (ou propriamente dita), respondendo o agente pelo crime diminuído de um a dois terços.",
+    "Desistência voluntária, isentando o agente da pena pelo furto.",
+    "Ato preparatório impune, visto que nenhum patrimônio chegou a ser transferido."
+   ],
+   "correta": 2,
+   "resposta": "Tentativa imperfeita (ou propriamente dita), respondendo o agente pelo crime diminuído de um a dois terços.",
+   "dica": "Começou a executar, mas algo de fora interrompeu no meio.",
+   "explicacao": "O iter criminis tem cogitação, preparação, execução e consumação. Como a execução foi iniciada e não se consumou por circunstâncias alheias à vontade do agente (a viatura), há tentativa (CP, art. 14, II). Como foi interrompida no meio, é tentativa imperfeita, com pena reduzida de um a dois terços.",
+   "emOutrasPalavras": "Começou o furto e foi pego no meio, sem querer parar: é tentativa, com pena menor."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 08 (Dolo e Culpa): No direito penal brasileiro, atuar com dolo eventual significa que o agente:",
+   "opcoes": [
+    "Deseja diretamente o resultado ilícito como finalidade última de sua conduta.",
+    "Atua com negligência ou imprudência, prevendo o resultado mas acreditando sinceramente que ele não ocorrerá.",
+    "Não prevê o resultado que era objetivamente previsível para qualquer homem médio.",
+    "Assume o risco de produzir o resultado ilícito, assentindo com a sua ocorrência caso ele venha a se verificar.",
+    "Pratica conduta lícita que gera resultado ilícito por caso fortuito ou força maior."
+   ],
+   "correta": 3,
+   "resposta": "Assume o risco de produzir o resultado ilícito, assentindo com a sua ocorrência caso ele venha a se verificar.",
+   "dica": "Ele não quer o resultado, mas aceita que ele aconteça.",
+   "explicacao": "Pelo CP, art. 18, I, segunda parte, há dolo eventual quando o agente assume o risco de produzir o resultado. Ele não quer diretamente, mas aceita. Na culpa consciente, o agente prevê o resultado, mas acredita que ele não vai ocorrer.",
+   "emOutrasPalavras": "Dolo eventual é \"se acontecer, aconteceu\". Culpa consciente é \"tenho certeza de que não vai acontecer\"."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 09 (Ilicitude e Culpabilidade): A reforma de 1984 no Código Penal comum levou o Brasil a adotar o Finalismo, em que dolo e culpa migraram da culpabilidade para o fato típico, diferenciando-se do Código Penal Militar. Assinale a alternativa que indica corretamente um elemento da Culpabilidade (na teoria finalista de Hans Welzel):",
+   "opcoes": [
+    "A conduta humana voluntária direcionada a um fim ilícito.",
+    "A tipicidade formal e material da conduta descrita na lei.",
+    "A potencial consciência da ilicitude do fato.",
+    "A existência de causa de exclusão de ilicitude por estrito cumprimento de dever legal.",
+    "O resultado naturalístico."
+   ],
+   "correta": 2,
+   "resposta": "A potencial consciência da ilicitude do fato.",
+   "dica": "Culpabilidade é um juízo de reprovação sobre o autor.",
+   "explicacao": "Na teoria finalista, a culpabilidade é o juízo de reprovação pessoal sobre o autor de um fato típico e ilícito. Seus elementos são imputabilidade, potencial consciência da ilicitude e exigibilidade de conduta diversa. A conduta e a tipicidade são do fato típico, e as excludentes pertencem à ilicitude.",
+   "emOutrasPalavras": "Culpabilidade: o autor podia ser cobrado? Era capaz, sabia que era errado e podia agir diferente?"
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 10 (Crimes Militares em Tempo de Paz – Art. 9º, II, \"a\", do CPM): Durante o serviço, um 2º Sargento do Corpo de Bombeiros Militar, no atendimento a uma ocorrência, desentendeu-se com um Soldado por questões operacionais e desferiu-lhe um golpe com o capacete, causando-lhe lesão corporal leve. À luz do art. 9º, II, \"a\", do CPM, o fato narrado configura:",
+   "opcoes": [
+    "Crime militar próprio, pois a agressão ocorreu entre militares no interior de quartel ou em serviço, punido exclusivamente pela legislação castrense.",
+    "Crime militar por extensão (impróprio), praticado por militar em serviço contra militar na mesma situação, atraindo a competência da Justiça Militar Estadual.",
+    "Crime comum de lesão corporal, de competência da Justiça Comum, pois a infração disciplinar militar absorve a infração penal civil.",
+    "Infração puramente administrativa, vedada a persecução penal simultânea em razão do princípio do ne bis in idem.",
+    "Contravenção penal de vias de fato, cuja apreciação cabe privativamente ao Juizado Especial Criminal (JECRIM)."
+   ],
+   "correta": 1,
+   "resposta": "Crime militar por extensão (impróprio), praticado por militar em serviço contra militar na mesma situação, atraindo a competência da Justiça Militar Estadual.",
+   "dica": "Os dois estavam em serviço, e o crime existe também no Código Penal comum.",
+   "explicacao": "Conforme o art. 9º, II, \"a\", do CPM, são crimes militares em tempo de paz os previstos no Código Penal comum (ou na legislação especial) praticados por militar em serviço ou em razão da função, contra militar na mesma situação. Como ambos estavam em serviço, é crime militar impróprio, julgado pela Justiça Militar estadual.",
+   "emOutrasPalavras": "Militar em serviço agrediu outro militar em serviço: é crime militar e vai para a Justiça Militar."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 11 (Crimes Militares Próprios): Crimes militares próprios são aqueles descritos exclusivamente no Código Penal Militar e que violam deveres inerentes à condição militar. Ocorre que existem condutas que constam como crime tanto no CPM quanto no CP, ou seja, são crimes que podem ser cometidos por civis. Dentre as alternativas, qual o único crime que não configura um crime militar próprio?",
+   "opcoes": [
+    "Deserção",
+    "Insubmissão",
+    "Lesão Corporal Grave",
+    "Motim",
+    "Recusa de obediência"
+   ],
+   "correta": 2,
+   "resposta": "Lesão Corporal Grave",
+   "dica": "Qual deles também existe para civis, no Código Penal comum?",
+   "explicacao": "Deserção, insubmissão, motim e recusa de obediência só existem no CPM e violam deveres próprios da condição militar. Lesão corporal grave também é crime no Código Penal comum e pode ser cometida por civil, então não é crime militar próprio. (O PDF não traz o gabarito desta questão; a resposta foi deduzida pelo conceito.)",
+   "emOutrasPalavras": "Os crimes que só militar comete são os próprios. Lesão corporal grave qualquer pessoa comete, então não é."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 12 (Crimes Militares Próprios (penas do art. 55)): O Código Penal Militar traz em seu artigo nº 55 um rol taxativo de penas. As seguintes alternativas trazem previsões de penas que constam nesse artigo, exceto:",
+   "opcoes": [
+    "morte",
+    "reclusão",
+    "detenção",
+    "banimento",
+    "impedimento"
+   ],
+   "correta": 3,
+   "resposta": "banimento",
+   "dica": "Procure a pena que não existe no Brasil.",
+   "explicacao": "O art. 55 do CPM prevê morte, reclusão, detenção, prisão, impedimento, suspensão do posto, graduação, cargo ou função, e reforma. Banimento não consta no rol (e a Constituição o proíbe). (O PDF não traz o gabarito desta questão; a resposta foi deduzida pelo texto do art. 55.)",
+   "emOutrasPalavras": "O banimento (expulsar do país) não é pena no CPM."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 13 (Crimes Militares em Tempo de Paz): Um Soldado do Corpo de Bombeiros Militar, de folga e usando roupas civis, transita com seu veículo particular em via pública de sua cidade. No trajeto, subtrai um notebook guardado no interior de um automóvel estacionado. Descobriu-se posteriormente que o veículo arrombado pertencia a um Tenente-Coronel da mesma corporação, o qual estava em horário de folga e trajando à paisana. À luz do Código Penal Militar, assinale a alternativa correta sobre a tipificação e a jurisdição do fato:",
+   "opcoes": [
+    "Trata-se de crime militar, pois a vítima é oficial da ativa da mesma corporação militar estadual.",
+    "O fato constituiu crime militar por equiparação, uma vez que o autor é militar da ativa do Corpo de Bombeiros.",
+    "O crime é comum (furto), de competência da Justiça Comum, pois o autor e a vítima encontravam-se em situação de folga, fora de lugar sujeito à administração militar e sem usar armas ou bens da corporação.",
+    "O delito configura crime militar próprio, aplicando-se a agravante de ter sido praticado contra superior hierárquico.",
+    "A conduta é atípica na esfera penal militar, respondendo o agente apenas por transgressão disciplinar grave perante a Corregedoria."
+   ],
+   "correta": 2,
+   "resposta": "O crime é comum (furto), de competência da Justiça Comum, pois o autor e a vítima encontravam-se em situação de folga, fora de lugar sujeito à administração militar e sem usar armas ou bens da corporação.",
+   "dica": "Os dois estavam de folga, à paisana, e o fato não tem ligação com o serviço.",
+   "explicacao": "Para ser crime militar fora do serviço, o ato precisa ser praticado em razão da função (art. 9º, II, \"c\", do CPM). Se ambos estão de folga, à paisana, com bens particulares, e o furto de patrimônio particular não tem relação com a função militar, o crime é comum e de competência da Justiça Comum.",
+   "emOutrasPalavras": "Folga, à paisana e sem ligação com o serviço: é furto comum, não crime militar."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 14 (Ação Penal Militar: Espécies e Titularidade): Acerca da ação penal no âmbito da Justiça Militar Estadual, verificado um crime militar próprio praticado por um Soldado do Corpo de Bombeiros Militar do Paraná contra a Administração Militar, a titularidade para o oferecimento da denúncia pertence privativamente a:",
+   "opcoes": [
+    "O GAECO - Grupo de Atuação Especial contra o Crime Organizado.",
+    "O Procurador-Geral de Justiça do Estado.",
+    "O Ministério Público do Estado do Paraná (MPPR), por intermédio dos Promotores de Justiça com atribuição perante a Justiça Militar do Estado.",
+    "O Comandante-Geral do Corpo de Bombeiros Militar.",
+    "O Corregedor-Geral da Corporação."
+   ],
+   "correta": 2,
+   "resposta": "O Ministério Público do Estado do Paraná (MPPR), por intermédio dos Promotores de Justiça com atribuição perante a Justiça Militar do Estado.",
+   "dica": "A ação penal militar é pública. Quem a promove?",
+   "explicacao": "Pelo art. 125, § 4º, da CF e pela legislação processual penal militar, a ação penal militar é pública e a titularidade é exclusiva do Ministério Público, por meio dos Promotores de Justiça que atuam junto às Auditorias militares.",
+   "emOutrasPalavras": "Quem acusa é sempre o Ministério Público, nunca o comandante nem a corregedoria."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 15 (Inquérito Policial Militar – IPM): Instaurado IPM para apurar suposto crime de insubordinação praticado por um bombeiro militar, o encarregado (oficial designado) concluiu as investigações e elaborou o relatório. Nos termos do CPPM, o Inquérito Policial Militar possui como características fundamentais:",
+   "opcoes": [
+    "Possuir contraditório e público, exigindo ampla defesa prévia do indiciado durante a coleta de provas.",
+    "Ser inquisitivo, sigiloso e dispensável à propositura da ação penal se já houver elementos de convicção.",
+    "Ter valor probatório absoluto, equivalendo a uma sentença penal condenatória se presidido por oficial superior.",
+    "Ser de titularidade do Poder Judiciário militar, que comanda diretamente os atos de oitiva de testemunhas.",
+    "Exigir representação obrigatória da vítima para iniciar a persecução penal nos crimes contra o patrimônio militar."
+   ],
+   "correta": 1,
+   "resposta": "Ser inquisitivo, sigiloso e dispensável à propositura da ação penal se já houver elementos de convicção.",
+   "dica": "O IPM é uma investigação prévia, sem contraditório pleno.",
+   "explicacao": "O IPM é investigação administrativa prévia, de natureza inquisitiva (sem contraditório pleno) e sigilosa, que serve de base para a opinio delicti do Ministério Público. Por ser peça informativa, sua ausência não anula a ação penal, se a denúncia estiver apoiada em outras provas.",
+   "emOutrasPalavras": "O IPM só junta as provas para o MP decidir. Não é julgamento, e dá para denunciar sem ele."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 16 (Crimes contra a Autoridade ou Disciplina Militar): Durante o serviço, um Cabo do Corpo de Bombeiros Militar é solicitado a comparecer até a sala do comandante da CIA. Ao adentrar o recinto, onde estava somente ele e o Capitão, o Cabo, numa atitude livre e consciente, com o intuito de menosprezar a autoridade de seu superior hierárquico, recusa-se ostensivamente a cumprir uma ordem direta e legal relativa ao serviço, emitida pelo oficial. O fato narrado configura o crime militar de:",
+   "opcoes": [
+    "Desrespeito a superior.",
+    "Insubordinação (Recusa de obediência).",
+    "Desacato a militar.",
+    "Oposição à ordem legal.",
+    "Incitação à desobediência."
+   ],
+   "correta": 1,
+   "resposta": "Insubordinação (Recusa de obediência).",
+   "dica": "Ele se recusou a cumprir uma ordem de serviço, sozinho.",
+   "explicacao": "Pelo art. 163 do CPM, a recusa de obediência consiste em recusar-se o militar a obedecer a ordem do superior sobre assunto ou matéria de serviço, ou relativa a dever militar. É um crime contra a autoridade e a disciplina militar.",
+   "emOutrasPalavras": "Recusou uma ordem legal de serviço dada pelo superior: é recusa de obediência."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 17 (Crimes contra a Administração Militar): Um Soldado do Corpo de Bombeiros Militar, encarregado pelo almoxarifado onde trabalha e responsável por todos os materiais de uso operacional de sua unidade, subtrai dolosamente duas motosserras novas pertencentes ao patrimônio da corporação, vendendo-as posteriormente a terceiros em proveito próprio. À luz do CPM, a conduta praticada possui tipificação mais adequada ao crime de:",
+   "opcoes": [
+    "Peculato.",
+    "Peculato-furto.",
+    "Apropriação indébita militar.",
+    "Facilitação de furto.",
+    "Furto de uso, conduta atípica."
+   ],
+   "correta": 1,
+   "resposta": "Peculato-furto.",
+   "dica": "Ele não tinha a posse do bem; usou a facilidade que o cargo dava.",
+   "explicacao": "Pelo art. 303 do CPM, comete peculato o militar que se apropria de bem que tem a posse em razão do cargo, ou o desvia. Quando o militar subtrai bem de que tem facilidade de acesso em razão da função, configura-se o peculato-furto, tratado como modalidade equiparada ao furto.",
+   "emOutrasPalavras": "Roubou da própria unidade usando o acesso que o cargo dava: peculato-furto."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 18 (Crimes contra a Dignidade Sexual no CPM): Determinado 1º Sargento do Corpo de Bombeiros Militar, prevalecendo-se de sua superioridade hierárquica e das funções de comando em uma unidade de atendimento, constrange uma Soldado subordinada, mediante o uso de intimidação e promessas de vantagens funcionais, com o intuito de obter favores sexuais. À luz da legislação penal militar, essa conduta configura o crime de:",
+   "opcoes": [
+    "Assédio sexual.",
+    "Estupro tentado.",
+    "Pudor desonesto agravado.",
+    "Importunação ofensiva ao pudor.",
+    "Concussão sexual."
+   ],
+   "correta": 0,
+   "resposta": "Assédio sexual.",
+   "dica": "Constranger alguém, usando a posição de chefe, para obter favor sexual.",
+   "explicacao": "O assédio sexual protege a dignidade sexual nas relações de subordinação: o agente constrange alguém, prevalecendo-se da superioridade hierárquica ou do cargo, para obter vantagem sexual.",
+   "emOutrasPalavras": "Chefe que usa o cargo para pressionar subordinada em troca de favor sexual comete assédio sexual."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 19 (Crime de Deserção – Contagem de Prazo e Consumação): Um Soldado do Corpo de Bombeiros Militar, após o término de suas férias, deveria apresentar-se e reassumir o serviço às 08h00 do dia 10 de maio de 2026 (data da ausência). O militar, contudo, deixou de se apresentar intencionalmente. Considerando as regras de contagem do prazo de ausência e o período de graça estabelecidos pelo CPM, o crime de deserção estará consumado no primeiro momento em que o militar já é considerado ausente e punível pela ausência (após findo o período de graça), ou seja, exatamente:",
+   "opcoes": [
+    "Às 00h00 do dia 11 de maio de 2026 (fim do primeiro dia de ausência).",
+    "Às 23h59 do dia 17 de maio de 2026, completados os 8 dias de tolerância sem apresentação voluntária.",
+    "Às 00h00 do dia 19 de maio de 2026 (início do nono dia, após escoado o prazo de graça de 8 dias para praças não-especiais/praças em geral).",
+    "Às 08h00 do dia 12 de maio de 2026, decorridas exatamente 48 horas da falta injustificada.",
+    "Apenas após a lavratura do termo de deserção pela autoridade competente, independentemente do transcurso de dias."
+   ],
+   "correta": 2,
+   "resposta": "Às 00h00 do dia 19 de maio de 2026 (início do nono dia, após escoado o prazo de graça de 8 dias para praças não-especiais/praças em geral).",
+   "dica": "O dia 10 não conta. Conte 8 dias completos a partir do dia 11.",
+   "explicacao": "Pelo art. 187 do CPM, a deserção se consuma quando o militar se ausenta, sem licença, por mais de oito dias. A contagem exclui o dia do começo (10 de maio) e inclui o do vencimento. O período de graça são os 8 dias completos (11 a 18 de maio); a deserção se consuma no primeiro instante do nono dia, às 00h00 do dia 19 de maio de 2026.",
+   "emOutrasPalavras": "Não conta o dia 10. Os dias 11 a 18 são a graça (8 dias). À meia-noite do dia 19, virou deserção."
+  },
+  {
+   "tipo": "escolha",
+   "assunto": "Revisão do instrutor",
+   "origem": "revisao",
+   "enunciado": "Revisão 20 (Lei Maria da Penha – Medidas Protetivas e Arma de Fogo): Determinada vítima de violência doméstica requer medidas protetivas de urgência em face de seu namorado, que é Soldado do Corpo de Bombeiros Militar. Constatando risco à integridade da ofendida e o uso ou porte de arma de fogo em razão da função, o juiz competente, à luz da Lei Maria da Penha (com as atualizações da Lei nº 13.882/2019 e alterações correlatas), determina:",
+   "opcoes": [
+    "A imediata cassação definitiva da patente militar e a exclusão sumária do agressor das fileiras da corporação pelo juízo cível.",
+    "A suspensão do porte de armas e a determinação da entrega imediata da arma de fogo (particular ou institucional) acautelada na corporação, comunicando-se à autoridade militar competente.",
+    "A conversão obrigatória da prisão preventiva do militar em regime de recolhimento domiciliar em quartel, com proibição de frequentar a residência comum.",
+    "O encaminhamento do militar para a reserva remunerada compulsória, mantendo-se o porte de arma funcional restrito ao horário de expediente interno.",
+    "A aplicação exclusiva de multa pecuniária administrativa, sendo vedada a apreensão de armas pertencentes ao Estado sob alegação de soberania militar."
+   ],
+   "correta": 1,
+   "resposta": "A suspensão do porte de armas e a determinação da entrega imediata da arma de fogo (particular ou institucional) acautelada na corporação, comunicando-se à autoridade militar competente.",
+   "dica": "A medida atinge a arma, e não a carreira.",
+   "explicacao": "Pelo art. 22, I, da Lei Maria da Penha (com as alterações da Lei 13.882/2019), verificada a violência doméstica, o juiz pode aplicar de imediato a suspensão do porte de armas, com comunicação ao órgão ou corporação do agressor, determinando a entrega imediata das armas sob sua posse.",
+   "emOutrasPalavras": "Havendo risco, o juiz manda recolher a arma do agressor na hora e avisa a corporação."
   }
  ]
 };
@@ -2445,7 +2817,7 @@ window.QUIZ_DATA = {
   function compacta() {
     var m = document.getElementById('qmain'), g = m && m.querySelector('.qgrid');
     if (!g) return;
-    var niveis = ['compacta', 'compacta2', 'compacta3'];
+    var niveis = ['compacta', 'compacta2', 'compacta3', 'compacta4'];
     niveis.forEach(function (c) { g.classList.remove(c); });
     for (var i = 0; i < niveis.length && m.scrollHeight > m.clientHeight + 1; i++) g.classList.add(niveis[i]);
   }

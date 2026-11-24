@@ -193,6 +193,18 @@ body.modo-quiz .wrap{padding:0;max-width:none;margin:0}
 .qgrid.compacta3:not(.resp) .badge{visibility:hidden}
 .qgrid.compacta3:not(.resp) .qmeta{margin-bottom:2px}
 .qgrid.compacta3:not(.resp) .enunc{font-size:.95rem;line-height:1.3}
+/* último recurso (enunciados muito longos em tela baixa): fonte e espaços menores */
+.qgrid.compacta4.compacta3 .enunc{font-size:.9rem;line-height:1.26}
+.qgrid.compacta4.compacta3 .opts{gap:4px}
+.qgrid.compacta4.compacta3 .opt{min-height:30px;padding:3px 8px 3px 6px;font-size:12.8px;line-height:1.24;gap:8px;border-radius:9px}
+.qgrid.compacta4.compacta3 .opt .letra{width:21px;height:21px;font-size:11px}
+.qgrid.compacta4.compacta3 .dica{padding:4px 9px;font-size:12.5px;margin-top:4px;line-height:1.3}
+.qgrid.compacta4.compacta3 .qmeta{margin-bottom:2px}
+.qgrid.compacta4.compacta3 .fb{padding:4px 10px;margin-top:5px;font-size:12.8px}
+.qgrid.compacta4.compacta3 .tabs{margin:5px 0 4px}
+.qgrid.compacta4.compacta3 .tabs button{padding:4px}
+.qgrid.compacta4.compacta3 .exp{padding:5px 10px}
+.qgrid.compacta4.compacta3 .exp p{font-size:12.8px;line-height:1.32}
 @media (max-width:599px){ .opt .marca{display:none} }
 @media (max-height:900px) and (max-width:819px){
   .qgrid.resp .figbox{height:clamp(56px,11dvh,120px)}

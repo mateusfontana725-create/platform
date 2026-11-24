@@ -12,7 +12,8 @@ const id = process.argv[2];
 if (!id) { console.error('Uso: node tools/checar-questoes.js <materia-id>'); process.exit(2); }
 const arq = path.join(__dirname, '..', 'data', id + '.js');
 const ctx = { window: {} }; vm.createContext(ctx); vm.runInContext(fs.readFileSync(arq, 'utf8'), ctx);
-const qs = (ctx.window.QUIZ_DATA.questoes || []).filter(q => q.tipo === 'escolha');
+// Questões com `origem` (ex.: gabarito do instrutor) mantêm a ordem original das alternativas e ficam fora das regras de equilíbrio.
+const qs = (ctx.window.QUIZ_DATA.questoes || []).filter(q => q.tipo === 'escolha' && !q.origem);
 const n = qs.length; const L = 'ABCD';
 const cont = [0, 0, 0, 0]; let maior = 0, empate = 0, menor = 0, corridas = 0, run = 1, destaque = [];
 qs.forEach((q, i) => {

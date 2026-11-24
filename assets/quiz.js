@@ -279,7 +279,7 @@
   function compacta() {
     var m = document.getElementById('qmain'), g = m && m.querySelector('.qgrid');
     if (!g) return;
-    var niveis = ['compacta', 'compacta2', 'compacta3'];
+    var niveis = ['compacta', 'compacta2', 'compacta3', 'compacta4'];
     niveis.forEach(function (c) { g.classList.remove(c); });
     for (var i = 0; i < niveis.length && m.scrollHeight > m.clientHeight + 1; i++) g.classList.add(niveis[i]);
   }
