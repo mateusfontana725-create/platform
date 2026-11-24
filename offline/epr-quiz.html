@@ -212,6 +212,9 @@ body.modo-quiz .wrap{padding:0;max-width:none;margin:0}
 .qmeta{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
 .badge{display:inline-flex;align-items:center;gap:6px;min-width:0;font-size:11.5px;font-weight:750;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)}
 .badge::before{content:"";flex:0 0 auto;width:8px;height:8px;border-radius:2px;background:var(--cor,var(--brand))}
+.badge.instrutor{color:#7a4a00;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 55%,var(--line));border-radius:999px;padding:3px 10px;letter-spacing:.03em}
+.badge.instrutor::before{display:none}
+@media (prefers-color-scheme:dark){.badge.instrutor{color:var(--accent)}}
 .badge span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .dicabtn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--surface);color:var(--fg);
   font:inherit;font-weight:650;font-size:13.5px;cursor:pointer}
@@ -253,7 +256,7 @@ body.modo-quiz .wrap{padding:0;max-width:none;margin:0}
 .opt.errada{border-color:var(--bad);background:var(--bad-bg)}
 .opt.errada .letra{background:var(--bad);border-color:var(--bad);color:#fff}
 .opt.errada .marca{color:var(--bad)}
-.opt.apagada{opacity:.5;box-shadow:none}
+.opt.apagada{opacity:.78;box-shadow:none}
 
 /* feedback e explicações, abaixo das alternativas */
 .fb{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;font-size:15px;line-height:1.35;font-weight:650;margin-top:12px}
@@ -355,11 +358,13 @@ body.modo-quiz .wrap{padding:0;max-width:none;margin:0}
 }
 
 /* ---------- respondida: em telas que não comportam tudo, só a escolhida e a correta continuam ---------- */
-/* compactação progressiva, aplicada pelo motor só quando a questão respondida não cabe na tela */
-.qgrid.compacta .opts li.apagada{display:none}
+/* compactação progressiva, aplicada pelo motor só quando a questão não cabe na tela. As alternativas nunca somem: só encolhem (o aluno precisa ler a certa e as outras) */
+.qgrid.resp.compacta .opts{gap:4px}
+.qgrid.resp.compacta .opt{min-height:34px;padding:4px 10px 4px 8px;font-size:14px;line-height:1.28}
+.qgrid.resp.compacta .opt .letra{width:24px;height:24px;font-size:12px}
 .qgrid.compacta .figbox{height:clamp(64px,16dvh,150px)}
 .qgrid.compacta .figbtn{display:none}
-.qgrid.compacta2 .opts li.errada{display:none}
+.qgrid.resp.compacta2 .opt{min-height:28px;padding-top:2px;padding-bottom:2px;font-size:13.2px}
 .qgrid.resp.compacta2 .figbox{height:52px}
 .qgrid.compacta2:not(.resp) .figbox{height:clamp(60px,12dvh,110px)}
 .qgrid.compacta2:not(.resp) .opt{min-height:36px;padding-top:3px;padding-bottom:3px}
@@ -1894,7 +1899,9 @@ window.QUIZ_DATA = {
   function embaralha(a) {
     a = a.slice();
     for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
-    return a;
+    // questões com `origem` (ex.: do instrutor) vão sempre para o fim, na ordem original
+    var vem = function (x) { return D.questoes[x] && D.questoes[x].origem; };
+    return a.filter(function (x) { return !vem(x); }).concat(a.filter(vem).sort(function (x, y) { return x - y; }));
   }
 
   // ---- comparação de respostas digitadas (sem acento, sem palavras de ligação)
@@ -2086,7 +2093,7 @@ window.QUIZ_DATA = {
     var total = ordem.length, ultima = pos === total - 1;
     var h = '<div class="qgrid' + (resp ? ' resp' : '') + (q.alvo ? '' : ' sem-fig') + '"><section class="qleft">';
     var ICO_DICA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.9V16h5v-.2c0-.8.4-1.5 1-1.9A6 6 0 0 0 12 3z"/></svg>';
-    h += '<div class="qmeta"><span class="badge"><span>' + esc(q.assunto) + '</span></span>' +
+    h += '<div class="qmeta"><span class="badge' + (q.origem ? ' instrutor' : '') + '"><span>' + esc(q.assunto) + '</span></span>' +
       '<button class="dicabtn" type="button" aria-label="Mostrar dica" aria-expanded="' + (dicaAberta[di] ? 'true' : 'false') + '" data-dica="' + di + '">' + ICO_DICA + 'Dica</button></div>';
     if (q.alvo) {
       h += '<div class="figwrap"><div class="figbox ' + (q.alvo.fig === 'f1' ? 'grande' : 'pequena') + '">' + figuraSVG(q.alvo, false) + '</div>' +
@@ -2134,7 +2141,7 @@ window.QUIZ_DATA = {
   }
 
   // se a questão não cabe na tela (dica aberta, explicação longa), aperta o layout em etapas.
-  // Respondida: as alternativas que não importam ficam apagadas e, se faltar altura, somem.
+  // Respondida: as alternativas erradas ficam esmaecidas, mas nunca somem; se faltar altura, encolhem e a tela rola.
   function compacta() {
     var m = document.getElementById('qmain'), g = m && m.querySelector('.qgrid');
     if (!g) return;

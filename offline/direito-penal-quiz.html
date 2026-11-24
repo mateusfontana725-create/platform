@@ -256,7 +256,7 @@ body.modo-quiz .wrap{padding:0;max-width:none;margin:0}
 .opt.errada{border-color:var(--bad);background:var(--bad-bg)}
 .opt.errada .letra{background:var(--bad);border-color:var(--bad);color:#fff}
 .opt.errada .marca{color:var(--bad)}
-.opt.apagada{opacity:.5;box-shadow:none}
+.opt.apagada{opacity:.78;box-shadow:none}
 
 /* feedback e explicações, abaixo das alternativas */
 .fb{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;font-size:15px;line-height:1.35;font-weight:650;margin-top:12px}
@@ -358,11 +358,13 @@ body.modo-quiz .wrap{padding:0;max-width:none;margin:0}
 }
 
 /* ---------- respondida: em telas que não comportam tudo, só a escolhida e a correta continuam ---------- */
-/* compactação progressiva, aplicada pelo motor só quando a questão respondida não cabe na tela */
-.qgrid.compacta .opts li.apagada{display:none}
+/* compactação progressiva, aplicada pelo motor só quando a questão não cabe na tela. As alternativas nunca somem: só encolhem (o aluno precisa ler a certa e as outras) */
+.qgrid.resp.compacta .opts{gap:4px}
+.qgrid.resp.compacta .opt{min-height:34px;padding:4px 10px 4px 8px;font-size:14px;line-height:1.28}
+.qgrid.resp.compacta .opt .letra{width:24px;height:24px;font-size:12px}
 .qgrid.compacta .figbox{height:clamp(64px,16dvh,150px)}
 .qgrid.compacta .figbtn{display:none}
-.qgrid.compacta2 .opts li.errada{display:none}
+.qgrid.resp.compacta2 .opt{min-height:28px;padding-top:2px;padding-bottom:2px;font-size:13.2px}
 .qgrid.resp.compacta2 .figbox{height:52px}
 .qgrid.compacta2:not(.resp) .figbox{height:clamp(60px,12dvh,110px)}
 .qgrid.compacta2:not(.resp) .opt{min-height:36px;padding-top:3px;padding-bottom:3px}
@@ -2818,7 +2820,7 @@ window.QUIZ_DATA = {
   }
 
   // se a questão não cabe na tela (dica aberta, explicação longa), aperta o layout em etapas.
-  // Respondida: as alternativas que não importam ficam apagadas e, se faltar altura, somem.
+  // Respondida: as alternativas erradas ficam esmaecidas, mas nunca somem; se faltar altura, encolhem e a tela rola.
   function compacta() {
     var m = document.getElementById('qmain'), g = m && m.querySelector('.qgrid');
     if (!g) return;

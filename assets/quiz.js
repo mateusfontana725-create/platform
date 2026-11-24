@@ -277,7 +277,7 @@
   }
 
   // se a questão não cabe na tela (dica aberta, explicação longa), aperta o layout em etapas.
-  // Respondida: as alternativas que não importam ficam apagadas e, se faltar altura, somem.
+  // Respondida: as alternativas erradas ficam esmaecidas, mas nunca somem; se faltar altura, encolhem e a tela rola.
   function compacta() {
     var m = document.getElementById('qmain'), g = m && m.querySelector('.qgrid');
     if (!g) return;
