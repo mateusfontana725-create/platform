@@ -1718,7 +1718,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 01 (Princípio da Legalidade): Para que determinada conduta humana seja considerada crime e sujeita a pena privativa de liberdade no ordenamento jurídico brasileiro, é imprescindível que a sanção e a tipificação estejam previstas em:",
    "opcoes": [
@@ -1736,7 +1736,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 02 (Princípio da Anterioridade): Em janeiro de 2025, um indivíduo praticou uma conduta que, à época, era penalmente atípica. Em março de 2026, entrou em vigor nova lei que passou a tipificar a referida conduta como crime. Diante disso, a referida lei:",
    "opcoes": [
@@ -1754,7 +1754,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 03 (Princípio do Ne Bis In Idem): Determinado policial militar comete uma falta disciplinar grave que também configura crime de peculato. O agente sofre a pena de demissão no âmbito administrativo e, posteriormente, é condenado à pena privativa de liberdade perante o Tribunal de Justiça. Essa cumulação de sanções:",
    "opcoes": [
@@ -1772,7 +1772,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 04 (Criminologia – Escola Clássica): A Escola Clássica de Criminologia, representada por expoentes como Cesare Beccaria, fundamentava o crime e a pena com base em qual premissa filosófica?",
    "opcoes": [
@@ -1790,7 +1790,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 05 (Criminologia – Escola Positivista): Diferentemente dos clássicos, a Escola Positivista de Criminologia (com Cesare Lombroso, Enrico Ferri e Raffaele Garofalo) substituiu o conceito de livre-arbítrio pelo postulado do:",
    "opcoes": [
@@ -1808,7 +1808,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 06 (Criminologia – Teorias Macrossociológicas): As teorias macrossociológicas do consenso (como a Teoria da Anomia e a da Associação Diferencial) e do conflito (como a Criminologia Crítica) divergem fundamentalmente porque:",
    "opcoes": [
@@ -1826,7 +1826,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 07 (Fato Típico e Iter Criminis): Durante a execução de um furto, o agente, após arrombar a janela do estabelecimento (atos preparatórios/início de execução), é surpreendido por uma viatura policial antes de subtrair qualquer bem, interrompendo a ação por circunstâncias alheias à sua vontade. Essa conduta configura:",
    "opcoes": [
@@ -1844,7 +1844,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 08 (Dolo e Culpa): No direito penal brasileiro, atuar com dolo eventual significa que o agente:",
    "opcoes": [
@@ -1862,7 +1862,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 09 (Ilicitude e Culpabilidade): A reforma de 1984 no Código Penal comum levou o Brasil a adotar o Finalismo, em que dolo e culpa migraram da culpabilidade para o fato típico, diferenciando-se do Código Penal Militar. Assinale a alternativa que indica corretamente um elemento da Culpabilidade (na teoria finalista de Hans Welzel):",
    "opcoes": [
@@ -1880,7 +1880,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 10 (Crimes Militares em Tempo de Paz – Art. 9º, II, \"a\", do CPM): Durante o serviço, um 2º Sargento do Corpo de Bombeiros Militar, no atendimento a uma ocorrência, desentendeu-se com um Soldado por questões operacionais e desferiu-lhe um golpe com o capacete, causando-lhe lesão corporal leve. À luz do art. 9º, II, \"a\", do CPM, o fato narrado configura:",
    "opcoes": [
@@ -1898,7 +1898,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 11 (Crimes Militares Próprios): Crimes militares próprios são aqueles descritos exclusivamente no Código Penal Militar e que violam deveres inerentes à condição militar. Ocorre que existem condutas que constam como crime tanto no CPM quanto no CP, ou seja, são crimes que podem ser cometidos por civis. Dentre as alternativas, qual o único crime que não configura um crime militar próprio?",
    "opcoes": [
@@ -1916,7 +1916,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 12 (Crimes Militares Próprios (penas do art. 55)): O Código Penal Militar traz em seu artigo nº 55 um rol taxativo de penas. As seguintes alternativas trazem previsões de penas que constam nesse artigo, exceto:",
    "opcoes": [
@@ -1934,7 +1934,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 13 (Crimes Militares em Tempo de Paz): Um Soldado do Corpo de Bombeiros Militar, de folga e usando roupas civis, transita com seu veículo particular em via pública de sua cidade. No trajeto, subtrai um notebook guardado no interior de um automóvel estacionado. Descobriu-se posteriormente que o veículo arrombado pertencia a um Tenente-Coronel da mesma corporação, o qual estava em horário de folga e trajando à paisana. À luz do Código Penal Militar, assinale a alternativa correta sobre a tipificação e a jurisdição do fato:",
    "opcoes": [
@@ -1952,7 +1952,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 14 (Ação Penal Militar: Espécies e Titularidade): Acerca da ação penal no âmbito da Justiça Militar Estadual, verificado um crime militar próprio praticado por um Soldado do Corpo de Bombeiros Militar do Paraná contra a Administração Militar, a titularidade para o oferecimento da denúncia pertence privativamente a:",
    "opcoes": [
@@ -1970,7 +1970,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 15 (Inquérito Policial Militar – IPM): Instaurado IPM para apurar suposto crime de insubordinação praticado por um bombeiro militar, o encarregado (oficial designado) concluiu as investigações e elaborou o relatório. Nos termos do CPPM, o Inquérito Policial Militar possui como características fundamentais:",
    "opcoes": [
@@ -1988,7 +1988,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 16 (Crimes contra a Autoridade ou Disciplina Militar): Durante o serviço, um Cabo do Corpo de Bombeiros Militar é solicitado a comparecer até a sala do comandante da CIA. Ao adentrar o recinto, onde estava somente ele e o Capitão, o Cabo, numa atitude livre e consciente, com o intuito de menosprezar a autoridade de seu superior hierárquico, recusa-se ostensivamente a cumprir uma ordem direta e legal relativa ao serviço, emitida pelo oficial. O fato narrado configura o crime militar de:",
    "opcoes": [
@@ -2006,7 +2006,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 17 (Crimes contra a Administração Militar): Um Soldado do Corpo de Bombeiros Militar, encarregado pelo almoxarifado onde trabalha e responsável por todos os materiais de uso operacional de sua unidade, subtrai dolosamente duas motosserras novas pertencentes ao patrimônio da corporação, vendendo-as posteriormente a terceiros em proveito próprio. À luz do CPM, a conduta praticada possui tipificação mais adequada ao crime de:",
    "opcoes": [
@@ -2024,7 +2024,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 18 (Crimes contra a Dignidade Sexual no CPM): Determinado 1º Sargento do Corpo de Bombeiros Militar, prevalecendo-se de sua superioridade hierárquica e das funções de comando em uma unidade de atendimento, constrange uma Soldado subordinada, mediante o uso de intimidação e promessas de vantagens funcionais, com o intuito de obter favores sexuais. À luz da legislação penal militar, essa conduta configura o crime de:",
    "opcoes": [
@@ -2042,7 +2042,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 19 (Crime de Deserção – Contagem de Prazo e Consumação): Um Soldado do Corpo de Bombeiros Militar, após o término de suas férias, deveria apresentar-se e reassumir o serviço às 08h00 do dia 10 de maio de 2026 (data da ausência). O militar, contudo, deixou de se apresentar intencionalmente. Considerando as regras de contagem do prazo de ausência e o período de graça estabelecidos pelo CPM, o crime de deserção estará consumado no primeiro momento em que o militar já é considerado ausente e punível pela ausência (após findo o período de graça), ou seja, exatamente:",
    "opcoes": [
@@ -2060,7 +2060,7 @@ window.QUIZ_DATA = {
   },
   {
    "tipo": "escolha",
-   "assunto": "Revisão do instrutor",
+   "assunto": "Questão do instrutor · passou na sala",
    "origem": "revisao",
    "enunciado": "Revisão 20 (Lei Maria da Penha – Medidas Protetivas e Arma de Fogo): Determinada vítima de violência doméstica requer medidas protetivas de urgência em face de seu namorado, que é Soldado do Corpo de Bombeiros Militar. Constatando risco à integridade da ofendida e o uso ou porte de arma de fogo em razão da função, o juiz competente, à luz da Lei Maria da Penha (com as atualizações da Lei nº 13.882/2019 e alterações correlatas), determina:",
    "opcoes": [

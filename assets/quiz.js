@@ -35,7 +35,9 @@
   function embaralha(a) {
     a = a.slice();
     for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
-    return a;
+    // questões com `origem` (ex.: do instrutor) vão sempre para o fim, na ordem original
+    var vem = function (x) { return D.questoes[x] && D.questoes[x].origem; };
+    return a.filter(function (x) { return !vem(x); }).concat(a.filter(vem).sort(function (x, y) { return x - y; }));
   }
 
   // ---- comparação de respostas digitadas (sem acento, sem palavras de ligação)
@@ -227,7 +229,7 @@
     var total = ordem.length, ultima = pos === total - 1;
     var h = '<div class="qgrid' + (resp ? ' resp' : '') + (q.alvo ? '' : ' sem-fig') + '"><section class="qleft">';
     var ICO_DICA = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.9V16h5v-.2c0-.8.4-1.5 1-1.9A6 6 0 0 0 12 3z"/></svg>';
-    h += '<div class="qmeta"><span class="badge"><span>' + esc(q.assunto) + '</span></span>' +
+    h += '<div class="qmeta"><span class="badge' + (q.origem ? ' instrutor' : '') + '"><span>' + esc(q.assunto) + '</span></span>' +
       '<button class="dicabtn" type="button" aria-label="Mostrar dica" aria-expanded="' + (dicaAberta[di] ? 'true' : 'false') + '" data-dica="' + di + '">' + ICO_DICA + 'Dica</button></div>';
     if (q.alvo) {
       h += '<div class="figwrap"><div class="figbox ' + (q.alvo.fig === 'f1' ? 'grande' : 'pequena') + '">' + figuraSVG(q.alvo, false) + '</div>' +
