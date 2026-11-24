@@ -18,12 +18,12 @@ window.MATERIAS = [
     id: 'salvamento-veicular',
     nome: 'Salvamento Veicular',
     sigla: 'SV',
-    descricao: 'Resumo do POP-SAR-3201.1: fases do salvamento, guarnições, FEAs, planos e glossário.',
+    descricao: 'POP-SAR-3201.1: resumo e quiz sobre fases do salvamento, guarnições, FEAs, planos e glossário.',
     cor: '#0a7d2c',
     resumo: 'resumo/salvamento-veicular.html',
     resumoPdf: 'resumo/salvamento-veicular.pdf',
-    quiz: null,
-    quizOffline: null
+    quiz: 'data/salvamento-veicular.js',
+    quizOffline: 'offline/salvamento-veicular-quiz.html'
   },
   {
     id: 'epr',
